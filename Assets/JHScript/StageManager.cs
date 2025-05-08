@@ -47,25 +47,13 @@ public class StageManager : MonoBehaviour
             isStage[i] = false;
         }
 
-        if (sceneName == "Stage_1")
+        for (int i = 0; i < isStage.Length; i++)
         {
-            isStage[0] = true;
-        }
-        else if (sceneName == "Stage_2")
-        {
-            isStage[1] = true;
-        }
-        else if (sceneName == "Stage_3")
-        {
-            isStage[2] = true;
-        }
-        else if (sceneName == "Stage_3")
-        {
-            isStage[4] = true;
-        }
-        else
-        {
-            return;
+            if (sceneName == $"Stage_{i}")
+            {
+                isStage[i] = true;
+                break;
+            }
         }
     }
 }
