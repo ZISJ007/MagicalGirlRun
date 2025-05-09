@@ -3,40 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class TitleUI : UIManagerBase
+public class TitleUI : BaseUI
 {  
 
     public Button startButton;
-    public Button quitButton;
-    public Button fakeQuitButton;
+    public Button exitButton;
+    public Button fakeExitButton;
     public VideoPlayer videoPlayer;
 
     public override void Init()
     {
+       
         startButton.onClick.AddListener(OnStart);
-        quitButton.onClick.AddListener(OnExit);
-        fakeQuitButton.onClick.AddListener(OnFakeExit);
+        exitButton.onClick.AddListener(OnExit);
+        fakeExitButton.onClick.AddListener(OnFakeExit);
 
         videoPlayer.Play();  // 배경 영상 재생
     }
 
-    private void OnStart()
+    public void OnStart()
     {
-        Debug.Log("게임 시작!");
         Hide();
-        // 씬 전환 또는 StageSelectUI.Show() 호출
+        SceneManager.LoadScene("StageSelectScene");
+
     }
 
-    private void OnExit()
+    public void OnExit()
     {
-        Debug.Log("게임 종료 시도");
+        Debug.Log("게임 종료");
         Application.Quit();
     }
 
-    private void OnFakeExit()
+    public void OnFakeExit()
     {
-        Debug.Log("어림도 없지! 가짜 종료!");
-       
+        Debug.Log("하남자처럼 도망이야? 넌 마법소녀다");
+        SceneManager.LoadScene("StageSelectScene");
     }
 }
