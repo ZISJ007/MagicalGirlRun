@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             Vector3 spawnPosition = new Vector3
-            (3 + (target.position.x + i)+ spawnOffset, -2f, 0f);
+            (3 + (target.position.x + i)+ spawnOffset, -3.5f, 0f);
             Instantiate(items[0], spawnPosition, Quaternion.identity);
         }
     }

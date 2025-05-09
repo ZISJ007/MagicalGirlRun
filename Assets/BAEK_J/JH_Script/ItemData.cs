@@ -59,9 +59,12 @@ public class ItemMover : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Vector3 pos = transform.position;
-        pos.y += 0.2f;
-        transform.position = pos;
+        if (collision.CompareTag("Obstacle"))
+        {
+            Vector3 pos = transform.position;
+            pos.y += 0.2f;
+            transform.position = pos;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
