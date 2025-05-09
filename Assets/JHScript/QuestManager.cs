@@ -1,34 +1,85 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public int isQuestClear = 0; // 1~3스테이지 퀘스트 클리어 상태
-
-    // 퀘스트 요구량
+    // 스테이지 퀘스트 클리어 상태
+    public static bool[] isQuestClear = new bool[3];
+    // 현재 스테이지 값
+    private int stage = StageManager.isStage;
+    // 퀘스트 아이템 요구량
     private int demand = 0;
     // 아이템 보유량
     private int reserves = 0;
 
-    // 키 소유량
-    public int keyCount;
-
-    // 스테이지 매니저 참조
-    StageManager stageManager;
-
     void Start()
+    {
+        GiveQuest();
+    }
+
+    private void Update()
     {
 
     }
 
-    private void GetQuest()
+    private void GiveQuest() // 스테이지에 따른 퀘스트 아이템 요구량 설정
     {
-        for (int i = 0; i <.Length; i++)
-        {
+        demand = 0;
+        reserves = 0;
 
+        if (stage == 1)
+        {
+            Quest_1();
         }
-    } 
+        else if (stage == 2)
+        {
+            Quest_2();
+        }
+        else if (stage == 3)
+        {
+            Quest_3();
+        }
+        else
+        {
+            Debug.Log("존재하지 않는 스테이지 입니다.");
+        }
+    }
+
+    private void Quest_1()
+    {
+        demand = 10;
+    }
+    private void Quest_2()
+    {
+        demand = 15;
+    }
+    private void Quest_3()
+    {
+        demand = 20;
+    }
+
+    private void QuestClear() // 퀘스트 클리어 상태 활성화
+    {
+        if (stage == 1)
+        {
+            isQuestClear[0] = true;
+        }
+        else if (stage == 2)
+        {
+            isQuestClear[1] = true;
+        }
+        else if (stage == 3)
+        {
+            isQuestClear[2] = true;
+        }
+        else
+        {
+            return;
+        }
+    }
 }

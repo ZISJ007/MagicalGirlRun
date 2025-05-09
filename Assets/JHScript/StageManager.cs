@@ -6,54 +6,74 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     // 현재 스테이지를 구분
-    public static int isStage = 0; // 현재 스테이지(1~4) 구분용 배열
-
+    public static int isStage = 0; // 현재 스테이지(1~4)
     // 스테이지 점수
     public int stageScore = 0;
-
-    // 게임이 진행중인지 구분
-    public bool isrunnig = false;
-
+    // 목적지까지의 거리
+    private float destination = 0; 
     // 플레이어 참조
     private Player player;
 
-    // 퀘스트 클리어 상태로 Stage 클리어시 열쇠 지급
-    // 열쇠가 3개 모이면 Final Boss Stage 해금
-    public int keyCount = 0;
+    // 퀘스트 클리어 상태로 Stage 클리어시 보스 등장
 
     private void Start()
     {
+        Time.timeScale = 1f;
         player = FindObjectOfType<Player>();
-        StageCheck();
+        DestinationSetting();
     }
 
     void Update()
     {
-
-    }
-
-    public void StageClear(int Distance)  // Stage Clear 조건
-    {
-        for (int i = 0; i < isStage.Length; i++)
+        if (player.moveDistance >= destination) // 목적지까지 도달
         {
-            if (isStage[i] == true)
-            {
-
-            }
+            Finish();
         }
     }
 
-    public void StageCheck() // 현재 스테이지 체크
+    private void Finish() // 퀘스트를 클리어 했다면 보스 소환
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-
-        for (int i = 0; i < isStage; i++)
+        if (QuestManager.isQuestClear[0] == true)
         {
-            if (sceneName == $"Stage_{i}")
-            {
-                isStage = i;
-                break;
-            }
+            //SpawnBoss_1();
+        }
+        else if (QuestManager.isQuestClear[1] == true)
+        {
+            //SpawnBoss_2();
+        }
+        else if (QuestManager.isQuestClear[2] == true)
+        {
+            //SpawnBoss_3();
+        }
+        else
+        {
+            StageClear();
+        }
+    }
+
+    private void StageClear() // 결과창 
+    {
+        Time.timeScale = 0f;
+    }
+
+    private void DestinationSetting() // 목적지 거리 설정
+    {
+        if (isStage == 1)
+        {
+            destination = 5000;
+        }
+        else if (isStage == 2)
+        {
+            destination = 6000;
+        }
+        else if (isStage == 3)
+        {
+            destination = 7000;
+        }
+        else
+        {
+            Debug.Log("존재하지 않는 스테이지 입니다.");
+            return;
         }
     }
 }
