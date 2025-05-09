@@ -20,12 +20,11 @@ public class TitleUI : BaseUI
         exitButton.onClick.AddListener(OnExit);
         fakeExitButton.onClick.AddListener(OnFakeExit);
 
-        videoPlayer.Play();  // 배경 영상 재생
+        videoPlayer.Play();  
     }
 
     public void OnStart()
-    {
-        Hide();
+    {     
         SceneManager.LoadScene("StageSelectScene");
 
     }

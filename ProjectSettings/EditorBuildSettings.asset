@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BAEK_C/Scenes/TitleScene.unity
     guid: ddfef1a2adf449e4f9225fb21a57a808
+  - enabled: 1
+    path: Assets/BAEK_C/Scenes/StageSelectScene.unity
+    guid: 5d9cd4bf901562041a21e9e2f7a9b23b
+  - enabled: 1
+    path: Assets/BAEK_C/Scenes/StageScene.unity
+    guid: 1d145c9c8c2c36941a0e385f01f2e435
   m_configObjects: {}
