@@ -14,14 +14,14 @@ public class StageManager : MonoBehaviour
     // 목적지까지의 거리
     private float destination = 0; 
     // 플레이어 참조
-    private Player player;
+    private JHPlayer player;
 
     // 퀘스트 클리어 상태로 Stage 클리어시 보스 등장
 
     private void Start()
     {
         Time.timeScale = 1f;
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<JHPlayer>();
         DestinationSetting();
     }
 
