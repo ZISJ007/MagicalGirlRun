@@ -17,10 +17,12 @@ public class GameSystem : MonoBehaviour
         player.life += amount;
         Debug.Log($"체력 {amount}");
     }
+
     public void AddScore(int amount) // 점수 증감
     {
         Debug.Log($"점수 {amount}");
     }
+
     public void AddKey_1() // 키 1~3 지급
     {
         player.key_1 = true;
