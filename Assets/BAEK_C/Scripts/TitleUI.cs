@@ -24,8 +24,18 @@ public class TitleUI : BaseUI
     }
 
     public void OnStart()
-    {     
-        SceneManager.LoadScene("StageSelectScene");
+    {
+        bool tutorialDone = PlayerPrefs.GetInt("TutorialCompleted", 0) == 1;
+
+        if (tutorialDone)
+        {
+            SceneManager.LoadScene("StageSelectScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("StageScene"); // Æ©Åä¸®¾ó Æ÷ÇÔµÈ ¾À
+            StageSelectUI.StageData.selectedStage = "Tutorial"; // Æ©Åä¸®¾ó ÁöÁ¤
+        }
 
     }
 
