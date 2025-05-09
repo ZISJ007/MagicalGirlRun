@@ -20,7 +20,8 @@ public class GameSystem : MonoBehaviour
 
     public void AddScore(int amount) // 점수 증감
     {
-        Debug.Log($"점수 {amount}");
+        StageManager.stageScore += amount;
+        Debug.Log($"획득 점수 {StageManager.stageScore}");
     }
 
     public void AddKey_1() // 키 1~3 지급

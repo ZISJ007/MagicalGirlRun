@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour
+public class ItemMover : MonoBehaviour
 {
-    // 생성될 아이템 리스트
-    [SerializeField]private List<GameObject> items;
+    public float moveSpeed = 3f; // 아이템 이동 속도
 
-    // 스탯시스템 참조
-    private GameSystem gameSystem;
+    private GameSystem gameSystem; // 게임 시스템 참조
+
+    void Update()
+    {
+        transform.position += Vector3.left * moveSpeed * Time.deltaTime; // 실제 이동
+        gameSystem = FindObjectOfType<GameSystem>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) // 플레이어와 접촉시
     {
         if (collision.CompareTag("Player"))
         {
-            if(gameObject.name.Contains("Coin")) // 코인
+            if (gameObject.name.Contains("Coin")) // 코인
             {
                 gameSystem.AddScore(+100);
             }
@@ -46,6 +50,7 @@ public class Items : MonoBehaviour
             {
                 gameSystem.AddKey_3();
             }
+
             Destroy(this.gameObject); // 획득한 아이템 파괴
         }
     }

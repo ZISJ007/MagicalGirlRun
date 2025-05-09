@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +8,9 @@ public class StageManager : MonoBehaviour
 {
     // 현재 스테이지를 구분
     public static int isStage = 0; // 현재 스테이지(1~4)
+
     // 스테이지 점수
-    public int stageScore = 0;
+    public static int stageScore = 0;
     // 목적지까지의 거리
     private float destination = 0; 
     // 플레이어 참조
