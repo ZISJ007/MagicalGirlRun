@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    public Player player;
+    public JHPlayer player;
 
     public void ChangeSpeed(float amount) // 속도 증감
     {

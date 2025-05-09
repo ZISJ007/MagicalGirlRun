@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class JHPlayer : MonoBehaviour
 {
     Rigidbody2D _rigidbody;
 
