@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
     // 현재 스테이지를 구분
-    public bool[] isStage = new bool[5]; // 현재 스테이지(1~4) 구분용 배열
-
-    // 스테이지 클리어 거리
-    public int clearDistance;
+    public static int isStage = 0; // 현재 스테이지(1~4) 구분용 배열
 
     // 스테이지 점수
     public int stageScore = 0;
@@ -30,28 +27,31 @@ public class StageManager : MonoBehaviour
         StageCheck();
     }
 
-    public void StageClear(int Distance) 
+    void Update()
     {
-        if (clearDistance <= player.moveDistance)
+
+    }
+
+    public void StageClear(int Distance)  // Stage Clear 조건
+    {
+        for (int i = 0; i < isStage.Length; i++)
         {
-            // GameManager.Instance.Clear();
+            if (isStage[i] == true)
+            {
+
+            }
         }
     }
 
-    public void StageCheck()
+    public void StageCheck() // 현재 스테이지 체크
     {
         string sceneName = SceneManager.GetActiveScene().name;
 
-        for (int i = 0; i < isStage.Length; i++)
-        {
-            isStage[i] = false;
-        }
-
-        for (int i = 0; i < isStage.Length; i++)
+        for (int i = 0; i < isStage; i++)
         {
             if (sceneName == $"Stage_{i}")
             {
-                isStage[i] = true;
+                isStage = i;
                 break;
             }
         }
