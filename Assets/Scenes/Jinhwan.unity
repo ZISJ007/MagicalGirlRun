@@ -215,6 +215,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &913351616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2842814359085944985, guid: 92dc53eec0b9b8146b0bdbdf53b15d99, type: 3}
+  m_PrefabInstance: {fileID: 1647347919547216906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977537495 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3906548482338434320, guid: c1b770a13c212fb46b9f2f8f0f83e508, type: 3}
@@ -276,7 +281,7 @@ GameObject:
   - component: {fileID: 1275711633}
   - component: {fileID: 1275711634}
   m_Layer: 0
-  m_Name: Items
+  m_Name: ItemSpawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,12 +315,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 1954883240}
+  - {fileID: 1980374350}
+  - {fileID: 1664405060}
+  - {fileID: 2093663587}
+  - {fileID: 913351616}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+--- !u!1 &1664405060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3210135390344187261, guid: 41c7f5379f48ed446ba11d39a2e3505e, type: 3}
+  m_PrefabInstance: {fileID: 8491299105041965809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1954883240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4116593259734725353, guid: caa167aab877f244f859b575c558dca7, type: 3}
+  m_PrefabInstance: {fileID: 3443416372185431411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1980374350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8082418734758982804, guid: 03f4a9c2808cf984c907603f27187619, type: 3}
+  m_PrefabInstance: {fileID: 4544123772823044012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2093663587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1396641204654303641, guid: e950f5b7753500a4b8aaa75a162b868f, type: 3}
+  m_PrefabInstance: {fileID: 1799871851663243126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1647347919547216906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -737,5 +763,5 @@ SceneRoots:
   - {fileID: 3443416372185431411}
   - {fileID: 4544123772823044012}
   - {fileID: 8491299105041965809}
-  - {fileID: 1647347919547216906}
   - {fileID: 1799871851663243126}
+  - {fileID: 1647347919547216906}
