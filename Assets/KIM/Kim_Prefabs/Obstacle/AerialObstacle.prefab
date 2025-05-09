@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7755973891389266865}
   - component: {fileID: -4894703845430863260}
   - component: {fileID: -7094083754457519061}
+  - component: {fileID: 4475606835806790727}
   m_Layer: 0
   m_Name: AerialObstacle
   m_TagString: Untagged
@@ -131,9 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3035890a408e02e46b708e0ec6feb28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  xMoveSpeed: 5
   downMoveSpeed: 5
-  targetY: -3
+  targetY: 2
 --- !u!61 &-4894703845430863260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206,3 +207,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &4475606835806790727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934110961983445967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f14d24749590244b2a6022beecc349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
