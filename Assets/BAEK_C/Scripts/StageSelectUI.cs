@@ -22,7 +22,7 @@ public class StageSelectUI : MonoBehaviour
         bossStageButton.gameObject.SetActive(false);
         infoPanel.SetActive(false);
 
-        // 버튼 이벤트 등록
+        // 버튼 이벤트 등록 텍스트 메쉬프로라 폰트잇어야 한글가능
         stage1Button.onClick.AddListener(() => SelectStage("Stage1", "난이도: 쉬움\n보스:? "));
         stage2Button.onClick.AddListener(() => SelectStage("Stage2", "난이도: 중간\n보스: ?"));
         stage3Button.onClick.AddListener(() => SelectStage("Stage3", "난이도: 어려움\n보스:? "));
