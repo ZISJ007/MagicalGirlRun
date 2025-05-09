@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ItemMover : MonoBehaviour
 {
-    public float moveSpeed = 3f; // 아이템 이동 속도
+    public float moveSpeed = 5; // 아이템 이동 속도
 
     private GameSystem gameSystem; // 게임 시스템 참조
 
@@ -53,5 +54,18 @@ public class ItemMover : MonoBehaviour
 
             Destroy(this.gameObject); // 획득한 아이템 파괴
         }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Vector3 pos = transform.position;
+        pos.y += 0.2f;
+        transform.position = pos;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
     }
 }

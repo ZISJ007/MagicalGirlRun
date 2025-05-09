@@ -9,10 +9,16 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> items; // 아이템 리스트
 
     public Transform target; // 타겟 설정
-    private float spawnOffset = 15f; // 타겟(플레이어)와 스폰 위치의 거리
+    public float spawnOffset = 5f; // 타겟(플레이어)와 스폰 위치의 거리
 
-    private float spawnInterval = 1f; // 스폰 간격
+    [SerializeField]private float spawnInterval = 9f; // 스폰 간격
     private float spawnTimer = 0f;
+
+
+    void Start()
+    {
+        SpawnItem();
+    }
 
     void Update()
     {
@@ -29,11 +35,11 @@ public class ItemSpawner : MonoBehaviour
 
     private void SpawnItem() // 아이템 스폰
     {
-        Vector3 spawnPosition = new Vector3
-        (target.position.x + spawnOffset, -2f, 0f);
-
-        int num = Random.Range(0, 4);
-        Instantiate(items[num], spawnPosition, Quaternion.identity);
+        for (int i = 0; i < 30; i++)
+        {
+            Vector3 spawnPosition = new Vector3
+            (3 + (target.position.x + i)+ spawnOffset, -2f, 0f);
+            Instantiate(items[0], spawnPosition, Quaternion.identity);
+        }
     }
-
 }
