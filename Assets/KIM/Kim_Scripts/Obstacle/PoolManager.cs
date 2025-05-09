@@ -15,8 +15,8 @@ public class PoolManager : MonoBehaviour
 
     [SerializeField] private List<PoolData> poolConfigs;
     
-    private Dictionary<string, Queue<GameObject>> poolDictionary=new Dictionary<string, Queue<GameObject>>();
-    private Dictionary<string,GameObject> prefabDictionary=new Dictionary<string, GameObject>();
+    private Dictionary<string, Queue<GameObject>> poolDictionary = new Dictionary<string, Queue<GameObject>>();
+    private Dictionary<string,GameObject> prefabDictionary = new Dictionary<string, GameObject>();
 
 
     public void InitializePool(Transform parent)
