@@ -10,8 +10,9 @@ public class ItemSpawner : MonoBehaviour
 
     public Transform target; // 타겟 설정
     public float spawnOffset = 5f; // 타겟(플레이어)와 스폰 위치의 거리
+    public int spawnCount = 15;
 
-    [SerializeField]private float spawnInterval = 9f; // 스폰 간격
+    [SerializeField] private float spawnInterval = 9f; // 스폰 간격
     private float spawnTimer = 0f;
 
 
@@ -35,10 +36,11 @@ public class ItemSpawner : MonoBehaviour
 
     private void SpawnItem() // 아이템 스폰
     {
-        for (int i = 0; i < 30; i++)
+
+        for (int i = 0; i < spawnCount; i++)
         {
             Vector3 spawnPosition = new Vector3
-            (3 + (target.position.x + i)+ spawnOffset, -3.5f, 0f);
+            ((target.position.x + (i * 2)) + spawnOffset, -3.5f, 0f);
             Instantiate(items[0], spawnPosition, Quaternion.identity);
         }
     }

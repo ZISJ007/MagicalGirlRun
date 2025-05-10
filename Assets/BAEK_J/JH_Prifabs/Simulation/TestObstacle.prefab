@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5184191826846973167}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 938380366672710108}
   - component: {fileID: 5949374629654069895}
   m_Layer: 0
-  m_Name: GroundObstacle 1
+  m_Name: TestObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
