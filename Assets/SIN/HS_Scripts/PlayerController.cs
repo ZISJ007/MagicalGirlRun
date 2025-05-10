@@ -19,7 +19,10 @@ public class PlayerController : MonoBehaviour
         // 컴포넌트 초기화
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        animationManager = GetComponent<AnimationManager>();
+
+        // 자식 오브젝트(Model)에서 AnimationManager를 찾음
+        animationManager = GetComponentInChildren<AnimationManager>();
+        //animationManager = GetComponent<AnimationManager>();
     }
 
     void Update()
