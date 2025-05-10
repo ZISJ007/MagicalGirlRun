@@ -7,17 +7,18 @@ using Random = UnityEngine.Random;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-     private PoolManager poolManager;
-    [SerializeField]private GameObject groundObstaclePrefab; 
-    [SerializeField]private GameObject aerialObstaclePrefab; 
-    [SerializeField]private string groundPoolKey="Ground";
-    [SerializeField]private string aerialPoolKey="Aerial";
-    [SerializeField]private float minSpawnDelay;
-    [SerializeField]private float maxSpawnDelay;
+    private PoolManager poolManager;
+    [SerializeField] private string groundPoolKey = "Ground";
+    [SerializeField] private string aerialPoolKey = "Aerial";
+    [SerializeField] private string testPoolKey = "test";
+    [SerializeField] private float minSpawnDelay;
+    [SerializeField] private float maxSpawnDelay;
+
     private void Start()
     {
-        StartCoroutine(SpawnObstacle(groundPoolKey,new Vector3(11,-5,0)));
-        StartCoroutine(SpawnObstacle(aerialPoolKey,new Vector3(10,5,0)));
+        StartCoroutine(SpawnObstacle(groundPoolKey, new Vector3(11, -5, 0)));
+        StartCoroutine(SpawnObstacle(aerialPoolKey, new Vector3(10, 5, 0)));
+        StartCoroutine(SpawnObstacle(testPoolKey, new Vector3(10, 5, 0)));
     }
 
     private void Awake()
@@ -30,22 +31,30 @@ public class ObstacleSpawner : MonoBehaviour
         poolManager.InitializePool(this.transform);
     }
 
-    private IEnumerator SpawnObstacle(string _poolKey,Vector3 _spawnPos )
+    private IEnumerator SpawnObstacle(string _poolKey, Vector3 _spawnPos)
     {
         float firstSpawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
         yield return new WaitForSeconds(firstSpawnDelay);
-        
+
         while (true) //게임 종료 조건 가져외서 false
         {
-            GameObject obj = poolManager.GetPoolObject(_poolKey,this.transform);
-            obj.transform.localPosition = _spawnPos;
+            GameObject obj = poolManager.GetPoolObject(_poolKey, this.transform);
+            if (obj != null)
+            {
+                obj.transform.localPosition = _spawnPos;
+            }
+            else
+            {
+                Debug.Log("Pool object not found");
+            }
+
             float spawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
             yield return new WaitForSeconds(spawnDelay);
         }
     }
     /*
-    // [SerializeField]private GameObject groundObstaclePrefab; 
-    // [SerializeField]private GameObject aerialObstaclePrefab; 
+    // [SerializeField]private GameObject groundObstaclePrefab;
+    // [SerializeField]private GameObject aerialObstaclePrefab;
     // [SerializeField]private float minSpawnDelay;
     // [SerializeField]private float maxSpawnDelay;
     // private void Start()
@@ -58,7 +67,7 @@ public class ObstacleSpawner : MonoBehaviour
     // {
     //     float firstSpawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
     //     yield return new WaitForSeconds(firstSpawnDelay);
-    //     
+    //
     //     while (true) //게임 종료 조건 가져외서 false
     //     {
     //         Instantiate(groundObstaclePrefab, new Vector3(11, -5, 0), Quaternion.identity);
@@ -71,13 +80,13 @@ public class ObstacleSpawner : MonoBehaviour
     // {
     //     float firstSpawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
     //     yield return new WaitForSeconds(firstSpawnDelay);
-    //     
+    //
     //     while (true) //게임 종료 조건 가져외서 false
     //     {
     //         Instantiate(aerialObstaclePrefab, new Vector3(11, 5, 0), Quaternion.identity);
     //         float spawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
     //         yield return new WaitForSeconds(spawnDelay);
-    //         
+    //
     //     }
     // }
     */
