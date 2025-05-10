@@ -15,13 +15,15 @@ public class JHPlayer : MonoBehaviour
 
     // 플레이어 체력
     public int life = 3;
+    bool isJump = false;
+
     // 보유 중인 열쇠
     public bool key_1 = false;
     public bool key_2 = false;
     public bool key_3 = false;
 
     public float speed = 3; // 이동 속도
-    public float jumpForce = 5; // 점프 높이
+    public float jumpForce = 10; // 점프 높이
 
     void Start()
     {
@@ -31,5 +33,22 @@ public class JHPlayer : MonoBehaviour
     void Update()
     {
         moveDistance = Vector2.Distance(startPosition, transform.position); // 이동 거리 측정
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            isJump = true;
+        }
+    }
+    private void FixedUpdate()
+    {
+
+        Vector3 velocity = _rigidbody.velocity;
+
+        if (isJump)
+        {
+            velocity.y += jumpForce;
+            isJump = false;
+        }
+        _rigidbody.velocity = velocity;
     }
 }

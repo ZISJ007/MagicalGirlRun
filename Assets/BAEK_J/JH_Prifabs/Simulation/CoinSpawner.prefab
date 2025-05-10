@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 4116593259734725353, guid: caa167aab877f244f859b575c558dca7, type: 3}
   - {fileID: 2842814359085944985, guid: 92dc53eec0b9b8146b0bdbdf53b15d99, type: 3}
   target: {fileID: 0}
-  spawnOffset: 6
-  spawnCount: 20
-  spawnInterval: 8
+  spawnOffset: 20
+  coinInterval: 6
+  coinCount: 15
+  itemInterval: 30
