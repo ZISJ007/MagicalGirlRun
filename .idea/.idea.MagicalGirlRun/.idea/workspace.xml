@@ -6,13 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/AerialAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/AerialAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/AttackState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/AttackState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/IAttackType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/IAttackType.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746859091207</updated>
       <workItem from="1746859096427" duration="7373000" />
-      <workItem from="1746867700779" duration="4012000" />
+      <workItem from="1746867700779" duration="6592000" />
     </task>
     <servers />
   </component>
