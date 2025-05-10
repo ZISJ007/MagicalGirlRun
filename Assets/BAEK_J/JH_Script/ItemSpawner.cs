@@ -12,14 +12,8 @@ public class ItemSpawner : MonoBehaviour
     public float spawnOffset = 5f; // 타겟(플레이어)와 스폰 위치의 거리
     public int spawnCount = 15;
 
-    [SerializeField] private float spawnInterval = 9f; // 스폰 간격
-    private float spawnTimer = 0f;
-
-
-    void Start()
-    {
-        SpawnItem();
-    }
+    [SerializeField] private float coinInterval = 9f; // 스폰 간격
+    [SerializeField] private float spawnTimer = 0f;
 
     void Update()
     {
@@ -27,16 +21,15 @@ public class ItemSpawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer >= spawnInterval) // 스폰 처리
+        if (spawnTimer >= coinInterval) // 스폰 처리
         {
-            SpawnItem();
+            SpawnCoin();
             spawnTimer = 0f;
         }
     }
 
-    private void SpawnItem() // 아이템 스폰
+    private void SpawnCoin() // 코인 스폰
     {
-
         for (int i = 0; i < spawnCount; i++)
         {
             Vector3 spawnPosition = new Vector3

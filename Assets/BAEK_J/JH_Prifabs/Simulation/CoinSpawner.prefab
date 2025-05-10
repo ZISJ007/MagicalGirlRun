@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5274534051624636750}
   - component: {fileID: 8331316689334577679}
   m_Layer: 0
-  m_Name: ItemSpawner
+  m_Name: CoinSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
