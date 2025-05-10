@@ -6,6 +6,7 @@ TagManager:
   tags:
   - YMoveTrigger
   - Obstacle
+  - Item
   layers:
   - Default
   - TransparentFX

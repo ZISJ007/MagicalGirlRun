@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7097067355144040507}
   - component: {fileID: 8012805299415374652}
   - component: {fileID: 5184191826846973167}
+  - component: {fileID: 5928454656257771540}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Obstacle
