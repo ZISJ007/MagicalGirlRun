@@ -15,6 +15,10 @@ public class EnemyController : MonoBehaviour
     
     [Space(10),Header("Aerial Enemy")]
     [SerializeField] private string bulletObjectPoolKey = "AerialBullet";
+    [SerializeField] private float angleRange = 30f;
+    [SerializeField] private float minYOffset = 1f;
+    [SerializeField] private float maxYOffset = 3f;
+    
     private PoolManager poolManager;
     
     private GameObject groundAttackObject;
@@ -52,6 +56,8 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            Vector3 playerPos = 
+            
             GameObject bullet= poolManager.GetPoolObject(bulletObjectPoolKey,null);
             bullet.transform.position = pivot.position;
             bullet.transform.rotation = pivot.rotation;
