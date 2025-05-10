@@ -5,39 +5,60 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    private State currentState;
-    
-    public IAttackType AttackType {get; set; }
-    
-    [Header("Attack Settings")]
-    private PoolManager poolManager;
-    public string attackPoolKey="GroundAttack";
-    [SerializeField] private Transform groundAttackPivot;
+    [Header("공통 정보")]
+    [SerializeField] private Transform pivot;
     [SerializeField] private float attackInterval = 2f;
+    [SerializeField] private bool isGroundEnemy = true;
 
-    private void Awake()
-    {
-        poolManager=FindObjectOfType<PoolManager>();
-    }
+    [Header("Ground Enemy")] 
+    [SerializeField] private GameObject groundAttackGameObjectPrefab;
+    
+    [Space(10),Header("Aerial Enemy")]
+    [SerializeField] private string bulletObjectPoolKey = "AerialBullet";
+    private PoolManager poolManager;
+    
+    private GameObject groundAttackObject;
 
     private void Start()
     {
-        AttackType = new GroundAttack();
-        currentState = new AttackState(this);
+        if (isGroundEnemy)
+        {
+            groundAttackObject = Instantiate(groundAttackGameObjectPrefab);
+            groundAttackObject.SetActive(false);
+        }
+        
+        StartCoroutine(AttackRoutine());
     }
 
-    private void Update()
+    private IEnumerator AttackRoutine()
     {
-        currentState.Execute();
+        while (true)
+        {
+            Fire();
+            yield return new WaitForSeconds(attackInterval);
+        }
     }
 
-    public void SetState(State _newstate)
+    private void Fire()
     {
-        currentState = _newstate;
+        if (isGroundEnemy)
+        {
+            groundAttackObject.transform.position = pivot.position;
+            groundAttackObject.transform.rotation = pivot.rotation;
+            groundAttackObject.SetActive(true);
+
+            GroundAttackObject script = groundAttackObject.GetComponent<GroundAttackObject>();
+            script.StartMove();
+        }
+        else
+        {
+            GameObject bullet= poolManager.GetPoolObject(bulletObjectPoolKey,null);
+            bullet.transform.position = pivot.position;
+            bullet.transform.rotation = pivot.rotation;
+            
+            AirBullet script = bullet.GetComponent<AirBullet>();
+            script.Launch(poolManager, bulletObjectPoolKey);
+        }
     }
 
-    public void ChangeAttackType(IAttackType _newattacktype)
-    {
-        AttackType=_newattacktype;
-    }
 }

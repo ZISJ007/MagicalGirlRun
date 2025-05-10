@@ -6,9 +6,9 @@ public abstract class State
 {
     protected EnemyController enemyController;
 
-    public State(EnemyController enemyController)
+    public State(EnemyController _enemyController)
     {
-        
+        enemyController = _enemyController;
     }
     public abstract void Execute();
 }

@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/State.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
     </list>
@@ -23,29 +23,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttackObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2wtRrsAtMjYYKFTPGZt28kY2EKt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev/KGC/Enemy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev/KGC/Enemy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="독립실행형 플레이어.Unity 시작">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />
@@ -105,7 +107,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746859091207</updated>
-      <workItem from="1746859096427" duration="3436000" />
+      <workItem from="1746859096427" duration="7373000" />
+      <workItem from="1746867700779" duration="4012000" />
     </task>
     <servers />
   </component>
