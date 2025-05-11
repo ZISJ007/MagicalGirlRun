@@ -6,72 +6,62 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [Header("아이템 리스트")]
-    public List<GameObject> items; // 아이템 리스트
-
     [Header("타겟 세팅")]
     public Transform target; // 타겟 설정
-    public float spawnOffset = 15f; // 타겟(플레이어)와 스폰 위치의 거리
+    [SerializeField] private float spawnOffset = 15f; // 타겟(플레이어)와 스폰 위치의 거리
 
-    [Header("아이템 스폰 설정")]
-    [SerializeField] private float item_Y = -1f;
-    [SerializeField] private float itemInterval = 30f; // 아이템 스폰 간격
-    private float itemTimer = 0f; // 스폰 간격 측정용
-
-    [Header("코인 스폰 설정")]
+    [Header("아이템 리스트와 스폰 설정")]
+    public List<GameObject> items;
     [SerializeField] private float coin_Y = -1.5f;
-    public int coinCount = 15; // 한번에 소환하는 코인 수
-    [SerializeField] private float coinInterval = 6f; // 코인 스폰 간격
-    private float coinTimer = 0f; // 스폰 간격 측정용
+    [SerializeField] private int spawnCount = 15; // 한번에 소환하는 아이템 수
+    [SerializeField] private float spawnInterval = 6f; // 아이템 스폰 간격
+
+    private float spawnTimer = 0f; // 스폰 간격 측정용
+    private int itemTurn = 1; // 아이템 스폰 주기 저장
 
     private void Start()
     {
-        SpawnCoin();
+        Spawnitem();
     }
+
     void Update()
     {
-        if (target == null) return;
+        spawnTimer += Time.deltaTime;
 
-        coinTimer += Time.deltaTime;
-        itemTimer += Time.deltaTime;
-
-        if (target != null)
-        {
-            if (coinTimer >= coinInterval) // 스폰 처리
+            if (spawnTimer >= spawnInterval) // 스폰 처리
             {
-                SpawnCoin();
-                coinTimer = 0f;
+                Spawnitem();
+                spawnTimer = 0f;
             }
-
-            if (itemTimer >= itemInterval)
-            {
-                SpawnItem();
-                itemTimer = 0f;
-            }
-        }
     }
-    private void SpawnCoin() // 코인 스폰
+
+    private void Spawnitem() // 아이템 스폰
     {
-        for (int i = 0; i < coinCount; i++)
+        if (items == null) return;
+
+        for (int i = 0; i < spawnCount; i++)
         {
             Vector3 spawnPosition = new Vector3
             ((target.position.x + (i * 2)) + spawnOffset, -2.5f, 0f);
-            Instantiate(items[0], spawnPosition, Quaternion.identity);
+
+            if (i == spawnCount - 1 && itemTurn == 2) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
+            {
+                int random = Random.Range(1, items.Count);
+                Instantiate(items[random], spawnPosition, Quaternion.identity);
+            }
+            else // 그 외 코인 스폰
+            {
+                Instantiate(items[0], spawnPosition, Quaternion.identity);
+            }
+        }
+
+        if (itemTurn != 2) // 생성 주기 체크
+        {
+            itemTurn = 2;
+        }
+        else if (itemTurn != 1)
+        {
+            itemTurn = 1;
         }
     }
-
-    private void SpawnItem() // 아이템 스폰
-    {
-        Vector3 spawnPosition = new Vector3
-        ((target.position.x ) + spawnOffset, -1f, 0f);
-        Instantiate(items[1], spawnPosition, Quaternion.identity);
-    }
-
-    private void SpawnQuestItem()
-    {
-        Vector3 spawnPosition = new Vector3
-        ((target.position.x) + spawnOffset, -1f, 0f);
-        Instantiate(items[1], spawnPosition, Quaternion.identity);
-    }
-
 }

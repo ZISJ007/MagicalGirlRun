@@ -5,22 +5,18 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour
 {
     public int life = 3;
-
     private int stageScore = 0;
 
-    [Header("속도와 목적지")]
+    private float beforeSpeed; // 증감 전 속도 저장
+    private Coroutine speedChange; // 지속시간 코루틴
+
+    [Header("속도와 목적지 설정")]
     [SerializeField] private float speed = 3;
     [SerializeField] private float destination = 100;
     private float moveDistance;
 
     // 보유 중인 열쇠
-    public bool key_1 = false;
-    public bool key_2 = false;
-    public bool key_3 = false;
-
-    void Start()
-    {
-    }
+    public static bool[] key = new bool[3];
 
     void Update()
     {
@@ -33,60 +29,47 @@ public class GameSystem : MonoBehaviour
         }
     }
 
-    public void ChangeSpeed(float amount) // 속도 증감
+    public void ChangeSpeed(float amount, float duration) // 1) 지속 시간동안 속도 증감
     {
+        beforeSpeed = speed;
         speed += amount;
-        Debug.Log($"속도 {amount}");
+        Debug.Log($"속도 변동 {speed} (지속 시간: {duration}초)");
+        speedChange = StartCoroutine(RevertSpeed(duration));
+    }
+    private IEnumerator RevertSpeed(float duration) // 2) 지속시간 종료시 복구
+    {
+        yield return new WaitForSeconds(duration);
+        speed = beforeSpeed;
+        Debug.Log($"속도 복원 {speed}");
     }
 
     public void ChangeLife(int amount) // 체력 증감
     {
         life += amount;
-        Debug.Log($"체력 {amount}");
+        Debug.Log($"체력 변동 {life}+{amount}");
     }
 
     public void AddScore(int amount) // 점수 증감
     {
         stageScore += amount;
-        Debug.Log($"획득 점수 {stageScore}");
-        Debug.Log($"획득 점수 {moveDistance}");
+        //Debug.Log($"획득 점수 {stageScore}");
+        //Debug.Log($"이동 거리 {moveDistance:N1}m");
     }
 
-    public void GetKey() // 키 1~3 지급
+    private void Finish() // 퀘스트를 클리어 했다면 키 제공
     {
-        if (StageManager.isStage == 1)
+        for (int i = 0; i <= key.Length; i++)
         {
-            key_1 = true;
-            Debug.Log("key_1 획득");
-        }
-        else if (StageManager.isStage == 2)
-        {
-            key_2 = true;
-            Debug.Log("key_2 획득");
-        }
-        else if (StageManager.isStage == 3)
-        {
-            key_3 = true;
-            Debug.Log($"key_3 획득");
-        }
-    }
-    private void Finish() // 퀘스트를 클리어 했다면 보스 소환
-    {
-        if (QuestManager.isQuestClear[0] == true)
-        {
-            //SpawnBoss_1();
-        }
-        else if (QuestManager.isQuestClear[1] == true)
-        {
-            //SpawnBoss_2();
-        }
-        else if (QuestManager.isQuestClear[2] == true)
-        {
-            //SpawnBoss_3();
-        }
-        else
-        {
-            StageClear();
+            if (QuestManager.isQuestClear[i] == true)
+            {
+                GameSystem.key[i] = true;
+                Debug.Log($"{i}번째 키 획득");
+                StageClear();
+            }
+            else
+            {
+                StageClear();
+            }
         }
     }
 

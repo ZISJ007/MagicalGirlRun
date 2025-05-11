@@ -45,13 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db178693fadde8c4cbb7e4ccc0dedb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  spawnOffset: 20
   items:
   - {fileID: 4116593259734725353, guid: caa167aab877f244f859b575c558dca7, type: 3}
   - {fileID: 2842814359085944985, guid: 92dc53eec0b9b8146b0bdbdf53b15d99, type: 3}
-  target: {fileID: 0}
-  spawnOffset: 20
+  - {fileID: 8082418734758982804, guid: 03f4a9c2808cf984c907603f27187619, type: 3}
+  - {fileID: 3210135390344187261, guid: 41c7f5379f48ed446ba11d39a2e3505e, type: 3}
+  - {fileID: 1396641204654303641, guid: e950f5b7753500a4b8aaa75a162b868f, type: 3}
   item_Y: -1
-  itemInterval: 30
+  itemInterval: 10
   coin_Y: -1.5
   coinCount: 15
   coinInterval: 6
