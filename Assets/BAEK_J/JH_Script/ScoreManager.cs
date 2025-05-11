@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    // 플레이어 체력
+    public int lifeCount = 3;
+
     // Start is called before the first frame update
     void Start()
     {

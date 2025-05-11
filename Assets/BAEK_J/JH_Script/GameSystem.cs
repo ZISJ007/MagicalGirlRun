@@ -4,39 +4,94 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    public JHPlayer player;
+    public int life = 3;
+
+    private int stageScore = 0;
+
+    [Header("¼Óµµ¿Í ¸ñÀûÁö")]
+    [SerializeField] private float speed = 3;
+    [SerializeField] private float destination = 100;
+    private float moveDistance;
+
+    // º¸À¯ ÁßÀÎ ¿­¼è
+    public bool key_1 = false;
+    public bool key_2 = false;
+    public bool key_3 = false;
+
+    void Start()
+    {
+    }
+
+    void Update()
+    {
+        moveDistance += speed * Time.deltaTime;
+
+        if (moveDistance >= destination)
+        {
+            Finish();
+            moveDistance = 0;
+        }
+    }
 
     public void ChangeSpeed(float amount) // ¼Óµµ Áõ°¨
     {
-        player.speed += amount;
+        speed += amount;
         Debug.Log($"¼Óµµ {amount}");
     }
 
     public void ChangeLife(int amount) // Ã¼·Â Áõ°¨
     {
-        player.life += amount;
+        life += amount;
         Debug.Log($"Ã¼·Â {amount}");
     }
 
     public void AddScore(int amount) // Á¡¼ö Áõ°¨
     {
-        StageManager.stageScore += amount;
-        Debug.Log($"È¹µæ Á¡¼ö {StageManager.stageScore}");
+        stageScore += amount;
+        Debug.Log($"È¹µæ Á¡¼ö {stageScore}");
+        Debug.Log($"È¹µæ Á¡¼ö {moveDistance}");
     }
 
-    public void AddKey_1() // Å° 1~3 Áö±Þ
+    public void GetKey() // Å° 1~3 Áö±Þ
     {
-        player.key_1 = true;
-        Debug.Log($"key_1 È¹µæ");
+        if (StageManager.isStage == 1)
+        {
+            key_1 = true;
+            Debug.Log("key_1 È¹µæ");
+        }
+        else if (StageManager.isStage == 2)
+        {
+            key_2 = true;
+            Debug.Log("key_2 È¹µæ");
+        }
+        else if (StageManager.isStage == 3)
+        {
+            key_3 = true;
+            Debug.Log($"key_3 È¹µæ");
+        }
     }
-    public void AddKey_2()
+    private void Finish() // Äù½ºÆ®¸¦ Å¬¸®¾î Çß´Ù¸é º¸½º ¼ÒÈ¯
     {
-        player.key_2 = true;
-        Debug.Log($"key_2 È¹µæ");
+        if (QuestManager.isQuestClear[0] == true)
+        {
+            //SpawnBoss_1();
+        }
+        else if (QuestManager.isQuestClear[1] == true)
+        {
+            //SpawnBoss_2();
+        }
+        else if (QuestManager.isQuestClear[2] == true)
+        {
+            //SpawnBoss_3();
+        }
+        else
+        {
+            StageClear();
+        }
     }
-    public void AddKey_3()
+
+    private void StageClear() // °á°úÃ¢ 
     {
-        player.key_3 = true;
-        Debug.Log($"key_3 È¹µæ");
+        Time.timeScale = 0f;
     }
 }

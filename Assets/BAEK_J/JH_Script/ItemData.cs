@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class ItemMover : MonoBehaviour
+public class ItemData : MonoBehaviour
 {
     public float moveSpeed = 5; // æ∆¿Ã≈€ ¿Ãµø º”µµ
 
@@ -39,22 +39,9 @@ public class ItemMover : MonoBehaviour
             {
                 gameSystem.ChangeLife(+1);
             }
-            else if (gameObject.name.Contains("Key_1")) // ø≠ºË
-            {
-                gameSystem.AddKey_1();
-            }
-            else if (gameObject.name.Contains("Key_2")) // ø≠ºË
-            {
-                gameSystem.AddKey_2();
-            }
-            else if (gameObject.name.Contains("Key_3")) // ø≠ºË
-            {
-                gameSystem.AddKey_3();
-            }
 
             Destroy(this.gameObject); // »πµÊ«— æ∆¿Ã≈€ ∆ƒ±´
         }
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -63,16 +50,6 @@ public class ItemMover : MonoBehaviour
         {
             Vector3 pos = transform.position;
             pos.y += 0.2f;
-            transform.position = pos;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Obstacle"))
-        {
-            Vector3 pos = transform.position;
-            pos.y += 0.5f;
             transform.position = pos;
         }
     }
