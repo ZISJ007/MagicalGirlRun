@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NeckAttack(G)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 226
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7dcf09f5ca18a34aa34b9c59affbfe0
+      internalID: -45504595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 194
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956f88076a718f546a758c66e358bc59
+      internalID: -902329517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 162
+        width: 74
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dae7bb2729bc74595c75db8e1daca4
+      internalID: 1779251006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 129
+        width: 94
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7626d852b3e2f3409408eb1a8187ef1
+      internalID: 1529263476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 99
+        width: 78
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daef78a4f80d4af4095db04d24a8eb30
+      internalID: -1645066428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 66
+        width: 45
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b05e3ac7aff0214d9e68c4fb98a2dce
+      internalID: 1933474492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 31
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8338c070670b343b32ea0ca33e99e2
+      internalID: -1625987498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(G)_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ed90c3b6753eb459bf90a1fd2928f3
+      internalID: -1176630360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NeckAttack(G)_0: -45504595
+      NeckAttack(G)_1: -902329517
+      NeckAttack(G)_2: 1779251006
+      NeckAttack(G)_3: 1734450159
+      NeckAttack(G)_4: 1529263476
+      NeckAttack(G)_5: -1645066428
+      NeckAttack(G)_6: 1933474492
+      NeckAttack(G)_7: -1625987498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
