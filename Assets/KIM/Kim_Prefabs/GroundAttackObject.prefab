@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8629330458778761614}
   - component: {fileID: 5883247627957557177}
   m_Layer: 0
-  m_Name: AttackObject
+  m_Name: GroundAttackObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

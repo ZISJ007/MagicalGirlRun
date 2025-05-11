@@ -213,6 +213,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2061683235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &493956940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493956941}
+  - component: {fileID: 493956942}
+  m_Layer: 0
+  m_Name: AttackPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493956941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493956940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.002, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1698725945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &493956942
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493956940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1 &603004246
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,11 +579,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9132f7e74b2b3d245ad3691de78ea061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivot: {fileID: 1836118003}
-  attackInterval: 2
+  attackPivot: {fileID: 1836118003}
+  playerTransform: {fileID: 0}
   isGroundEnemy: 1
+  groundAttackInterval: 2
   groundAttackGameObjectPrefab: {fileID: 7819713013294699357, guid: fbeca5f18fd58be498e9c60a41b4c633, type: 3}
-  bulletObjectPoolKey: AerialBullet
+  aerialAttackInterval: 2
+  bulletObjectPoolKey: 
+  angleRange: 30
+  minYOffset: 1
+  maxYOffset: 3
 --- !u!1 &786726916
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 1071867762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.52, y: -2.41, z: 0}
+  m_LocalPosition: {x: -4.77, y: -2.66, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -876,6 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698725945}
   - component: {fileID: 1698725944}
+  - component: {fileID: 1698725946}
   m_Layer: 0
   m_Name: TestAerialEnemy
   m_TagString: Untagged
@@ -947,9 +1030,32 @@ Transform:
   m_LocalPosition: {x: 11, y: 3.5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 493956941}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1698725946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698725943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9132f7e74b2b3d245ad3691de78ea061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPivot: {fileID: 493956941}
+  playerTransform: {fileID: 1071867764}
+  isGroundEnemy: 0
+  groundAttackInterval: 2
+  groundAttackGameObjectPrefab: {fileID: 0}
+  aerialAttackInterval: 2
+  bulletObjectPoolKey: AerialBullet
+  angleRange: 0
+  minYOffset: -2
+  maxYOffset: 2
 --- !u!1 &1836118002
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +1067,7 @@ GameObject:
   - component: {fileID: 1836118003}
   - component: {fileID: 1836118004}
   m_Layer: 0
-  m_Name: Pivot
+  m_Name: AttackPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,17 +1250,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[2].poolKey
-      value: GroundAttack
+      value: AerialBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[3].poolKey
+      value: AerialBullet
       objectReference: {fileID: 0}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[2].poolSize
-      value: 2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[3].poolSize
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[2].obstaclePrefab
       value: 
-      objectReference: {fileID: 7819713013294699357, guid: fbeca5f18fd58be498e9c60a41b4c633, type: 3}
+      objectReference: {fileID: 7819713013294699357, guid: a14e9176c49878e4483c7681a5816d5d, type: 3}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[3].obstaclePrefab
+      value: 
+      objectReference: {fileID: 7819713013294699357, guid: a14e9176c49878e4483c7681a5816d5d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

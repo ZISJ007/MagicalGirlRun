@@ -23,7 +23,12 @@ public class PoolManager : MonoBehaviour
     {
         foreach (var pool in poolConfigs)
         {
-            if(pool.obstaclePrefab == null)continue;
+            if (pool.obstaclePrefab == null)
+            {
+                poolDictionary[pool.poolKey]=new Queue<GameObject>();
+                continue;
+            }
+
             Queue<GameObject> objectQueue = new Queue<GameObject>();
 
             for (int i = 0; i < pool.poolSize; i++)

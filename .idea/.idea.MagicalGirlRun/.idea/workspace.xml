@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="" />
+    <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +108,7 @@
       <updated>1746859091207</updated>
       <workItem from="1746859096427" duration="7373000" />
       <workItem from="1746867700779" duration="6666000" />
+      <workItem from="1746877882380" duration="13983000" />
     </task>
     <servers />
   </component>
