@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpForce = 10f;        // 점프할 때 위로 가해지는 힘
-    public float slideDuration = 1f;     // 슬라이드 상태 유지 시간
+    public float jumpForce = 5f;        // 점프할 때 위로 가해지는 힘
+    public float slideDuration = 3f;     // 슬라이드 상태 유지 시간
 
     private Rigidbody2D rb;              // 캐릭터 제어용
     private Animator animator;           // 캐릭터의 애니메이션을 제어
