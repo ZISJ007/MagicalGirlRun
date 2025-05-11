@@ -13,20 +13,20 @@ public class AnimationManager : MonoBehaviour
 
     public void PlayRun()
     {
-        //animator.Play("Run");
+        animator.Play("Black_Run");
         Debug.Log("달리기 애니메이션 실행");
     }
 
     public void PlayJump()
     {
-        //animator.Play("Jump");
-        //animator.speed = 2f;
+        animator.Play("Black_Jump");
+        animator.speed = 2f;
         Debug.Log("점프 애니메이션 실행");
     }
 
     public void PlaySlide()
     {
-        //animator.Play("Slide");
+        animator.Play("Black_Sliding");
         Debug.Log("슬라이드 애니메이션 실행");
     }
 }
