@@ -7,6 +7,7 @@ public class DestroyZone : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"오브젝트 충돌 :{other.gameObject.name}");
         PoolableObject poolableObject = other.GetComponent<PoolableObject>();
         if (poolableObject != null)
         {

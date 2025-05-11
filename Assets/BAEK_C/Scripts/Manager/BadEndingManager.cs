@@ -5,62 +5,74 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BadEndingManager : MonoBehaviour
 {
-    public TextMeshProUGUI badendingText; 
-    public TextMeshProUGUI characterNameText; 
-    public Image characterImage; 
-    public Button nextButton; 
+    public TextMeshProUGUI leftNameText;           // 왼쪽 캐릭터 이름 텍스트
+    public TextMeshProUGUI rightNameText;          // 오른쪽 캐릭터 이름 텍스트
+    public TextMeshProUGUI badstoryText;           // 대사 텍스트
+   
+    public GameObject Panel;    // 대화 패널
+    public Button Button;           // 대사 진행 버튼
 
-    public string[] dialogue = {
-        "마법소녀 1: ",
-        "마법소녀 2: ",
-        "마법소녀 3: ",
-        "주인공: "
-
-    }; 
-    public string[] characterNames = {
-        "마법소녀 1",
-        "마법소녀 2",
-        "마법소녀 3",
-        "주인공"}; // 캐릭터 이름
-    public Sprite[] characterSprites = { 
-    }; //캐릭터이미지
-
-    private int currentDialogueIndex = 0; //현재 대사
+    public List<BadStoryLine> badstoryline;    // 대사 리스트
+    private int currentIndex = 0;       // 현재 대사 인덱스
 
     void Start()
     {
-        nextButton.onClick.AddListener(OnNextText);
-        ShowText();  // 첫번째대사
+        // 대사 리스트가 에디터에서 추가되었는지 확인
+        
+
+        Button.onClick.AddListener(NextLine); // 버튼 클릭 시 대사 진행
     }
 
-    //대사 출력
-    void ShowText()
+    // 대사 출력
+    void ShowLine()
     {
-        if (currentDialogueIndex < dialogue.Length)
+        if (currentIndex >= badstoryline.Count)
         {
-            badendingText.text = dialogue[currentDialogueIndex];  
-            characterNameText.text = characterNames[currentDialogueIndex]; 
-            characterImage.sprite = characterSprites[currentDialogueIndex];  
+            EndDialogue();
+            return;
         }
-        else
+
+        BadStoryLine line = badstoryline[currentIndex];
+
+        // 이름 텍스트 설정
+        if (line.speaker == "Left")
         {
-            
-            Ending();
+            leftNameText.text = line.speakerName;   // 왼쪽 캐릭터 이름
+            rightNameText.text = "";                // 오른쪽 캐릭터 이름은 비워둠
         }
+        else if (line.speaker == "Right")
+        {
+            leftNameText.text = "";                // 왼쪽 캐릭터 이름은 비워둠
+            rightNameText.text = line.speakerName;  // 오른쪽 캐릭터 이름
+        }
+
+        badstoryText.text = line.badstoryText;      // 대사 텍스트
+        
+
+        Panel.SetActive(true);  // 대화 패널 활성화
     }
 
-    //다음 대사로
-    void OnNextText()
+    // 대사 진행
+    void NextLine()
     {
-        currentDialogueIndex++;  
-        ShowText(); 
+        currentIndex++;
+        ShowLine();
     }
 
-    //대사가 끝나면 엔딩 처리나 씬 이동
-    void Ending()
+    // 대화 종료
+    void EndDialogue()
     {
-       
-    
-      //SceneManager.LoadScene("EndingScene");
+        Panel.SetActive(false);  // 대화 종료 후 패널 비활성화
+        // 대화 끝난 후 다른 처리
     }
+
+}
+
+[System.Serializable]
+public class BadStoryLine
+{
+    public string speaker;             // 어떤 캐릭터가 말을 하는지 (Left / Right)
+    public string speakerName;         // 말하는 사람의 이름
+    public string badstoryText;        // 대사 내용
+   
 }

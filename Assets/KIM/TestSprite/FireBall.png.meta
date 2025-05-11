@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01cd1dbc077bc8e449bb9de2542c9e75
+guid: 14cb106a0c12c86408a3d87bd6d84ddf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Manager1_0
+      name: FireBall_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 4
-        width: 209
-        height: 302
+        x: 0
+        y: 96
+        width: 27
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95d9643c8e3fc594b991957faa1daede
-      internalID: 765671488
+      spriteID: dd9aef28c7eb18f409332d3e5ee6ded2
+      internalID: 676264376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Manager1_1
+      name: FireBall_1
       rect:
         serializedVersion: 2
-        x: 255
-        y: 5
-        width: 209
-        height: 302
+        x: 0
+        y: 64
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 665a337ac0507bf409139f2bb070bad8
-      internalID: -1276105943
+      spriteID: b2c022a9f7eaca34f8935250c985e077
+      internalID: 1986504591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Manager1_2
+      name: FireBall_2
       rect:
         serializedVersion: 2
-        x: 503
-        y: 5
-        width: 209
-        height: 302
+        x: 0
+        y: 32
+        width: 21
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88053c50f4705734aaddeae8de3edc70
-      internalID: 327909488
+      spriteID: a0adaf104b9255644bc2ada65de70ce2
+      internalID: -863943593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Manager1_3
+      name: FireBall_3
       rect:
         serializedVersion: 2
-        x: 731
-        y: 8
-        width: 209
-        height: 302
+        x: 0
+        y: 0
+        width: 23
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,92 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c63320614c30d5147a92c924e9284f0f
-      internalID: 746265837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Manager1_4
-      rect:
-        serializedVersion: 2
-        x: 955
-        y: 9
-        width: 209
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 420009c9b52dbe84c9040a4fa5014ecd
-      internalID: 149235977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Manager1_5
-      rect:
-        serializedVersion: 2
-        x: 1173
-        y: 7
-        width: 209
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ef3a332218da0c44a50f4953afecc00
-      internalID: -964400469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Manager1_6
-      rect:
-        serializedVersion: 2
-        x: 1398
-        y: 4
-        width: 209
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cddd4cd133bba94395cb9fa9f6de8d5
-      internalID: -526521214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Manager1_7
-      rect:
-        serializedVersion: 2
-        x: 1617
-        y: 4
-        width: 209
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d81b26d577212143afcf12942ea380b
-      internalID: 666835366
+      spriteID: b246927e5bb1d884d900b87fe6ad40f1
+      internalID: -423246739
       vertices: []
       indices: 
       edges: []
@@ -314,14 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Manager1_0: 765671488
-      Manager1_1: -1276105943
-      Manager1_2: 327909488
-      Manager1_3: 746265837
-      Manager1_4: 149235977
-      Manager1_5: -964400469
-      Manager1_6: -526521214
-      Manager1_7: 666835366
+      FireBall_0: 676264376
+      FireBall_1: 1986504591
+      FireBall_2: -863943593
+      FireBall_3: -423246739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
