@@ -6,24 +6,33 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TitleUI : BaseUI
-{  
+{
+    public AudioSource audioSource;
+
+    
+
 
     public Button startButton;
     public Button exitButton;
     public Button fakeExitButton;
     public VideoPlayer videoPlayer;
-
+    
     public override void Init()
     {
-       
-        startButton.onClick.AddListener(OnStart);
-        exitButton.onClick.AddListener(OnExit);
-        fakeExitButton.onClick.AddListener(OnFakeExit);
+
+        startButton.onClick.AddListener(() => OnStart(startButton.GetComponent<AudioSource>().clip));
+        exitButton.onClick.AddListener(() => OnExit(exitButton.GetComponent<AudioSource>().clip));
+        fakeExitButton.onClick.AddListener(() => OnFakeExit(fakeExitButton.GetComponent<AudioSource>().clip));
 
         videoPlayer.Play();  
     }
 
-    public void OnStart()
+    public void OnStart(AudioClip clip)
+    {
+        StartCoroutine(PlaySoundThen(() => LoadStartScene(), clip));
+    }
+
+    void LoadStartScene()
     {
         bool tutorialDone = PlayerPrefs.GetInt("TutorialCompleted", 0) == 1;
 
@@ -33,21 +42,32 @@ public class TitleUI : BaseUI
         }
         else
         {
-            SceneManager.LoadScene("StageScene"); // 튜토리얼 포함된 씬
-            StageSelectUI.StageData.selectedStage = "Tutorial"; // 튜토리얼 지정
+            SceneManager.LoadScene("BadEndingScene");
+            StageSelectUI.StageData.selectedStage = "Tutorial";
         }
-
     }
 
-    public void OnExit()
+   public void OnExit(AudioClip clip)
     {
         Debug.Log("게임 종료");
-        Application.Quit();
+        StartCoroutine(PlaySoundThen(() => Application.Quit(), clip));
     }
 
-    public void OnFakeExit()
+    public void OnFakeExit(AudioClip clip)
     {
         Debug.Log("하남자처럼 도망이야? 넌 마법소녀다");
-        SceneManager.LoadScene("StageSelectScene");
+        StartCoroutine(PlaySoundThen(() => LoadStartScene(), clip));
     }
+
+    private IEnumerator PlaySoundThen(System.Action onComplete, AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+            yield return new WaitForSeconds(clip.length);
+        }
+        onComplete?.Invoke();
+    }
+
 }
