@@ -5,7 +5,6 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameSystem : MonoBehaviour
 {
-    public int life = 3;
    [SerializeField] private int stageScore; // 게임 점수
    [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
@@ -50,17 +49,9 @@ public class GameSystem : MonoBehaviour
         Debug.Log($"속도 복원 {speed}");
     }
 
-    public void ChangeLife(int amount) // 체력 증감
-    {
-        life += amount;
-        Debug.Log($"체력 변동 {life}+{amount}");
-    }
-
     public void AddScore(int amount) // 점수 증감
     {
         stageScore += amount;
-        //Debug.Log($"획득 점수 {stageScore}");
-        //Debug.Log($"이동 거리 {moveDistance:N1}m");
     }
 
     private void Finish() // 퀘스트를 클리어 했다면 키 제공

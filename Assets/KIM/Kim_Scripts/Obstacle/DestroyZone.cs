@@ -15,7 +15,7 @@ public class DestroyZone : MonoBehaviour
         }
         else
         {
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
         }
     }
 }

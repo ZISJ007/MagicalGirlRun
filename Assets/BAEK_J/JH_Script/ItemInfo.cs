@@ -36,11 +36,11 @@ public class ItemInfo : MonoBehaviour
             }
             else if (gameObject.name.Contains("Bomb")) // ÆøÅº
             {
-                gameSystem.ChangeLife(-1);
+                //gameSystem.ChangeLife(-1);
             }
             else if (gameObject.name.Contains("Heart")) // ÇÏÆ®
             {
-                gameSystem.ChangeLife(+1);
+                //gameSystem.ChangeLife(+1);
             }
 
             else if (gameObject.name.Contains("QuestItem")) // Äù½ºÆ® ¾ÆÀÌÅÛ
@@ -54,7 +54,7 @@ public class ItemInfo : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("ItemObstacle"))
         {
             Vector3 pos = transform.position;
             pos.y += 0.2f;
