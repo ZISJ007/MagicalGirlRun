@@ -127,28 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 194
-        width: 41
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5180155360e6e984184026d1c04a2982
-      internalID: 588142510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(Y)_1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 226
+        y: 270
         width: 28
         height: 29
       alignment: 0
@@ -158,8 +137,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 849db8fa4489a70419f9704bc1d2d60a
-      internalID: 1266715157
+      spriteID: c4e2a0b5c39be354ebd8aa621264c7e0
+      internalID: -1026775449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NeckAttack(Y)_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 232
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cb893faf3289b4e89bc569abd25009
+      internalID: -74649407
       vertices: []
       indices: 
       edges: []
@@ -168,8 +168,8 @@ TextureImporter:
       name: NeckAttack(Y)_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 162
+        x: 2
+        y: 200
         width: 74
         height: 30
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed95d4a8b658534e99b18d225039716
-      internalID: 199783929
+      spriteID: 3d048772c24c9d2438e0234b81a18af0
+      internalID: 2118520500
       vertices: []
       indices: 
       edges: []
@@ -190,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 130
+        y: 167
         width: 94
         height: 27
       alignment: 0
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0148402960775fc4aaf084e0ec173ac0
-      internalID: -877345494
+      spriteID: ab7331bfb92257d4f8b68a087c505746
+      internalID: 788678357
       vertices: []
       indices: 
       edges: []
@@ -211,7 +211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 98
+        y: 131
         width: 76
         height: 29
       alignment: 0
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e701a98c86f420f47a57749786c49d76
-      internalID: -369036747
+      spriteID: a85825ec151212c4f8f2c42ba52cde64
+      internalID: -1997049470
       vertices: []
       indices: 
       edges: []
@@ -232,7 +232,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 66
+        y: 87
         width: 45
         height: 32
       alignment: 0
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 812f0540b29f6d34aaa7c4d670f7408f
-      internalID: -505029442
+      spriteID: 448e6e74aad89824492b7b26031c1af4
+      internalID: 1126654618
       vertices: []
       indices: 
       edges: []
@@ -253,7 +253,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 32
+        y: 45
         width: 29
         height: 33
       alignment: 0
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b04917cb9de375f428ecf15f0c1b03a9
-      internalID: -1373961364
+      spriteID: 81c5f6d1310e8584ea72ebbe4a05b6c4
+      internalID: -1185715927
       vertices: []
       indices: 
       edges: []
@@ -274,7 +274,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 0
+        y: 4
         width: 22
         height: 31
       alignment: 0
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4375161cc4d2949b9f733cd53b7591
-      internalID: -1637959804
+      spriteID: 29e08ca4944006840ac0fa24364ba63e
+      internalID: 10029144
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NeckAttack(Y)_0: 588142510
-      NeckAttack(Y)_1: 1266715157
-      NeckAttack(Y)_2: 199783929
-      NeckAttack(Y)_3: -877345494
-      NeckAttack(Y)_4: -369036747
-      NeckAttack(Y)_5: -505029442
-      NeckAttack(Y)_6: -1373961364
-      NeckAttack(Y)_7: -1637959804
+      NeckAttack(Y)_0: -1026775449
+      NeckAttack(Y)_1: -74649407
+      NeckAttack(Y)_2: 2118520500
+      NeckAttack(Y)_3: 788678357
+      NeckAttack(Y)_4: -1997049470
+      NeckAttack(Y)_5: 1126654618
+      NeckAttack(Y)_6: -1185715927
+      NeckAttack(Y)_7: 10029144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

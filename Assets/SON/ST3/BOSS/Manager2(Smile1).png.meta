@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ee06035605398240b9b5017ade48436
+guid: 7e50617a9c5f5f3499b5a850ae944332
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NeckAttack(S)_0
+      name: Manager2(Smile1)_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 269
-        width: 28
-        height: 29
+        x: 47
+        y: 552
+        width: 393
+        height: 437
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81a19ba2544144547aabc1c1e807baab
-      internalID: -1761313304
+      spriteID: 460220f794999594f904eedfa4797b57
+      internalID: -664366044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_1
+      name: Manager2(Smile1)_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 228
-        width: 41
-        height: 34
+        x: 50
+        y: 52
+        width: 406
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,134 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89bc0e1dd54f7404189c60125a417aef
-      internalID: -1498981243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 195
-        width: 74
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82f79beeade2ab442b7473338fabcabf
-      internalID: 256017088
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 164
-        width: 94
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7307435ee13886e48aa20c748e9d0f7c
-      internalID: -148266163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 125
-        width: 76
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9984dbbddc1b6014a96701d4de13a41f
-      internalID: -705138393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 88
-        width: 45
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8855a58ddb005349830a7a4f45e5781
-      internalID: 1177253341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 45
-        width: 29
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebdd9a56d14c15e448c84b484d562458
-      internalID: 332119915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NeckAttack(S)_7
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 3
-        width: 22
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd0a6359c5530af4d8fdbbf1a97f769b
-      internalID: 1293373804
+      spriteID: 8f0ee3cf6d26cfb44904bfe95df3aec2
+      internalID: -1683685841
       vertices: []
       indices: 
       edges: []
@@ -301,14 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NeckAttack(S)_0: -1761313304
-      NeckAttack(S)_1: -1498981243
-      NeckAttack(S)_2: 256017088
-      NeckAttack(S)_3: -148266163
-      NeckAttack(S)_4: -705138393
-      NeckAttack(S)_5: 1177253341
-      NeckAttack(S)_6: 332119915
-      NeckAttack(S)_7: 1293373804
+      Manager2(Smile1)_0: -664366044
+      Manager2(Smile1)_1: -1683685841
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

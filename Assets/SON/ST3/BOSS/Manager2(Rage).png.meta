@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ee06035605398240b9b5017ade48436
+guid: 69b67460ad8c6654a8d6fba72100bcf5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NeckAttack(S)_0
+      name: Manager2(Rage)_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 269
-        width: 28
-        height: 29
+        x: 65
+        y: 515
+        width: 404
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81a19ba2544144547aabc1c1e807baab
-      internalID: -1761313304
+      spriteID: 786e6204c72a8ab429e1393b95d94376
+      internalID: 1670333708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_1
+      name: Manager2(Rage)_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 228
-        width: 41
-        height: 34
+        x: 507
+        y: 517
+        width: 403
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89bc0e1dd54f7404189c60125a417aef
-      internalID: -1498981243
+      spriteID: 88c852712a5a64143b9b89ac78b9e91e
+      internalID: 783047866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_2
+      name: Manager2(Rage)_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 195
-        width: 74
-        height: 30
+        x: 939
+        y: 529
+        width: 403
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82f79beeade2ab442b7473338fabcabf
-      internalID: 256017088
+      spriteID: ec0cd13d26a672a4fa92a358540efbc5
+      internalID: 183185002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_3
+      name: Manager2(Rage)_3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 164
-        width: 94
-        height: 27
+        x: 1361
+        y: 476
+        width: 439
+        height: 495
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7307435ee13886e48aa20c748e9d0f7c
-      internalID: -148266163
+      spriteID: 9b5ae2f71c5e60649a0611098a478945
+      internalID: -1788386703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_4
+      name: Manager2(Rage)_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 125
-        width: 76
-        height: 29
+        x: 1827
+        y: 521
+        width: 403
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9984dbbddc1b6014a96701d4de13a41f
-      internalID: -705138393
+      spriteID: 04e475bc2c6a018499a663b53d5ed73e
+      internalID: -1368488076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_5
+      name: Manager2(Rage)_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 88
-        width: 45
-        height: 32
+        x: 487
+        y: 490
+        width: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8855a58ddb005349830a7a4f45e5781
-      internalID: 1177253341
+      spriteID: 26661f7466da98144b55454a5dec763e
+      internalID: 210225837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_6
+      name: Manager2(Rage)_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 45
-        width: 29
-        height: 33
+        x: 531
+        y: 0
+        width: 648
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdd9a56d14c15e448c84b484d562458
-      internalID: 332119915
+      spriteID: 29adf443109cda749816faf5ec92ce8b
+      internalID: -530065184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_7
+      name: Manager2(Rage)_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 22
-        height: 31
+        x: 31
+        y: 13
+        width: 404
+        height: 471
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0a6359c5530af4d8fdbbf1a97f769b
-      internalID: 1293373804
+      spriteID: 71be1c1f092211748b2f394911ed7437
+      internalID: -521812086
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NeckAttack(S)_0: -1761313304
-      NeckAttack(S)_1: -1498981243
-      NeckAttack(S)_2: 256017088
-      NeckAttack(S)_3: -148266163
-      NeckAttack(S)_4: -705138393
-      NeckAttack(S)_5: 1177253341
-      NeckAttack(S)_6: 332119915
-      NeckAttack(S)_7: 1293373804
+      Manager2(Rage)_0: 1670333708
+      Manager2(Rage)_1: 783047866
+      Manager2(Rage)_2: 183185002
+      Manager2(Rage)_3: -1788386703
+      Manager2(Rage)_4: -1368488076
+      Manager2(Rage)_5: 210225837
+      Manager2(Rage)_6: -530065184
+      Manager2(Rage)_7: -521812086
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

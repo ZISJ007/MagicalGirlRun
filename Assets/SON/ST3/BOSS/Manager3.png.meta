@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ee06035605398240b9b5017ade48436
+guid: 1dc1b926a3b3c4348a04ec48fa52ca81
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NeckAttack(S)_0
+      name: Manager3_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 269
-        width: 28
-        height: 29
+        x: 176
+        y: 1125
+        width: 657
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81a19ba2544144547aabc1c1e807baab
-      internalID: -1761313304
+      spriteID: 9f3cab91fe5f6154ba0442f6e867a5d4
+      internalID: -1128137509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_1
+      name: Manager3_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 228
-        width: 41
-        height: 34
+        x: 919
+        y: 1101
+        width: 658
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89bc0e1dd54f7404189c60125a417aef
-      internalID: -1498981243
+      spriteID: 2228faef94e84e54b98a81c6ea3fabdf
+      internalID: 1864873586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_2
+      name: Manager3_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 195
-        width: 74
-        height: 30
+        x: 1711
+        y: 1077
+        width: 660
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82f79beeade2ab442b7473338fabcabf
-      internalID: 256017088
+      spriteID: c57e1c2aacc8ae44fa50321e02e5b21a
+      internalID: -1014119379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_3
+      name: Manager3_3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 164
-        width: 94
-        height: 27
+        x: 2490
+        y: 1101
+        width: 660
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7307435ee13886e48aa20c748e9d0f7c
-      internalID: -148266163
+      spriteID: ed3973c0fdeafd34386065109686759c
+      internalID: 2145597287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_4
+      name: Manager3_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 125
-        width: 76
-        height: 29
+        x: 3294
+        y: 1089
+        width: 660
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9984dbbddc1b6014a96701d4de13a41f
-      internalID: -705138393
+      spriteID: 2651ef98c7d0ef64ba8325a0fcb502b2
+      internalID: 907435886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_5
+      name: Manager3_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 88
-        width: 45
-        height: 32
+        x: 4100
+        y: 1065
+        width: 657
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8855a58ddb005349830a7a4f45e5781
-      internalID: 1177253341
+      spriteID: 73363a899aa92b8488b0809af282c992
+      internalID: -957965723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_6
+      name: Manager3_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 45
-        width: 29
-        height: 33
+        x: 92
+        y: 154
+        width: 658
+        height: 862
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdd9a56d14c15e448c84b484d562458
-      internalID: 332119915
+      spriteID: 9f626f7180e7bc444b1c5e59dee78674
+      internalID: -2058498764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NeckAttack(S)_7
+      name: Manager3_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 22
-        height: 31
+        x: 895
+        y: 178
+        width: 658
+        height: 863
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd0a6359c5530af4d8fdbbf1a97f769b
-      internalID: 1293373804
+      spriteID: 421260fcae177224e85ef1fa09298c5d
+      internalID: -1925866984
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NeckAttack(S)_0: -1761313304
-      NeckAttack(S)_1: -1498981243
-      NeckAttack(S)_2: 256017088
-      NeckAttack(S)_3: -148266163
-      NeckAttack(S)_4: -705138393
-      NeckAttack(S)_5: 1177253341
-      NeckAttack(S)_6: 332119915
-      NeckAttack(S)_7: 1293373804
+      Manager3_0: -1128137509
+      Manager3_1: 1864873586
+      Manager3_2: -1014119379
+      Manager3_3: 2145597287
+      Manager3_4: 907435886
+      Manager3_5: -957965723
+      Manager3_6: -2058498764
+      Manager3_7: -1925866984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
