@@ -539,12 +539,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 1065518020015713181, guid: ea1d5adcfffee8c43a338e68a24f3701, type: 3}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: isStage
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: destination
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

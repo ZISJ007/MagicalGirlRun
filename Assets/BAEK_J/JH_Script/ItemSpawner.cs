@@ -17,7 +17,7 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 6; // 아이템 스폰 간격
 
     private float spawnTimer = 0f; // 스폰 간격 측정용
-    private int itemTurn = 1; // 아이템 스폰 주기 저장
+    private int itemTurn = 0; // 아이템 스폰 주기 저장
 
     private void Start()
     {
@@ -26,34 +26,34 @@ public class ItemSpawner : MonoBehaviour
 
     void Update()
     {
-
-
         spawnTimer += Time.deltaTime;
 
-            if (spawnTimer >= spawnInterval) // 스폰 처리
-            {
-                Spawnitem();
-                spawnTimer = 0f;
-            }
+        if (spawnTimer >= spawnInterval && !GameSystem.hasFinished)
+        {
+            Spawnitem();
+            spawnTimer = 0f;
+        }
     }
 
     private void Spawnitem() // 아이템 스폰
     {
         if (items == null) return;
 
-        for (int i = 0; i < spawnCount; i++)
         {
-            Vector3 spawnPosition = new Vector3
-            ((target.position.x + (i * 2)) + spawnOffset, -2.5f, 0f);
+            for (int i = 0; i < spawnCount; i++)
+            {
+                Vector3 spawnPosition = new Vector3
+                ((target.position.x + (i * 2)) + spawnOffset, -2.5f, 0f);
 
-            if (i == spawnCount - 1 && itemTurn == 2) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
-            {
-                int random = Random.Range(1, items.Count);
-                Instantiate(items[random], spawnPosition, Quaternion.identity);
-            }
-            else // 그 외 코인 스폰
-            {
-                Instantiate(items[0], spawnPosition, Quaternion.identity);
+                if (i == spawnCount - 1 && itemTurn == 2) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
+                {
+                    int random = Random.Range(1, items.Count);
+                    Instantiate(items[random], spawnPosition, Quaternion.identity);
+                }
+                else // 그 외 코인 스폰
+                {
+                    Instantiate(items[0], spawnPosition, Quaternion.identity);
+                }
             }
         }
 
@@ -65,5 +65,8 @@ public class ItemSpawner : MonoBehaviour
         {
             itemTurn = 1;
         }
+
+
+
     }
 }

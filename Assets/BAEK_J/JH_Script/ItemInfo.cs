@@ -41,6 +41,10 @@ public class ItemInfo : MonoBehaviour
             {
                 player.Heal(1);
             }
+            else if (gameObject.name.Contains("portal")) // 하트
+            {
+                Destroy(collision.gameObject);
+            }
 
             else if (gameObject.name.Contains("QuestItem")) // 퀘스트 아이템
             {
