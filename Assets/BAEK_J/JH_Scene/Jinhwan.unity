@@ -420,6 +420,18 @@ PrefabInstance:
       propertyPath: spawnChance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8331316689334577679, guid: a4c422a7624959c4ba24f66c3460d1c9, type: 3}
+      propertyPath: items.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331316689334577679, guid: a4c422a7624959c4ba24f66c3460d1c9, type: 3}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 3210135390344187261, guid: 41c7f5379f48ed446ba11d39a2e3505e, type: 3}
+    - target: {fileID: 8331316689334577679, guid: a4c422a7624959c4ba24f66c3460d1c9, type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 1396641204654303641, guid: e950f5b7753500a4b8aaa75a162b868f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
