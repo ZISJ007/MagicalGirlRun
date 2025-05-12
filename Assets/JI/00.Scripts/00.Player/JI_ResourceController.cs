@@ -7,6 +7,7 @@ public class JI_ResourceController : MonoBehaviour
 {
     private JI_PlayerController playerController;
     private JI_PlayerStats playerStats;
+
     [Header("장애물 데미지")]
     public float obstacleDamage = 0;
     [Header("무적 지속시간(초)")]

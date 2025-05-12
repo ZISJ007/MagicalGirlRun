@@ -6,13 +6,14 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameSystem : MonoBehaviour
 {
    [SerializeField] private int stageScore; // 게임 점수
+
    [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
     [Header("속도와 목적지 설정")]
-    [SerializeField] public static float speed = 5;
+    public static float speed = 5;
     [SerializeField] private float moveDistance;
-    [SerializeField] private float destination = 100;
+    [SerializeField] private float destination = 500;
 
     private bool hasFinished = false; // Finish 메서드 반복 실행 방지
 

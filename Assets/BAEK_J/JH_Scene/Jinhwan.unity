@@ -880,6 +880,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1984238988}
+    - target: {fileID: 1230149426524939813, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
+      propertyPath: spawnInterval
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2559860411100981903, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: m_Name
       value: QuestManager
@@ -909,6 +913,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1984238988}
+    - target: {fileID: 6874575987341793370, guid: c6e31fe58d5af90438cc6e1fbf4be20b, type: 3}
+      propertyPath: spawnInterval
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9164823060940843782, guid: c6e31fe58d5af90438cc6e1fbf4be20b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
