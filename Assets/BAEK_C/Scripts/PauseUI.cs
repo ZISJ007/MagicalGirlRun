@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour
@@ -14,6 +15,7 @@ public class PauseUI : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         // 일시정지 UI 비활성화
         pauseMenuUI.SetActive(false);
         resumeButton.onClick.AddListener(ResumeGame);
@@ -26,6 +28,7 @@ public class PauseUI : MonoBehaviour
         //esc 눌러도 일시정지 가능
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("ESC");
             if (isPaused)
                 ResumeGame();
             else
@@ -52,6 +55,6 @@ public class PauseUI : MonoBehaviour
     // 게임 종료
     void ExitGame()
     {  
-        Application.Quit();  
+        SceneManager.LoadScene("Scenes/StageSelectScene");
     }
 }

@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 3
-  moveSpeed: 8
+  moveSpeed: 12
 --- !u!58 &5822668248931071635
 CircleCollider2D:
   m_ObjectHideFlags: 0

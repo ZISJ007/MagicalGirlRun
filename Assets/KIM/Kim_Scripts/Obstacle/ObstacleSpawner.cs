@@ -15,8 +15,15 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(SpawnObstacle(groundPoolKey, new Vector3(15, -5, 0)));
-        StartCoroutine(SpawnObstacle(aerialPoolKey, new Vector3(15, 5, 0)));
+        if (groundPoolKey != null)
+        {
+            StartCoroutine(SpawnObstacle(groundPoolKey, new Vector3(15, -5, 0)));
+        }
+
+        if (aerialPoolKey != null)
+        {
+            StartCoroutine(SpawnObstacle(aerialPoolKey, new Vector3(15, 5, 0)));
+        }
     }
 
     private void Awake()
