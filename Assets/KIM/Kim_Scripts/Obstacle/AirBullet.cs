@@ -35,5 +35,9 @@ public class AirBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("총알 충돌");
+        if (other.CompareTag("Player"))
+        {
+            poolManager.ReturnPoolObject(gameObject, bulletObjectPoolKey);
+        }
     }
 }

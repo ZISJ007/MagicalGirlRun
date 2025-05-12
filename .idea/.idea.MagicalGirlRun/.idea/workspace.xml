@@ -5,13 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AttackObject.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Player/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Player/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Player/TestPlayer.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Player/TestPlayer.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Meteor/AerialAttackObject.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Meteor/AerialAttackObject.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Meteor/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Meteor/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Volcano/GroundAttackObject.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Volcano/GroundAttackObject.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Volcano/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Volcano/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialAttackObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialAttackObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/GroundAttackObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/GroundAttackObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/AerialObstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/GroundObstacle.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scene/ObsticleObjectScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/ObstacleAnimation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/Common/Bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/TestSprite/Common/Bar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/Common/Title.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/TestSprite/Common/Title.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST1/ST1_Obstacle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST1/ST1_Obstacle.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +45,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttackObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyAnimationHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -109,6 +132,7 @@
       <workItem from="1746859096427" duration="7373000" />
       <workItem from="1746867700779" duration="6666000" />
       <workItem from="1746877882380" duration="13983000" />
+      <workItem from="1746966107234" duration="7498000" />
     </task>
     <servers />
   </component>

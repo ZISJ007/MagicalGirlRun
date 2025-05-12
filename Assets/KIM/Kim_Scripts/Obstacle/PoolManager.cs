@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PoolManager : MonoBehaviour
 {
@@ -9,21 +10,21 @@ public class PoolManager : MonoBehaviour
     public class PoolData
     {
         public string poolKey; //프리팹 구분
-        public GameObject obstaclePrefab; //장애물 프리팹
+        public List<GameObject> obstaclePrefabs=new List<GameObject>(); //장애물 프리팹
         public int poolSize = 10; //생성할 오브젝트의 갯수
     }
 
     [SerializeField] private List<PoolData> poolConfigs;
     
     private Dictionary<string, Queue<GameObject>> poolDictionary = new Dictionary<string, Queue<GameObject>>();
-    private Dictionary<string,GameObject> prefabDictionary = new Dictionary<string, GameObject>();
+    private Dictionary<string,List<GameObject>> prefabDictionary = new Dictionary<string, List<GameObject>>();
 
 
     public void InitializePool(Transform parent)
     {
         foreach (var pool in poolConfigs)
         {
-            if (pool.obstaclePrefab == null)
+            if (pool.obstaclePrefabs == null||pool.obstaclePrefabs.Count == 0)
             {
                 poolDictionary[pool.poolKey]=new Queue<GameObject>();
                 continue;
@@ -33,14 +34,15 @@ public class PoolManager : MonoBehaviour
 
             for (int i = 0; i < pool.poolSize; i++)
             {
-                GameObject obj = Instantiate(pool.obstaclePrefab,parent);
+                var prefab=pool.obstaclePrefabs[Random.Range(0, pool.obstaclePrefabs.Count)];
+                GameObject obj = Instantiate(prefab,parent);
                 obj.SetActive(false);
                 obj.GetComponent<PoolableObject>().PoolKey = pool.poolKey;
                 obj.GetComponent<PoolableObject>().PoolManager=this;
                 objectQueue.Enqueue(obj);
             }
             poolDictionary[pool.poolKey] = objectQueue;
-            prefabDictionary[pool.poolKey] = pool.obstaclePrefab;
+            prefabDictionary[pool.poolKey] = pool.obstaclePrefabs;
         }
     }
 
@@ -59,7 +61,9 @@ public class PoolManager : MonoBehaviour
         }
         else
         {
-            GameObject obj = Instantiate(prefabDictionary[_poolKey],parent);             
+            var prefabList=prefabDictionary[_poolKey];
+            var randomPrefab= prefabList[Random.Range(0, prefabList.Count)];
+            GameObject obj = Instantiate(randomPrefab,parent);             
             obj.GetComponent<PoolableObject>().PoolKey = _poolKey;
             obj.GetComponent<PoolableObject>().PoolManager=this;
             return obj;

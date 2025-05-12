@@ -31,9 +31,13 @@ public class EnemyController : MonoBehaviour
     private PoolManager poolManager;
 
     private GameObject groundAttackObject;
+    //애니메이션
+    private static readonly int isAttack = Animator.StringToHash("IsAttack");
+    private Animator animator;
 
     private void Awake()
     {
+            animator = GetComponent<Animator>();
         poolManager = FindObjectOfType<PoolManager>();
         if (playerTransform == null) return;
         if (groundAttackObject == null) return;
@@ -81,6 +85,7 @@ public class EnemyController : MonoBehaviour
             groundAttackObject.transform.rotation = attackPivot.rotation;
             groundAttackObject.SetActive(true);
 
+            AttackAnimation();
             GroundAttackObject script = groundAttackObject.GetComponent<GroundAttackObject>();
             script.StartMove();
         }
@@ -127,5 +132,10 @@ public class EnemyController : MonoBehaviour
             AirBullet script = bullet.GetComponent<AirBullet>();
             script.Launch(poolManager, bulletObjectPoolKey, rotatedDic);
         }
+    }
+
+    public void AttackAnimation()
+    {
+        animator.SetTrigger(isAttack);
     }
 }

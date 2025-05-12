@@ -51,8 +51,8 @@ MonoBehaviour:
   - poolKey: Ground
     obstaclePrefab: {fileID: 8965110112489355953, guid: b01142515275f90458af358015ba9a5e, type: 3}
     poolSize: 10
-  - poolKey: Test
-    obstaclePrefab: {fileID: 8965110112489355953, guid: b01142515275f90458af358015ba9a5e, type: 3}
+  - poolKey: AerialBullet
+    obstaclePrefab: {fileID: 7819713013294699357, guid: a14e9176c49878e4483c7681a5816d5d, type: 3}
     poolSize: 10
 --- !u!1 &4021317198476122032
 GameObject:
@@ -96,6 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9139678635145490667}
+  - component: {fileID: 6495933937982794378}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -118,3 +119,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8310228120847034148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6495933937982794378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145297412975142600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42edf6e0b8139654883ff705c1bd7cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
