@@ -5,8 +5,6 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour
 {
     public int life = 3;
-    private int stageScore = 0;
-
     private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
