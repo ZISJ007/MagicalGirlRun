@@ -17,7 +17,6 @@ public class StageSelectUI : MonoBehaviour
     [Header("스테이지 버튼")] [SerializeField] private List<Button> stageButtons;
     [Header("스테이지 정보(버튼 순서와동일하게)")]
     [SerializeField]private List<StageInfo> stageInfos;
-    
 
     [Header("UI")]
     [SerializeField] private GameObject infoPanel;
@@ -29,7 +28,6 @@ public class StageSelectUI : MonoBehaviour
 
     void Start()
     {
-        
         infoPanel.SetActive(false);
 
         //  메쉬프로라 폰트잇어야 한글가능
@@ -78,7 +76,6 @@ public class StageSelectUI : MonoBehaviour
     {
         // 외부에서 스테이지 클리어시 호출 
         keysCollected++;
-        
 
         if (keysCollected >= 3)
         {

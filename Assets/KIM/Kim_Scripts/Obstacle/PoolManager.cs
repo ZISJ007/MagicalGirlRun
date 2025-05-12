@@ -61,6 +61,8 @@ public class PoolManager : MonoBehaviour
         }
         else
         {
+            if (!prefabDictionary.ContainsKey(_poolKey) || prefabDictionary[_poolKey] == null) 
+                return null;
             var prefabList=prefabDictionary[_poolKey];
             var randomPrefab= prefabList[Random.Range(0, prefabList.Count)];
             GameObject obj = Instantiate(randomPrefab,parent);             
