@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ItemInfo : MonoBehaviour
 {
-    public float moveSpeed = 5; // 아이템 이동 속도
+    [Header("아이템 이동 속도")]
+    public float moveSpeed = 5; 
 
     private QuestManager questManager; // 퀘스트 매니저 참조
     private GameSystem gameSystem; // 게임 시스템 참조

@@ -501,15 +501,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2912011543119846858, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3342712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2912011543119846858, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08735092
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2912011543119846858, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03683116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2912011543119846858, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: m_LocalRotation.w
@@ -538,6 +538,14 @@ PrefabInstance:
     - target: {fileID: 2912011543119846858, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: isStage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: destination
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -608,6 +616,22 @@ PrefabInstance:
       propertyPath: poolConfigs.Array.data[2].obstaclePrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[0].obstaclePrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[1].obstaclePrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[0].obstaclePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6934110961983445967, guid: d1219ee254fce8d408c0e64be51c532d, type: 3}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[1].obstaclePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8965110112489355953, guid: e299a2112c83ae9439df385276f180b9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -912,6 +936,10 @@ PrefabInstance:
     - target: {fileID: 2559860411100981903, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: m_Name
       value: QuestManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168602557505624441, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
+      propertyPath: isStage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

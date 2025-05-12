@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameSystem : MonoBehaviour
 {
     public int life = 3;
-    private float beforeSpeed; // 증감 전 속도 저장
+   [SerializeField] private int stageScore; // 게임 점수
+   [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
-    public int stageScore;
 
     [Header("속도와 목적지 설정")]
     [SerializeField] private float speed = 3;
     [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 100;
 
-    bool hasFinished = false;
+    private bool hasFinished = false; // Finish 메서드 반복 실행 방지
 
     // 보유 중인 열쇠
     public static bool[] key = new bool[3];
@@ -29,8 +30,9 @@ public class GameSystem : MonoBehaviour
         {
             hasFinished = true;
             Time.timeScale = 0f;
-            Finish();
             moveDistance = 0;
+            stageScore = 0;
+            Finish();
         }
     }
 
