@@ -321,7 +321,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2557380810790466595}
   - component: {fileID: 5981733258402817181}
-  - component: {fileID: 8515436160793979672}
   m_Layer: 5
   m_Name: Stage
   m_TagString: Untagged
@@ -369,22 +368,6 @@ MonoBehaviour:
   - {fileID: 2089331753715338306}
   - {fileID: 1511611416999439526}
   - {fileID: 1865747587509137067}
---- !u!114 &8515436160793979672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107534493228550400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd1a639082382c40b137ee2b08e1b1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  resumeButton: {fileID: 0}
-  exitButton: {fileID: 0}
-  pauseButton: {fileID: 2663789288027890015}
 --- !u!1001 &638538100097268738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -775,17 +758,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f182953d6cbf29f44bfdae69f0b28b53, type: 3}
---- !u!114 &2663789288027890015 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6567878202209436784, guid: f182953d6cbf29f44bfdae69f0b28b53, type: 3}
-  m_PrefabInstance: {fileID: 9210534496642606383}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &6180967125869363199 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3032418475291335376, guid: f182953d6cbf29f44bfdae69f0b28b53, type: 3}

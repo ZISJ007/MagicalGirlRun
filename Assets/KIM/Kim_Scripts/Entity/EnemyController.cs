@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private bool isGroundEnemy = true;
 
     [Header("Ground Enemy")] 
-    [SerializeField] private float groundAttackInterval = 2f;
+    public float groundAttackInterval = 2f;
     [SerializeField] private GameObject groundAttackGameObjectPrefab;
 
     [Space(10), Header("Aerial Enemy")] 
@@ -63,6 +63,7 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(2f);
             GroundAttackFire();
             yield return new WaitForSeconds(groundAttackInterval);
         }

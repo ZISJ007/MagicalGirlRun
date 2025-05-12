@@ -15,8 +15,9 @@ public class GroundAttackObject : MonoBehaviour
 
     private IEnumerator MoveRoutine()
     {
-        Vector3 startPos = transform.position;
-        Vector3 tartgetPos = startPos+transform.right*moveDistance;
+        
+        Vector3 startPos = transform.position;;
+        Vector3 tartgetPos = startPos+transform.right * moveDistance;
 
         while (Vector3.Distance(transform.position, tartgetPos) > 0.01f)
         {
