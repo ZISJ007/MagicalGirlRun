@@ -382,16 +382,19 @@ MonoBehaviour:
   badstoryline:
   - speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140"
-    badstoryText: "\uB09C\uB9DD\uD587\uC5B4"
-  - speaker: Left
+    badstoryText: "\uC8FC\uC778\uACF5\uC9F1~"
+  - speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
-    badstoryText: "\uD06C\uC544\uC544\uC544\uC545"
-  - speaker: Right
+    badstoryText: "\uD558\uC774~"
+  - speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140"
-    badstoryText: "\uD06C\uC544\uC544\uC544\uC545"
+    badstoryText: "\uB098\uB2C8\uAC00\uC2A4\uD0A4~"
   - speaker: Right
-    speakerName: asd
-    badstoryText: "\uD06C\uC544\uC544\uC544\uC545\uD06C\uC544\uC544\uC544\uC545"
+    speakerName: "\uC8FC\uC778\uACF5"
+    badstoryText: "\uB9C8\uBC95\uC18C\uB140 \uC694\uB9AC\uBAA8 \uC544 \uB098 \uD0C0!"
+  - speaker: Left
+    speakerName: "\uB9C8\uBC95\uC18C\uB140"
+    badstoryText: "\uC544\uC774\uC2A4\uD06C\uB9BC~"
 --- !u!114 &359420665
 MonoBehaviour:
   m_ObjectHideFlags: 0
