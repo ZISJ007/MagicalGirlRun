@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class ItemInfo : MonoBehaviour
 {
-    [Header("아이템 이동 속도")]
-    public float moveSpeed = 5; 
-
     private QuestManager questManager; // 퀘스트 매니저 참조
     private GameSystem gameSystem; // 게임 시스템 참조
+    private JI_ResourceController player; // 리소스 컨트롤러 참조
 
     void Update()
     {
-        transform.position += Vector3.left * moveSpeed * Time.deltaTime; // 실제 이동
+        transform.position += Vector3.left * GameSystem.speed * Time.deltaTime; // 실제 이동
         gameSystem = FindObjectOfType<GameSystem>();
         questManager = FindObjectOfType<QuestManager>();
+        player = FindObjectOfType<JI_ResourceController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // 플레이어와 접촉시
@@ -28,19 +27,19 @@ public class ItemInfo : MonoBehaviour
             }
             else if (gameObject.name.Contains("Booster")) // 부스터
             {
-                gameSystem.ChangeSpeed(+1f, 3f);
+                gameSystem.ChangeSpeed(+2f, 5f);
             }
             else if (gameObject.name.Contains("Slower")) // 슬로워
             {
-                gameSystem.ChangeSpeed(-1f, 3f);
+                gameSystem.ChangeSpeed(-1.5f, 5f);
             }
             else if (gameObject.name.Contains("Bomb")) // 폭탄
             {
-                gameSystem.ChangeLife(-1);
+                player.TakeDamage(1);
             }
             else if (gameObject.name.Contains("Heart")) // 하트
             {
-                gameSystem.ChangeLife(+1);
+                player.Heal(1);
             }
 
             else if (gameObject.name.Contains("QuestItem")) // 퀘스트 아이템
@@ -54,7 +53,7 @@ public class ItemInfo : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("ItemObstacle"))
         {
             Vector3 pos = transform.position;
             pos.y += 0.2f;
