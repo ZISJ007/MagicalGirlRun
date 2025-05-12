@@ -25,7 +25,7 @@ public class PoolManager : MonoBehaviour
         {
             if (pool.obstaclePrefab == null)
             {
-                poolDictionary[pool.poolKey]=new Queue<GameObject>();
+                poolDictionary[pool.poolKey] = new Queue<GameObject>();
                 continue;
             }
 

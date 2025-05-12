@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - YMoveTrigger
+  - Obstacle
+  - Item
   layers:
   - Default
   - TransparentFX
