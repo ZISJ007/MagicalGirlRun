@@ -7,21 +7,28 @@ public class GameSystem : MonoBehaviour
     public int life = 3;
     private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
+    public int stageScore;
 
     [Header("속도와 목적지 설정")]
     [SerializeField] private float speed = 3;
     [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 100;
 
+    bool hasFinished = false;
+
     // 보유 중인 열쇠
     public static bool[] key = new bool[3];
 
     void Update()
     {
+        if (hasFinished) return;
+
         moveDistance += speed * Time.deltaTime;
 
         if (moveDistance >= destination)
         {
+            hasFinished = true;
+            Time.timeScale = 0f;
             Finish();
             moveDistance = 0;
         }
@@ -61,18 +68,8 @@ public class GameSystem : MonoBehaviour
             if (QuestManager.isQuestClear[i] == true)
             {
                 GameSystem.key[i] = true;
-                Debug.Log($"{i}번째 키 획득");
-                StageClear();
-            }
-            else
-            {
-                StageClear();
+                Debug.Log($"{i + 1}번째 키 획득");
             }
         }
-    }
-
-    private void StageClear() // 결과창 
-    {
-        Time.timeScale = 0f;
     }
 }
