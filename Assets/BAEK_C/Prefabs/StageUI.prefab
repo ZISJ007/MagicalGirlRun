@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 8278295883449298877}
   - component: {fileID: 4880846259047470132}
   m_Layer: 5
-  m_Name: StageCanvas
+  m_Name: StageUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,6 +393,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2557380810790466595}
     m_Modifications:
+    - target: {fileID: 657288107169426562, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 386b1afa5d6580f48af61546a0981db8, type: 3}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
