@@ -10,15 +10,13 @@ public class ObstacleSpawner : MonoBehaviour
     private PoolManager poolManager;
     [SerializeField] private string groundPoolKey = "Ground";
     [SerializeField] private string aerialPoolKey = "Aerial";
-    [SerializeField] private string testPoolKey = "test";
     [SerializeField] private float minSpawnDelay;
     [SerializeField] private float maxSpawnDelay;
 
     private void Start()
     {
-        StartCoroutine(SpawnObstacle(groundPoolKey, new Vector3(11, -5, 0)));
-        StartCoroutine(SpawnObstacle(aerialPoolKey, new Vector3(10, 5, 0)));
-        StartCoroutine(SpawnObstacle(testPoolKey, new Vector3(10, 5, 0)));
+        StartCoroutine(SpawnObstacle(groundPoolKey, new Vector3(15, -5, 0)));
+        StartCoroutine(SpawnObstacle(aerialPoolKey, new Vector3(15, 5, 0)));
     }
 
     private void Awake()

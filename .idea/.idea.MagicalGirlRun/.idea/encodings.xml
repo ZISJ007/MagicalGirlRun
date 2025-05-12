@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/TitleUI.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/JHScript/StageManager.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/JI/00.Scripts/JI_PlayerController.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/SIN/HS_Scripts/PlayerController.cs" charset="EUC-KR" />
   </component>
 </project>
