@@ -12,8 +12,8 @@ public class GameSystem : MonoBehaviour
 
     [Header("속도와 목적지 설정")]
     [SerializeField] private float speed = 3;
+    [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 100;
-    private float moveDistance;
 
     // 보유 중인 열쇠
     public static bool[] key = new bool[3];
