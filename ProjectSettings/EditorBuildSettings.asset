@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/BAEK_C/Scenes/StageSelectScene.unity
     guid: 5d9cd4bf901562041a21e9e2f7a9b23b
   - enabled: 1
-    path: Assets/BAEK_C/Scenes/StageScene.unity
+    path: Assets/BAEK_C/Scenes/Stage1Scene.unity
     guid: 1d145c9c8c2c36941a0e385f01f2e435
+  - enabled: 1
+    path: Assets/BAEK_C/Scenes/BadEndingScene.unity
+    guid: 0df5957ba898aea458a9c88ff3e21fd4
   m_configObjects: {}
