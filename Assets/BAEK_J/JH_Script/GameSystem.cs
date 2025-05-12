@@ -10,7 +10,7 @@ public class GameSystem : MonoBehaviour
     private Coroutine speedChange; // 지속시간 코루틴
 
     [Header("속도와 목적지 설정")]
-    [SerializeField] private float speed = 3;
+    [SerializeField] public static float speed = 5;
     [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 100;
 

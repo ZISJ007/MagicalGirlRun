@@ -11,9 +11,7 @@ public interface IObstacleSpawner
 
 public abstract class BaseObstacle : MonoBehaviour
 {
-    
-    [Header("Obstacle Info")]
-    [SerializeField]private float xMoveSpeed; //좌측으로 이동하는 속도(맵의 이동속도를 가져와서 작업하면 될것)
+   
     
     public abstract void Spawn();
 
@@ -24,7 +22,7 @@ public abstract class BaseObstacle : MonoBehaviour
 
     private void XMove()
     {
-        transform.Translate(Vector2.left * xMoveSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * GameSystem.speed * Time.deltaTime);
     }
      protected abstract void YMove();
     

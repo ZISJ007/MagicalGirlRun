@@ -5,15 +5,13 @@ using UnityEngine;
 
 public class ItemInfo : MonoBehaviour
 {
-    [Header("아이템 이동 속도")]
-    public float moveSpeed = 5; 
 
     private QuestManager questManager; // 퀘스트 매니저 참조
     private GameSystem gameSystem; // 게임 시스템 참조
 
     void Update()
     {
-        transform.position += Vector3.left * moveSpeed * Time.deltaTime; // 실제 이동
+        transform.position += Vector3.left * GameSystem.speed * Time.deltaTime; // 실제 이동
         gameSystem = FindObjectOfType<GameSystem>();
         questManager = FindObjectOfType<QuestManager>();
     }
