@@ -63,7 +63,7 @@ public class GameSystem : MonoBehaviour
 
     private void Finish() // 퀘스트를 클리어 했다면 키 제공
     {
-        for (int i = 0; i <= key.Length; i++)
+        for (int i = 0; i < key.Length; i++)
         {
             if (QuestManager.isQuestClear[i] == true)
             {
