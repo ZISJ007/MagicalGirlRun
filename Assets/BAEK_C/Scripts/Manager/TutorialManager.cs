@@ -21,7 +21,7 @@ public class TutorialManager : MonoBehaviour
 
         if (tutorialStep == 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            ShowMessage("이번엔 아래 Shift로 슬라이딩해 보도록 합니다.");
+            ShowMessage("이번엔 Shift로 슬라이딩해 보도록 합니다.");
             tutorialStep++;
         }
         else if (tutorialStep == 1 && Input.GetKeyDown(KeyCode.LeftShift)|| Input.GetKeyDown(KeyCode.RightShift))
