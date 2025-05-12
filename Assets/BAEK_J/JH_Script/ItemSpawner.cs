@@ -14,7 +14,7 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> items;
     [SerializeField] private float coin_Y = -1.5f;
     [SerializeField] private int spawnCount = 15; // 한번에 소환하는 아이템 수
-    [SerializeField] private float spawnInterval = 6f; // 아이템 스폰 간격
+    [SerializeField] private float spawnInterval = 6; // 아이템 스폰 간격
 
     private float spawnTimer = 0f; // 스폰 간격 측정용
     private int itemTurn = 1; // 아이템 스폰 주기 저장
@@ -26,6 +26,8 @@ public class ItemSpawner : MonoBehaviour
 
     void Update()
     {
+
+
         spawnTimer += Time.deltaTime;
 
             if (spawnTimer >= spawnInterval) // 스폰 처리

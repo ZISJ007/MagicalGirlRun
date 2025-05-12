@@ -10,7 +10,6 @@ public class JI_PlayerStats : MonoBehaviour
         get => maxHp;
         set
         {
-
             maxHp = Mathf.Max(0f, value);// 최대 체력은 0 이상으로만 설정          
             currentHp = Mathf.Clamp(currentHp, 0f, maxHp);// currentHp가 새 maxHp를 넘지 않도록 제한
         }
