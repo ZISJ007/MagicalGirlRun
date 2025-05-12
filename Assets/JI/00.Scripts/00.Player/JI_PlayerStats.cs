@@ -25,6 +25,7 @@ public class JI_PlayerStats : MonoBehaviour
     }
     public void Heal(float amount) => currentHp += amount;
     public void TakeDamage(float amount) => currentHp -= amount;
+
     private void Awake()
     {
         currentHp = maxHp; // 초기 체력 설정

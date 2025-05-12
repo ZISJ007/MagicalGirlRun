@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class JI_PlayerController : MonoBehaviour
@@ -20,16 +21,18 @@ public class JI_PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator anim;
+    private SpriteRenderer spriteRenderer; // 스프라이트 렌더러 컴포넌트
+    private Coroutine damageFlashCoroutine; //무적 애니메이션 코루틴
     private bool isJump = false;
     private bool isStopped = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>(); // 애니메이터 컴포넌트 가져오기
+        anim = GetComponentInChildren<Animator>(); // 애니메이터 컴포넌트 가져오기
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>(); // 스프라이트 렌더러 컴포넌트 가져오기
         //DontDestroyOnLoad(this.gameObject);
         IsResume(); // 스크립트 활성화
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
@@ -90,18 +93,47 @@ public class JI_PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && IsGrounded() && !isJump && !isLanding)
         {
             anim.SetBool("IsSlide", true); // 슬라이드 애니메이션 트리거 설정
-            slideObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            //slideObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            
         }
         else
         {
             anim.SetBool("IsSlide", false); // 슬라이드 애니메이션 트리거 설정
-            slideObject.transform.rotation = Quaternion.identity;
+            //slideObject.transform.rotation = Quaternion.identity;
         }
     }
     public void HandleDeath()
     {
         anim.SetTrigger("IsDead"); // 사망 애니메이션 트리거 설정   
         enabled = false;
+    }
+    public void HandleDamage(float duration)
+    {
+        if (damageFlashCoroutine != null) // 코루틴이 이미 실행 중이라면(중복 방지)
+        {
+            StopCoroutine(damageFlashCoroutine);  // 이전 코루틴 중지
+            damageFlashCoroutine = null;          // 참조 초기화
+        }
+        // 새로운 코루틴 시작
+        damageFlashCoroutine = StartCoroutine(DamageFlashCoroutine(duration));
+    }
+
+    private IEnumerator DamageFlashCoroutine(float duration)
+    {
+        float endTime = Time.time + duration;// 0 + duration > endTime = 0 + duration
+        bool IsDamged = false;
+        while (Time.time < endTime) //(Time.time 이 0에서부터 계속 올라감  <  endTime = 0 + duration)
+        {
+            //매 반복마다 IsDamged 값을 반전
+            IsDamged = !IsDamged;
+            //isRed가 true면 clear, false면 원래 색으로 변경
+            spriteRenderer.color = IsDamged ? Color.clear : Color.white ; 
+            yield return new WaitForSeconds(0.2f); //0.2초 대기 간격으로 깜빡임
+        }
+
+        
+        spriteRenderer.color = Color.white;//  원래 색으로 복구
+        damageFlashCoroutine = null;// 코루틴 종료
     }
     public void IsStop()
     {
@@ -127,6 +159,7 @@ public class JI_PlayerController : MonoBehaviour
         anim.enabled = true;
         rb.simulated = true;
     }
+  
     private void OnDrawGizmosSelected()
     {
         if (groundCheck == null) return;
