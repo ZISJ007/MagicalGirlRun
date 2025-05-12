@@ -21,6 +21,7 @@ public class BadEndingManager : MonoBehaviour
         
 
         Button.onClick.AddListener(NextLine); // 버튼 클릭 시 대사 진행
+        ShowLine();
     }
 
     // 대사 출력
