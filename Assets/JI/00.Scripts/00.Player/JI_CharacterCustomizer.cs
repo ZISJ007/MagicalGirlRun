@@ -13,10 +13,10 @@ public class JI_CharacterCustomizer : MonoBehaviour
 
     private void Start()
     {
-        // 1) 씬 넘어오기 전 선택된 프리팹이 있으면 그것을 장착
-        if (JI_GM.Instance != null && JI_GM.Instance.SelectedHatPrefab != null)
+        // 1) 커스텀 씬에서 선택된 모자 정보가 있으면 장착
+        if (JI_CustomManager.Instance != null && JI_CustomManager.Instance.SelectedHatPrefab != null)
         {
-            EquipHat(JI_GM.Instance.SelectedHatPrefab);
+            EquipHat(JI_CustomManager.Instance.SelectedHatPrefab);
             return;
         }
         // 2) 선택 정보가 없으면 초기 지정값으로 장착
@@ -29,7 +29,8 @@ public class JI_CharacterCustomizer : MonoBehaviour
     /// </summary>
     public void EquipHat(GameObject hatPrefab)
     {
-        if (currentHat != null) Destroy(currentHat);
+        if (currentHat != null)
+            Destroy(currentHat);
 
         currentHat = Instantiate(hatPrefab, headSocket);
         currentHat.transform.localPosition = Vector3.zero;

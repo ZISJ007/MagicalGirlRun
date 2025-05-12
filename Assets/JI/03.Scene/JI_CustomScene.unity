@@ -267,7 +267,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7482525017543136126, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1571821697197255461, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+    - {fileID: 3070831060415988890, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+    - {fileID: 5570090733607490061, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+    - {fileID: 1021409630654036255, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -285,6 +293,7 @@ GameObject:
   - component: {fileID: 266753790}
   - component: {fileID: 266753789}
   - component: {fileID: 266753793}
+  - component: {fileID: 266753794}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -386,7 +395,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 266753788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812a94fe953b6164fa96f925a6c2ff81, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c558d2b0dbbaef4ab389f441fab3a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &266753794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266753788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f64e268eca1a94bafc3f8696cd732a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &269753835
@@ -473,8 +494,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 266753793}
-        m_TargetAssemblyTypeName: JI_Test, Assembly-CSharp
-        m_MethodName: OnClickEquipHat
+        m_TargetAssemblyTypeName: JI_CustomManager, Assembly-CSharp
+        m_MethodName: OnSelectHat
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6292300129138698604, guid: a801e56dd600fd043937ae7acf1bb918, type: 3}
@@ -915,8 +936,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 266753793}
-        m_TargetAssemblyTypeName: JI_Test, Assembly-CSharp
-        m_MethodName: OnClickEquipHat
+        m_TargetAssemblyTypeName: JI_CustomManager, Assembly-CSharp
+        m_MethodName: OnSelectHat
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 6292300129138698604, guid: 0314d6017f446a94ba1b961494c2765a, type: 3}
@@ -1047,9 +1068,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266753793}
-        m_TargetAssemblyTypeName: JI_Test, Assembly-CSharp
-        m_MethodName: OnClickStart
+      - m_Target: {fileID: 266753794}
+        m_TargetAssemblyTypeName: JI_GM, Assembly-CSharp
+        m_MethodName: OnClikToStat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

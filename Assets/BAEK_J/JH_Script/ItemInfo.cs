@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ItemInfo : MonoBehaviour
 {
-    public float moveSpeed = 5; // 아이템 이동 속도
+    [Header("아이템 이동 속도")]
+    public float moveSpeed = 5; 
 
     private QuestManager questManager; // 퀘스트 매니저 참조
     private GameSystem gameSystem; // 게임 시스템 참조
@@ -42,10 +43,9 @@ public class ItemInfo : MonoBehaviour
                 gameSystem.ChangeLife(+1);
             }
 
-            else if (gameObject.name.Contains("QuestItem (1)")) // 퀘스트 아이템
+            else if (gameObject.name.Contains("QuestItem")) // 퀘스트 아이템
             {
                 questManager.GetQuestItem();
-                Debug.Log("퀘스트 아이템 획득");
             }
 
             Destroy(this.gameObject); // 획득한 아이템 파괴

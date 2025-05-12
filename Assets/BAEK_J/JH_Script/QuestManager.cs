@@ -4,18 +4,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEditor.Build.Content;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
+    [Header("현재 스테이지")]
+    public int isStage = 0; // 현재 스테이지(1~4)
+
     // 스테이지 퀘스트 상태
     public static bool[] isQuestClear = new bool[3];
-    public static bool[] onQuest = new bool[3]; 
+    public static bool[] onQuest = new bool[3];
 
-    // 퀘스트 아이템 요구량
-    private int demand = 5;
-    // 아이템 보유량
-    private int reserves = 0;
+    [Header("요구량, 보유량")]
+    [SerializeField] private int demand = 5;
+    [SerializeField] private int reserves = 0;
 
     void Start()
     {
@@ -26,10 +29,10 @@ public class QuestManager : MonoBehaviour
     {
         for (int i = 0; i < onQuest.Length; i++)
         {
-            if (GameSystem.key[i] == false && StageManager.isStage[i])
+            if (!GameSystem.key[i] && isStage == i + 1)
             {
-                onQuest[0] = true;
-                Debug.Log($"{i}번째 퀘스트 활성화");
+                onQuest[i] = true;
+                Debug.Log($"{i + 1}스테이지 퀘스트 활성화");
             }
         }
     }
