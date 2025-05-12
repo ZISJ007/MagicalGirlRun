@@ -65,6 +65,7 @@ public class BadEndingManager : MonoBehaviour
     // 대사 진행
     void NextLine()
     {
+        
         currentIndex++;
         ShowLine();
     }

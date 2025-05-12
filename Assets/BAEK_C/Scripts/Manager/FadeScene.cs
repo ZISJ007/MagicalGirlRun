@@ -77,7 +77,8 @@ public class FadeScene : MonoBehaviour
             
         }
         if (badEndingManager != null && badEndingManager.Button != null)
-        {         
+        {
+            
             badEndingManager.Button.interactable = true;           
         }
     }
