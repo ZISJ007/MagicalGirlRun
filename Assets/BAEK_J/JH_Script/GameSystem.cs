@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameSystem : MonoBehaviour
 {
     public Scrollbar scrollBar;
+    public ScoreManager scoreManager;
 
     [Header("현재 스테이지")]
     [SerializeField] private int isStage = 0;
@@ -65,6 +66,7 @@ public class GameSystem : MonoBehaviour
         {
             GameSystem.key[isStage - 1] = true;
             Debug.Log($"{isStage}번째 키 획득");
+            scoreManager.SetScore();
         }
     }
 }
