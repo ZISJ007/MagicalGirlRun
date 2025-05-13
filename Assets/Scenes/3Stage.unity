@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1571821697197255461, guid: 1c04450e3a2061f41b20f0c40032a7f9, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5576270532201232168, guid: 1c04450e3a2061f41b20f0c40032a7f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
