@@ -51,7 +51,7 @@ public class CreditUI : MonoBehaviour
             data.image.color = color;
         }
 
-        StartCoroutine(FirstTextStartCredits());
+       
     }
 
     private void Update()
@@ -68,7 +68,7 @@ public class CreditUI : MonoBehaviour
             if (scrollContent.anchoredPosition.y >= creditEndY)
             {
                 isScrolling = false;
-                SceneManager.LoadScene("TitleScene");
+                StartCoroutine(FinalText());
             }
         }
     }
@@ -128,11 +128,18 @@ public class CreditUI : MonoBehaviour
 
         isScrolling = true;
     }
+    private IEnumerator FinalText()
+    {
+        
+        yield return StartCoroutine(FirstTextStartCredits());
 
+        
+        SceneManager.LoadScene("TitleScene");
+    }
     private void SkipCredit()
     {
         isScrolling = false;
-        SceneManager.LoadScene("TitleScene"); // 엔딩 후 이동할 씬
+        SceneManager.LoadScene("TitleScene"); 
     }
 }
 
