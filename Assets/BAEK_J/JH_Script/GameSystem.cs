@@ -7,9 +7,8 @@ using static UnityEngine.GraphicsBuffer;
 public class GameSystem : MonoBehaviour
 {
     [Header("현재 스테이지")]
-    public int isStage = 0;
+    [SerializeField] private int isStage = 0;
 
-    [SerializeField] private int stageScore; // 게임 점수
     [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
@@ -25,8 +24,8 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         moveDistance = 0;
-        stageScore = 0;
     }
 
     private void Update()
@@ -56,17 +55,13 @@ public class GameSystem : MonoBehaviour
         Debug.Log($"속도 복원 {speed}");
     }
 
-    public void AddScore(int amount) // 점수 증감
-    {
-        stageScore += amount;
-    }
-
     private void Finish() // 퀘스트를 클리어 했다면 키 제공
     {
-            if (QuestManager.isQuestClear == true)
-            {
-                GameSystem.key[isStage - 1] = true;
-                Debug.Log($"{isStage}번째 키 획득");
-            }
+
+        if (QuestManager.isQuestClear == true)
+        {
+            GameSystem.key[isStage - 1] = true;
+            Debug.Log($"{isStage}번째 키 획득");
+        }
     }
 }
