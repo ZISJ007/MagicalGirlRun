@@ -6,94 +6,110 @@ using TMPro;
 
 public class TrueEndingManager : MonoBehaviour
 {
+    [Header("BGM")]
     [SerializeField] private AudioSource bgmSource;
     [SerializeField] private AudioClip trueEndingBGM;
 
+    [Header("UI")]
+    [SerializeField] private Image blackPanel;
+    [SerializeField] private Image background;
     [SerializeField] private TextMeshProUGUI storyText;
-    [SerializeField] private string[] storyLines;
-    [SerializeField] private float storyDisplayDuration = 3f;
 
-    [SerializeField] private Image specialIllustration;
-    [SerializeField] private float illustrationFadeDuration = 1.5f;
+
+    [Header("Story")]
+    [SerializeField] private StoryStep[] storySteps;
+
+    [Header("속도조절")]
+    [SerializeField] private float textFadeDuration = 1f;
+    [SerializeField] private float textDisplayDuration = 3f;
+    [SerializeField] private float imageFadeDuration = 1.5f;
+
+ 
+
+    [System.Serializable]
+    public class StoryStep
+    {
+        [TextArea(2, 5)]
+        public string text;
+        public Image illustration;
+    }
 
     private void Start()
     {
-        StartCoroutine(PlayTrueEndingSequence());
+        StartCoroutine(PlayTrueEnding());
     }
 
-    private IEnumerator PlayTrueEndingSequence()
+    private IEnumerator PlayTrueEnding()
     {
-        // BGM
+        // BGM 시작
         bgmSource.clip = trueEndingBGM;
         bgmSource.Play();
 
-        // 스토리 라인 순차 출력
-        foreach (var line in storyLines)
+        // 블랙 배경 페이드 인 (초기연출)
+        yield return StartCoroutine(FadeImage(blackPanel, 1f, 0f, 2f));
+
+        // 스토리 라인 순차 재생
+        foreach (var step in storySteps)
         {
-            storyText.text = line;
-            yield return StartCoroutine(FadeTextInOut(storyText, storyDisplayDuration));
+            // 텍스트 & 이미지 페이드 인
+            yield return StartCoroutine(FadeImage(step.illustration, 0f, 1f, imageFadeDuration));
+            yield return StartCoroutine(FadeTextInOut(step.text));
+
+            // 텍스트 유지 시간
+            yield return new WaitForSeconds(textDisplayDuration);
+
+            // 텍스트 & 이미지 페이드 아웃
+            yield return StartCoroutine(FadeTextOut());
+            yield return StartCoroutine(FadeImage(step.illustration, 1f, 0f, imageFadeDuration));
         }
 
-        // 스페셜 일러스트 연출
-        yield return StartCoroutine(FadeImageInOut(specialIllustration, illustrationFadeDuration));
+     
+        
 
-        // 다 끝나면 Credit 씬으로 넘어가기
-        SceneManager.LoadScene("CreditScene");
+        //크레딧 씬으로
+        SceneManager.LoadScene("EndingCredit");
     }
 
-    private IEnumerator FadeTextInOut(TextMeshProUGUI text, float duration)
+    private IEnumerator FadeTextInOut(string text)
     {
-        Color color = text.color;
+        storyText.text = text;
+        Color color = storyText.color;
         color.a = 0f;
-        text.color = color;
+        storyText.color = color;
 
-        // 페이드 인
         float elapsed = 0f;
-        while (elapsed < 1f)
+        while (elapsed < textFadeDuration)
         {
             elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(0f, 1f, elapsed / 1f);
-            text.color = color;
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(duration);
-
-        // 페이드 아웃
-        elapsed = 0f;
-        while (elapsed < 1f)
-        {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(1f, 0f, elapsed / 1f);
-            text.color = color;
+            color.a = Mathf.Lerp(0f, 1f, elapsed / textFadeDuration);
+            storyText.color = color;
             yield return null;
         }
     }
 
-    private IEnumerator FadeImageInOut(Image img, float duration)
+    private IEnumerator FadeTextOut()
+    {
+        Color color = storyText.color;
+        float elapsed = 0f;
+        while (elapsed < textFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Lerp(1f, 0f, elapsed / textFadeDuration);
+            storyText.color = color;
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeImage(Image img, float fromAlpha, float toAlpha, float duration)
     {
         Color color = img.color;
-        color.a = 0f;
-        img.color = color;
-
-        // 페이드 인
         float elapsed = 0f;
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(0f, 1f, elapsed / duration);
-            img.color = color;
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(2f);
-
-        // 페이드 아웃
-        elapsed = 0f;
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(1f, 0f, elapsed / duration);
+            float t = Mathf.Clamp01(elapsed / duration);
+            color.a = Mathf.Lerp(fromAlpha, toAlpha, t);
             img.color = color;
             yield return null;
         }
