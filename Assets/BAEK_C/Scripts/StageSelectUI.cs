@@ -22,6 +22,12 @@ public class StageSelectUI : MonoBehaviour
     [SerializeField] private GameObject infoPanel;
     [SerializeField]private TextMeshProUGUI stageInfoText;
     [SerializeField]private Button startButton;
+    [Header("사운드")]
+    [SerializeField] private AudioSource audioSource;     // 효과음용
+    [SerializeField] private AudioSource bgmSource;        // BGM용
+
+    [SerializeField] private AudioClip stageSelectSound;   // 스테이지 선택 효과음
+    [SerializeField] private AudioClip startButtonSound;   // 시작 버튼 효과음
 
     private string selectedStage = "";
     private int keysCollected = 0;
@@ -29,7 +35,10 @@ public class StageSelectUI : MonoBehaviour
     void Start()
     {
         infoPanel.SetActive(false);
-
+        if (bgmSource != null && !bgmSource.isPlaying)
+        {
+            bgmSource.Play();
+        }
         //  메쉬프로라 폰트잇어야 한글가능
 
         if (stageButtons.Count != stageInfos.Count)
@@ -43,13 +52,29 @@ public class StageSelectUI : MonoBehaviour
             int index = i;
             stageButtons[i].onClick.AddListener((() =>
             {
+                AnimateButtonPress(stageButtons[index].transform);
+                if (stageSelectSound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(stageSelectSound);
+                }
                 selectedStage = stageInfos[index].stageName;
                 stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
                 infoPanel.SetActive(true);
             }));
         }
-        
-        startButton.onClick.AddListener((() => StartSelectedStage()));
+
+        startButton.onClick.AddListener(() => {
+            AnimateButtonPress(startButton.transform);
+            if (startButtonSound != null && audioSource != null)
+            {
+                StartCoroutine(PlayStartSoundAndLoadScene());
+            }
+            else
+            {
+                // 효과음 없으면 그냥 씬 이동
+                StartSelectedStage();
+            }
+        });
     }
 
     void StartSelectedStage()
@@ -85,5 +110,52 @@ public class StageSelectUI : MonoBehaviour
     public static class StageData
     {
         public static string selectedStage;
+    }
+
+    public void AnimateButtonPress(Transform buttonTransform)
+    {
+        StartCoroutine(ButtonPressRoutine(buttonTransform));
+    }
+
+    private IEnumerator ButtonPressRoutine(Transform buttonTransform)
+    {
+        Vector3 originalPos = buttonTransform.localPosition;
+        Vector3 targetPos = originalPos + new Vector3(0, 20f, 0); //위로 올라가는정도
+
+        float duration = 0.1f;
+        float elapsed = 0f;
+
+        
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            buttonTransform.localPosition = Vector3.Lerp(originalPos, targetPos, t);
+            yield return null;
+        }
+
+        elapsed = 0f;
+
+        
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            buttonTransform.localPosition = Vector3.Lerp(targetPos, originalPos, t);
+            yield return null;
+        }
+
+       
+        buttonTransform.localPosition = originalPos;
+    }
+    private IEnumerator PlayStartSoundAndLoadScene()
+    {
+        audioSource.PlayOneShot(startButtonSound);
+
+        
+        yield return new WaitForSeconds(startButtonSound.length);
+
+        
+        StartSelectedStage();
     }
 }
