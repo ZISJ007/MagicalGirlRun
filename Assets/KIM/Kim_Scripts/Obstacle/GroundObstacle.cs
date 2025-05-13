@@ -7,7 +7,8 @@ public class GroundObstacle : BaseObstacle
 {
     [SerializeField] private float upMoveSpeed;
     [SerializeField] private float targetY;
-    
+    [SerializeField]private float xMoveSpeed;
+    private GameSystem gameSystem;
     private bool isYMoving = false;
 
     public override void Spawn()
@@ -22,6 +23,8 @@ public class GroundObstacle : BaseObstacle
             YMove();
         }
     }
+    
+    
 
     protected override void YMove()
     {

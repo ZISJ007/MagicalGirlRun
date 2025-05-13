@@ -1,52 +1,77 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Serialization;
+
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject tutorialCharacter;
+
+    [System.Serializable]
+    public class TutorialStep
+    {
+        public string message;
+        public List<KeyCode> requiredKeys;
+    }
+    
+    [FormerlySerializedAs("tutorialCharacter")] public GameObject tutorialPanel;
     public TextMeshProUGUI tutorialText;
 
-    private int tutorialStep = 0;
-    private bool TutorialActive = true;
+    [SerializeField] private List<TutorialStep> steps = new List<TutorialStep>();
+    
+    private int currentStepIndex = 0;
+    private bool tutorialActive = true;
 
     void Start()
     {
-        tutorialCharacter.SetActive(true);
-        ShowMessage("스페이스바로 점프할 수 있도록 합니다. 실시");
+        if (steps.Count == 0)
+        {
+            tutorialActive = false;
+            return;
+        }
+        tutorialPanel.SetActive(true);
+        ShowCurrentStep();
     }
 
     void Update()
     {
-        if (!TutorialActive) return;
+        if(!tutorialActive||currentStepIndex >= steps.Count) return;
 
-        if (tutorialStep == 0 && Input.GetKeyDown(KeyCode.Space))
+        foreach (KeyCode key in steps[currentStepIndex].requiredKeys)
         {
-            ShowMessage("이번엔 Shift로 슬라이딩해 보도록 합니다.");
-            tutorialStep++;
-        }
-        else if (tutorialStep == 1 && Input.GetKeyDown(KeyCode.LeftShift)|| Input.GetKeyDown(KeyCode.RightShift))
-        {
-            ShowMessage("좋아, 제군들 마법소녀런에 온걸 환영한다");
-            tutorialStep++;
-        }
-        else if (tutorialStep == 2)
-        {
-            StartCoroutine(EndTutorial());
-            tutorialStep++;
+            if (Input.GetKeyDown(key))
+            {
+                NextStep();
+                break;
+            }
         }
     }
 
-    void ShowMessage(string message)
+    void NextStep()
     {
-        tutorialText.text = message;
+        currentStepIndex++;
+
+        if (currentStepIndex >= steps.Count)
+        {
+            StartCoroutine(EndTutorial());
+        }
+        else
+        {
+            ShowCurrentStep();
+        }
+    }
+
+    void ShowCurrentStep()
+    {
+        tutorialText.text = steps[currentStepIndex].message;
     }
    
     IEnumerator EndTutorial()
     {
         yield return new WaitForSeconds(1f);
-        tutorialCharacter.SetActive(false);
+        tutorialPanel.SetActive(false);
 
-        TutorialActive = false;
+        tutorialActive = false;
 
         // 여기서 게임 시작 로직 연결
         Debug.Log("튜토리얼 끝 → 게임 시작!");

@@ -1289,6 +1289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2046542407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5576270532201232168, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+  m_PrefabInstance: {fileID: 602677568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2060033588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1683,7 +1688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPivot: {fileID: 1959541969390849017}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 2046542407}
   isGroundEnemy: 0
   groundAttackInterval: 2
   groundAttackGameObjectPrefab: {fileID: 0}
