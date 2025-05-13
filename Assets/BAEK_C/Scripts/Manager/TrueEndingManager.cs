@@ -6,7 +6,7 @@ using TMPro;
 
 public class TrueEndingManager : MonoBehaviour
 {
-    [Header("BGM")]
+    [Header("배경음악")]
     [SerializeField] private AudioSource bgmSource;
     [SerializeField] private AudioClip trueEndingBGM;
 
@@ -16,7 +16,7 @@ public class TrueEndingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
 
 
-    [Header("Story")]
+    [Header("스토리")]
     [SerializeField] private StoryStep[] storySteps;
 
     [Header("속도조절")]
@@ -41,24 +41,24 @@ public class TrueEndingManager : MonoBehaviour
 
     private IEnumerator PlayTrueEnding()
     {
-        // BGM 시작
+        
         bgmSource.clip = trueEndingBGM;
         bgmSource.Play();
 
-        // 블랙 배경 페이드 인 (초기연출)
-        yield return StartCoroutine(FadeImage(blackPanel, 1f, 0f, 2f));
+        //검은배경이 천천히 사라지면서 뒷 배경등장
+        yield return StartCoroutine(FadeImage(blackPanel, 1f, 0f, 5f));//더 서서히 나오게 숫자 수정
 
-        // 스토리 라인 순차 재생
+        //스토리 라인 순서대로 재생
         foreach (var step in storySteps)
         {
-            // 텍스트 & 이미지 페이드 인
+            //텍스트 & 이미지 페이드 인
             yield return StartCoroutine(FadeImage(step.illustration, 0f, 1f, imageFadeDuration));
             yield return StartCoroutine(FadeTextInOut(step.text));
 
-            // 텍스트 유지 시간
+            //텍스트 유지 시간
             yield return new WaitForSeconds(textDisplayDuration);
 
-            // 텍스트 & 이미지 페이드 아웃
+            //텍스트,이미지 페이드 아웃
             yield return StartCoroutine(FadeTextOut());
             yield return StartCoroutine(FadeImage(step.illustration, 1f, 0f, imageFadeDuration));
         }
@@ -109,9 +109,19 @@ public class TrueEndingManager : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / duration);
-            color.a = Mathf.Lerp(fromAlpha, toAlpha, t);
+
+            
+            float easedT = EaseInOut(t);
+
+            color.a = Mathf.Lerp(fromAlpha, toAlpha, easedT);
             img.color = color;
+
             yield return null;
         }
+    }
+
+    private float EaseInOut(float t)
+    {
+        return t * t * (3f - 2f * t);  
     }
 }

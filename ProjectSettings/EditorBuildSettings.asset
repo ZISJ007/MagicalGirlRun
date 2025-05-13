@@ -36,9 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelectScene.unity
     guid: 731399c5b0506014aa87a9b87e155171
   - enabled: 1
-    path: Assets/BAEK_C/Scenes/TrueEndingScene.unity
-    guid: ddcefde972704cd4eaaa5bfc7a8313b6
-  - enabled: 1
     path: Assets/Scenes/EndingCredit.unity
     guid: 90546dbdb8d7a0847abbf8e723c51a5b
+  - enabled: 1
+    path: Assets/Scenes/TrueEndingScene.unity
+    guid: 691c034ec96c0214f969cb2236865318
   m_configObjects: {}

@@ -23,12 +23,12 @@ public class CreditUI : MonoBehaviour
 
     
     [SerializeField] private Canvas canvas;
-    [SerializeField] private float triggerViewportY = 0.4f; // 화면 중간
-    [SerializeField] private float tolerance = 0.2f;        // 오차 범위
+    [SerializeField] private float triggerViewportY = 0.4f; //화면 중간
+    [SerializeField] private float tolerance = 0.2f;        //오차 범위
     [SerializeField] private Button skipButton;
-    [SerializeField] private float creditEndY = 1500f;   // 스크롤 자동 끝나는 부분
-    [SerializeField] private float ScrollSpeed = 200f;  // 누르고 있을 때 속도
-    [SerializeField] private KeyCode accelerateKey = KeyCode.Mouse0;  // 왼쪽 마우스 버튼
+    [SerializeField] private float creditEndY = 1500f;   //스크롤 자동 끝나는 부분
+    [SerializeField] private float ScrollSpeed = 200f;  //누르고 있을 때 속도
+    [SerializeField] private KeyCode accelerateKey = KeyCode.Mouse0;  //왼쪽 마우스 버튼
     [SerializeField] private float imageFadeLerpSpeed = 2f;
     private bool isScrolling = true;
     
@@ -43,7 +43,7 @@ public class CreditUI : MonoBehaviour
     {
         skipButton.onClick.AddListener(SkipCredit);
 
-        // 이미지 전부 투명으로 초기화
+        
         foreach (var data in creditImageDatas)
         {
             Color color = data.image.color;
@@ -64,7 +64,7 @@ public class CreditUI : MonoBehaviour
 
             CheckShowImages();
 
-            // 크레딧 끝나면 자동 이동
+            //크레딧 끝나면 자동 이동
             if (scrollContent.anchoredPosition.y >= creditEndY)
             {
                 isScrolling = false;
@@ -76,7 +76,7 @@ public class CreditUI : MonoBehaviour
     {
         foreach (var data in creditImageDatas)
         {
-            // 이미지의 월드 포지션 → 뷰포트 좌표로 변환 (0~1)
+            //뷰포트 좌표로 변환 (0~1)
             Vector2 viewportPos = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, data.image.transform.position);
             viewportPos.x /= Screen.width;
             viewportPos.y /= Screen.height;
@@ -85,14 +85,14 @@ public class CreditUI : MonoBehaviour
 
             if (viewportPos.y >= triggerViewportY - tolerance && viewportPos.y <= triggerViewportY + tolerance)
             {
-                // 중앙에 가까울수록 alpha 1, 벗어날수록 alpha 0
+                //중앙에 가까울수록 alpha 1 멀리 벗어날수록 alpha 0
                 float t = Mathf.InverseLerp(triggerViewportY - tolerance, triggerViewportY + tolerance, viewportPos.y);
                 alpha = 1f - Mathf.Abs(t - 0.5f) * 2f;  // 중앙이면 1, 양쪽 끝으로 갈수록 0
             }
 
-            // 부드럽게 보이게 (Lerp로 자연스럽게)
+            //부드럽게 보이게
             Color color = data.image.color;
-            color.a = Mathf.Lerp(color.a, alpha, Time.deltaTime * imageFadeLerpSpeed);  // *10f로 빠르게 반응
+            color.a = Mathf.Lerp(color.a, alpha, Time.deltaTime * imageFadeLerpSpeed);
             data.image.color = color;
         }
     }
@@ -143,7 +143,7 @@ public class CreditUI : MonoBehaviour
 
         yield return new WaitForSeconds(firstDuration);
 
-        // 페이드 아웃
+      
         elapsed = 0f;
         while (elapsed < fadeDuration)
         {
