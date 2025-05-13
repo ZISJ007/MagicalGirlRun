@@ -24,6 +24,7 @@ public class StageSelectUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bestScoreText;
     [SerializeField]private TextMeshProUGUI stageInfoText;
     [SerializeField]private Button startButton;
+
     [Header("사운드")]
     [SerializeField] private AudioSource audioSource;     // 효과음용
     [SerializeField] private AudioSource bgmSource;        // BGM용
