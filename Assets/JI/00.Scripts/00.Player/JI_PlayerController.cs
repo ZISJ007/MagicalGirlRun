@@ -92,14 +92,11 @@ public class JI_PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && IsGrounded() && !isJump && !isLanding)
         {
-            anim.SetBool("IsSlide", true); // 슬라이드 애니메이션 트리거 설정
-            //slideObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
-            
+            anim.SetBool("IsSlide", true); // 슬라이드 애니메이션 트리거 설정         
         }
         else
         {
             anim.SetBool("IsSlide", false); // 슬라이드 애니메이션 트리거 설정
-            //slideObject.transform.rotation = Quaternion.identity;
         }
     }
     public void HandleDeath()

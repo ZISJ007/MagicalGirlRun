@@ -8,7 +8,7 @@ public class JI_ResourceController : MonoBehaviour
     private JI_PlayerController playerController;
     private JI_PlayerStats playerStats;
     [Header("장애물 데미지")]
-    public float obstacleDamage = 0;
+    public int obstacleDamage = 0;
     [Header("무적 지속시간(초)")]
     public float invincibilityDuration = 1.0f;
     [Header("플레이어 무적 상태")]
@@ -28,16 +28,16 @@ public class JI_ResourceController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.H))  // H키를 눌렀을 때 체력 회복
         {
-            TakeDamage(1f);
+            TakeDamage(1);
         }
     }
 
-    public void Heal(float amount)
+    public void Heal(int amount)
     {
         playerStats.Heal(amount);  // 플레이어 체력 회복
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
         if (isInvincible) return; // 무적 상태일 때는 return
         playerController.HandleDamage(invincibilityDuration);  // 플레이어 피해 애니메이션 매서드 호출
@@ -47,6 +47,11 @@ public class JI_ResourceController : MonoBehaviour
         {
             Death();
         }
+    }
+    public void TakeHeal(int amount) // 하트 회복
+    {
+        if (playerStats.CurrentHp >= playerStats.MaxHp) return; // 최대 체력 이상일 때는 return
+        playerStats.Heal(amount);  // 플레이어 체력 회복
     }
     public void StartInvincibility(float duration)
     {
