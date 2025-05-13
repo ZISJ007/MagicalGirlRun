@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/AerialEnemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/AerialEnemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/GroundEnemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/GroundEnemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" afterDir="false" />
-    </list>
+    <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
