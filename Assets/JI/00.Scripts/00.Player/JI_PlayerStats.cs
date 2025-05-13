@@ -2,29 +2,30 @@ using UnityEngine;
 
 public class JI_PlayerStats : MonoBehaviour
 {
-    [Header("ÇÃ·¹ÀÌ¾î Ã¼·Â")]
-    [SerializeField] private int maxHp = 3; // ÃÖ´ë Ã¼·Â (³»ºÎ Àü¿ë)
-    [SerializeField] private int currentHp; // ÇöÀç Ã¼·Â (³»ºÎ Àü¿ë)
-    JI_HeartsUI heartsUI; // ÇÏÆ® UI¸¦ ÂüÁ¶ÇÏ±â À§ÇÑ º¯¼ö
-    public int MaxHp // ÃÖ´ë Ã¼·Â ¿ÜºÎ¿¡¼­  Á¢±Ù °¡´É
+    [Header("í”Œë ˆì´ì–´ ì²´ë ¥")]
+    [SerializeField] private int maxHp = 3; // ìµœëŒ€ ì²´ë ¥ (ë‚´ë¶€ ì „ìš©)
+    [SerializeField] private int currentHp; // í˜„ì¬ ì²´ë ¥ (ë‚´ë¶€ ì „ìš©)
+    JI_HeartsUI heartsUI; // í•˜íŠ¸ UIë¥¼ ì°¸ì¡°í•˜ê¸° ìœ„í•œ ë³€ìˆ˜
+    public int MaxHp // ìµœëŒ€ ì²´ë ¥ ì™¸ë¶€ì—ì„œ  ì ‘ê·¼ ê°€ëŠ¥
     {
         get => maxHp;
         set
         {
-            maxHp = Mathf.Max(1, value); // ÃÖ¼Ò 1 ÀÌ»óÀ¸·Î Á¦ÇÑ
-            // currentHp ÃÖ¼Ò°ªÀÌ 0, ÃÖ´ë°ªÀÌ maxHp·Î Á¦ÇÑ
+
+            maxHp = Mathf.Max(1, value); // ìµœì†Œ 1 ì´ìƒìœ¼ë¡œ ì œí•œ
+            // currentHp ìµœì†Œê°’ì´ 0, ìµœëŒ€ê°’ì´ maxHpë¡œ ì œí•œ
             currentHp = Mathf.Clamp(currentHp, 0, maxHp);
-            // heartsUI°¡ nullÀÌ ¾Æ´Ï¸é ÃÖ´ë Ã¼·Â º¯°æ ½Ã UI °»½Å
+            // heartsUIê°€ nullì´ ì•„ë‹ˆë©´ ìµœëŒ€ ì²´ë ¥ ë³€ê²½ ì‹œ UI ê°±ì‹ 
             heartsUI?.UpdateHearts();  
         }
     }
-    public int CurrentHp // ÇöÀç Ã¼·Â ¿ÜºÎ¿¡¼­ Á¢±Ù °¡´É
+    public int CurrentHp // í˜„ì¬ ì²´ë ¥ ì™¸ë¶€ì—ì„œ ì ‘ê·¼ ê°€ëŠ¥
     {
         get => currentHp;
         private set
         {
             currentHp = Mathf.Clamp(value, 0, maxHp);
-            // heartsUI°¡ nullÀÌ ¾Æ´Ï¸é Ã¼·Â º¯°æµÉ ¶§ UI °»½Å
+            // heartsUIê°€ nullì´ ì•„ë‹ˆë©´ ì²´ë ¥ ë³€ê²½ë  ë•Œ UI ê°±ì‹ 
             heartsUI?.UpdateHearts(); 
 
         }
@@ -39,15 +40,15 @@ public class JI_PlayerStats : MonoBehaviour
     }
     private void Start()
     {
-        // heartsUI°¡ nullÀÌ ¾Æ´Ï¸é ½ÃÀÛÇÒ ¶§ UI ÃÊ±âÈ­
+        // heartsUIê°€ nullì´ ì•„ë‹ˆë©´ ì‹œì‘í•  ë•Œ UI ì´ˆê¸°í™”
         heartsUI?.UpdateHearts();
     }
-    public void Heal(int amount) // Ã¼·Â È¸º¹ 
+    public void Heal(int amount) // ì²´ë ¥ íšŒë³µ 
     {
         CurrentHp += amount;
     }
 
-    public void TakeDamage(int amount) // Ã¼·Â °¨¼Ò
+    public void TakeDamage(int amount) // ì²´ë ¥ ê°ì†Œ
     {
         CurrentHp -= amount;
     }

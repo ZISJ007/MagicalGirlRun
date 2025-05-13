@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private bool isGroundEnemy = true;
 
     [Header("Ground Enemy")] 
-    [SerializeField] private float groundAttackInterval = 2f;
+    public float groundAttackInterval = 2f;
     [SerializeField] private GameObject groundAttackGameObjectPrefab;
 
     [Space(10), Header("Aerial Enemy")] 
@@ -32,12 +32,13 @@ public class EnemyController : MonoBehaviour
 
     private GameObject groundAttackObject;
     //애니메이션
-    private static readonly int isAttack = Animator.StringToHash("IsAttack");
+    private static readonly int isGroundAttack = Animator.StringToHash("GroundIsAttack");
+    private static readonly int isAerialAttack = Animator.StringToHash("AerialIsAttack");
     private Animator animator;
 
     private void Awake()
     {
-            animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         poolManager = FindObjectOfType<PoolManager>();
         if (playerTransform == null) return;
         if (groundAttackObject == null) return;
@@ -53,17 +54,20 @@ public class EnemyController : MonoBehaviour
         {
             groundAttackObject = Instantiate(groundAttackGameObjectPrefab, transform);
             groundAttackObject.SetActive(false);
+            StartCoroutine(GroundAttackRoutine());
         }
-
-        StartCoroutine(GroundAttackRoutine());
-        StartCoroutine(AerialAttackRoutine());
+        else
+        {
+            StartCoroutine(AerialAttackRoutine());
+        }
     }
 
     private IEnumerator GroundAttackRoutine()
     {
         while (true)
         {
-            GroundAttackFire();
+            yield return new WaitForSeconds(2f);
+            GroundAttackAnimation();
             yield return new WaitForSeconds(groundAttackInterval);
         }
     }
@@ -72,6 +76,8 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
+            AerialAttackAnimation();
+            yield return new WaitForSeconds(0.5f);
             AerialAttack();
             yield return new WaitForSeconds(aerialAttackInterval);
         }
@@ -85,7 +91,7 @@ public class EnemyController : MonoBehaviour
             groundAttackObject.transform.rotation = attackPivot.rotation;
             groundAttackObject.SetActive(true);
 
-            AttackAnimation();
+            GroundAttackAnimation();
             GroundAttackObject script = groundAttackObject.GetComponent<GroundAttackObject>();
             script.StartMove();
         }
@@ -134,8 +140,15 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void AttackAnimation()
+    public void GroundAttackAnimation()
     {
-        animator.SetTrigger(isAttack);
+        if(animator==null)return;
+        animator.SetTrigger(isGroundAttack);
+    }
+
+    public void AerialAttackAnimation()
+    {
+        if (animator==null)return;
+        animator.SetTrigger(isAerialAttack);
     }
 }

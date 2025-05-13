@@ -7,6 +7,7 @@ public class JI_ResourceController : MonoBehaviour
 {
     private JI_PlayerController playerController;
     private JI_PlayerStats playerStats;
+
     [Header("장애물 데미지")]
     public int obstacleDamage = 0;
     [Header("무적 지속시간(초)")]
@@ -30,6 +31,14 @@ public class JI_ResourceController : MonoBehaviour
         {
             TakeDamage(1);
         }
+
+        if (GameSystem.hasFinished)
+        {
+            transform.position += Vector3.right * GameSystem.speed * Time.deltaTime;
+        }
+
+        if (isInvincible) return;
+        isInvincible = true;
     }
 
     public void Heal(int amount)

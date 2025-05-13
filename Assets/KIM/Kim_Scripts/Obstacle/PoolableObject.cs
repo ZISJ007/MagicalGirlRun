@@ -9,6 +9,9 @@ public class PoolableObject : MonoBehaviour
 
     public void returnPool()
     {
+        if(PoolManager==null)return;
+        if(string.IsNullOrEmpty(PoolKey))return;
+        
         PoolManager.ReturnPoolObject(this.gameObject, PoolKey);
     }
 }
