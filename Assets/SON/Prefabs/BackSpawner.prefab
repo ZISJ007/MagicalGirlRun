@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backPrefab: {fileID: 6326506970817284208, guid: 948d195fd0b756d4cbc05d9049f53a3f, type: 3}
-  spawnInterval: 6
+  spawnInterval: 60
   spawnPosition: {x: 26, y: 0.9, z: 0}
-  scrollSpeed: 2
+  scrollSpeed: 0.2
