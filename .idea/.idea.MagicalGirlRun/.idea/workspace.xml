@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
