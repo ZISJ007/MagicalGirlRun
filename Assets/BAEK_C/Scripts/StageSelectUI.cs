@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -20,6 +21,7 @@ public class StageSelectUI : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject infoPanel;
+    [SerializeField] private TextMeshProUGUI bestScoreText;
     [SerializeField]private TextMeshProUGUI stageInfoText;
     [SerializeField]private Button startButton;
     [Header("사운드")]
@@ -60,6 +62,8 @@ public class StageSelectUI : MonoBehaviour
                 selectedStage = stageInfos[index].stageName;
                 stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
                 infoPanel.SetActive(true);
+
+                ShowBestScore(index);
             }));
         }
 
@@ -157,5 +161,12 @@ public class StageSelectUI : MonoBehaviour
 
         
         StartSelectedStage();
+    }
+
+    void ShowBestScore(int stageIndex)
+    {
+        string key = $"bestScore_{stageIndex + 1}";
+        int best = PlayerPrefs.GetInt(key, 0);
+        bestScoreText.text = $"최고 점수: {best}";
     }
 }
