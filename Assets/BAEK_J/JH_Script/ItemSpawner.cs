@@ -19,10 +19,6 @@ public class ItemSpawner : MonoBehaviour
     public float spawnTimer = 0f; // 
     private int itemTurn = 0; // 아이템 스폰 주기 저장
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         spawnTimer += GameSystem.speed * Time.deltaTime;

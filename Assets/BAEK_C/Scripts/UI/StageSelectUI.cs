@@ -66,7 +66,6 @@ public class StageSelectUI : MonoBehaviour
 
                 ShowBestScore(i + 1);
             }));
-
         }
 
         startButton.onClick.AddListener(() => {

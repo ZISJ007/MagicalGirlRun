@@ -10,14 +10,13 @@ public class GameSystem : MonoBehaviour
 
     [Header("현재 스테이지")]
     [SerializeField] private int isStage = 0;
-
     [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
     [Header("기본 속도와 목적지 설정")]
     public static float speed = 5;
     [SerializeField] private float moveDistance;
-    [SerializeField] private float destination = 500;
+    [SerializeField] private float destination = 100;
 
     public static bool hasFinished = false; // Finish 메서드 반복 실행 방지
 
