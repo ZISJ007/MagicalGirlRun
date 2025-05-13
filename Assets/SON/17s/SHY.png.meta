@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615ed9e42b76de8419a56505f299b51d
+guid: 263da82222fe8a949a44c9ab3ccb96e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Car(Run)_0
+      name: SHY_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 49
-        height: 32
+        x: 41
+        y: 52
+        width: 279
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc542107f507fb4f8dd844f9131e81e
-      internalID: -759292067
+      spriteID: 0f209ca6caa2fc24baa2575a5b28d7ca
+      internalID: 115938222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Car(Run)_1
+      name: SHY_1
       rect:
         serializedVersion: 2
-        x: 52
-        y: 0
-        width: 49
-        height: 32
+        x: 441
+        y: 60
+        width: 279
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,50 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 608bf43f91fef5c42b99e79ffbded02b
-      internalID: 154863290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Car(Run)_2
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 1
-        width: 48
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52a467438010eed47ac1271e07c9d84b
-      internalID: -964311878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Car(Run)_3
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 0
-        width: 49
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acffbdd3cfa815c4bbb2651f52ddce73
-      internalID: -1831533860
+      spriteID: c45beccc380508a45bca705473c69bc5
+      internalID: 604082585
       vertices: []
       indices: 
       edges: []
@@ -217,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Car(Run)_0: -759292067
-      Car(Run)_1: 154863290
-      Car(Run)_2: -964311878
-      Car(Run)_3: -1831533860
+      SHY_0: 115938222
+      SHY_1: 604082585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
