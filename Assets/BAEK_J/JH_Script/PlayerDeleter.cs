@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeleter : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class PlayerDeleter : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-            Time.timeScale = 0f;
+            //시간 멈추고 결과 UI출력
+            
+            //로드씬은 임시
+            SceneManager.LoadScene("Scenes/StageSelectScene");
         }
     }
 }

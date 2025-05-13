@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPivot: {fileID: 1959541969390849017}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1346832406}
   isGroundEnemy: 0
   groundAttackInterval: 2
   groundAttackGameObjectPrefab: {fileID: 0}
