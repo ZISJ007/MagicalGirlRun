@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -64,7 +63,7 @@ public class StageSelectUI : MonoBehaviour
                 stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
                 infoPanel.SetActive(true);
 
-                ShowBestScore(index);
+                ShowBestScore(index + 1);
             }));
         }
 
@@ -80,6 +79,14 @@ public class StageSelectUI : MonoBehaviour
                 StartSelectedStage();
             }
         });
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R)) // R 키로 BestScore 초기화
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     void StartSelectedStage()
@@ -164,9 +171,10 @@ public class StageSelectUI : MonoBehaviour
         StartSelectedStage();
     }
 
-    void ShowBestScore(int stageIndex)
+    private void ShowBestScore(int stage) // 최고 점수 불러오는 메서드
     {
-        string key = $"bestScore_{stageIndex + 1}";
+        Debug.Log($"현재 스테이지 {stage} 최고점수");
+        string key = $"bestScore_{stage}";
         int best = PlayerPrefs.GetInt(key, 0);
         bestScoreText.text = $"최고 점수: {best}";
     }

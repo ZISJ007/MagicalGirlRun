@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
-using UnityEditor.Build.Content;
-using UnityEditor.SceneManagement;
+
 using UnityEngine;
+using TMPro;
 
 public class QuestManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI questUI;
+
     [Header("현재 스테이지")]
     // 스테이지 퀘스트 상태
     public static bool isQuestClear;
@@ -23,13 +20,14 @@ public class QuestManager : MonoBehaviour
         Debug.Log($"퀘스트 활성화");
         onQuest = true;
         isQuestClear = false;
+        OnQuestUI();
     }
 
     public void GetQuestItem() // 퀘스트 아이템 습득
     {
         reserves ++;
 
-        Debug.Log($"퀘스트 아이템 획득 총 {reserves}개");
+        OnQuestUI();
 
         if (onQuest && demand <= reserves)
         {
@@ -39,9 +37,16 @@ public class QuestManager : MonoBehaviour
 
     private void QuestComplete() // 퀘스트 완료
     {
-        Debug.Log($"퀘스트 완료");
+        questUI.text = $"퀘스트 아이템 수집\n-수집 완료-";
         isQuestClear = true;
         onQuest = false;
         reserves = 0;
+    }
+
+    private void OnQuestUI() // 퀘스트 현황 표시
+    {
+        if (onQuest == false) { return; }
+
+        questUI.text = $"퀘스트 아이템 수집\n{reserves}/{demand}";
     }
 }

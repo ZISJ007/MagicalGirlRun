@@ -8,16 +8,15 @@ TagManager:
   - Obstacle
   - Item
   - ItemObstacle
-  - Heart
-  - BackGround
+
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 

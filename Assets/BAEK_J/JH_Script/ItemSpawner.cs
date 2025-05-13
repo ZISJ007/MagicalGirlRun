@@ -1,8 +1,6 @@
-using System.Collections;
+
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class ItemSpawner : MonoBehaviour
 {
@@ -18,10 +16,6 @@ public class ItemSpawner : MonoBehaviour
 
     public float spawnTimer = 0f; // 
     private int itemTurn = 0; // 아이템 스폰 주기 저장
-
-    private void Start()
-    {
-    }
 
     private void Update()
     {

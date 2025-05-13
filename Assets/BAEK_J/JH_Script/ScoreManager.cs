@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
 
@@ -27,7 +26,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         score += amount;
-        scoreText.text = score.ToString();
+        scoreText.text = $"현재 점수:{score}";
     }
 
     public void SetScore()
@@ -36,9 +35,9 @@ public class ScoreManager : MonoBehaviour
             nowScoreTxt.text = score.ToString();
 
         string key = $"bestScore_{isStage}";
-
-        // 기존 점수 가져오기
         int best = PlayerPrefs.GetInt(key, 0);
+
+        Debug.Log($"저장된 최고 점수: {best}");
 
         if (score > best) // 현재 점수와 비교
         {
