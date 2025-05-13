@@ -32,13 +32,15 @@ public class ScoreManager : MonoBehaviour
 
     public void SetScore()
     {
+        Debug.Log($"SetScore 호출됨 | 현재 점수: {score}");
+
         if (nowScoreTxt != null)
             nowScoreTxt.text = score.ToString();
 
         string key = $"bestScore_{isStage}";
-
-        // 기존 점수 가져오기
         int best = PlayerPrefs.GetInt(key, 0);
+
+        Debug.Log($"저장된 최고 점수: {best}");
 
         if (score > best) // 현재 점수와 비교
         {

@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 497258766}
   - component: {fileID: 497258767}
   - component: {fileID: 497258768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1571821697197255461, guid: 1c04450e3a2061f41b20f0c40032a7f9, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5576270532201232168, guid: 1c04450e3a2061f41b20f0c40032a7f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -624,7 +628,7 @@ GameObject:
   - component: {fileID: 1019732117}
   - component: {fileID: 1019732119}
   - component: {fileID: 1019732118}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

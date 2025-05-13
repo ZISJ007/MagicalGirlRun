@@ -64,7 +64,7 @@ public class StageSelectUI : MonoBehaviour
                 stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
                 infoPanel.SetActive(true);
 
-                ShowBestScore(i + 1);
+                ShowBestScore(index + 1);
             }));
         }
 
@@ -80,6 +80,14 @@ public class StageSelectUI : MonoBehaviour
                 StartSelectedStage();
             }
         });
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R)) // R 키로 BestScore 초기화
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     void StartSelectedStage()
@@ -164,8 +172,9 @@ public class StageSelectUI : MonoBehaviour
         StartSelectedStage();
     }
 
-    private void ShowBestScore(int stage)
+    private void ShowBestScore(int stage) // 최고 점수 불러오는 메서드
     {
+        Debug.Log($"현재 스테이지 {stage} 최고점수");
         string key = $"bestScore_{stage}";
         int best = PlayerPrefs.GetInt(key, 0);
         bestScoreText.text = $"최고 점수: {best}";

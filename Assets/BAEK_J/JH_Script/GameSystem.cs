@@ -38,6 +38,7 @@ public class GameSystem : MonoBehaviour
         if (moveDistance >= destination)
         {
             hasFinished = true;
+            scoreManager.SetScore();
             Finish();
         }
 
@@ -60,12 +61,10 @@ public class GameSystem : MonoBehaviour
 
     private void Finish() // 퀘스트를 클리어 했다면 키 제공
     {
-
         if (QuestManager.isQuestClear == true)
         {
             GameSystem.key[isStage - 1] = true;
             Debug.Log($"{isStage}번째 키 획득");
-            scoreManager.SetScore();
         }
     }
 }
