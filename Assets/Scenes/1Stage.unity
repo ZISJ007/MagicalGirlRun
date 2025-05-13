@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1571821697197255461, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5576270532201232168, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -487,6 +491,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
   m_PrefabInstance: {fileID: 7036491736712154109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &898763472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 261115521598269062, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
+  m_PrefabInstance: {fileID: 606273368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ddc32b52cfa0449892adbcb85d027b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093198821
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +772,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1321708867}
   - component: {fileID: 1321708868}
-  m_Layer: 0
+  - component: {fileID: 1321708869}
+  m_Layer: 3
   m_Name: Ground1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,6 +847,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1321708869
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321708866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11.428572, y: 3.4285715}
+    newSize: {x: 11.428572, y: 3.4285715}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &1346832406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5576270532201232168, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
@@ -1065,8 +1126,12 @@ PrefabInstance:
       objectReference: {fileID: 247521661}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: destination
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 898763472}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1208,7 +1273,7 @@ GameObject:
   - component: {fileID: 1827924097}
   - component: {fileID: 1827924098}
   - component: {fileID: 1827924099}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1390,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11, y: 1}
+  m_Size: {x: 11.5, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1942246268 stripped
 MonoBehaviour:
