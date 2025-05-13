@@ -55,6 +55,9 @@ public class ObstacleSpawner : MonoBehaviour
 
             float spawnDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
             yield return new WaitForSeconds(spawnDelay);
+
+            if (GameSystem.hasFinished)
+                break;
         }
     }
 }

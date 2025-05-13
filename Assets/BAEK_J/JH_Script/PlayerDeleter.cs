@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDeleter : MonoBehaviour
+public class PlayerDeleter : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Item"))
+        if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            Time.timeScale = 0f;
         }
     }
 }

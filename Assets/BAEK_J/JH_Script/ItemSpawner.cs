@@ -12,58 +12,43 @@ public class ItemSpawner : MonoBehaviour
 
     [Header("아이템 리스트와 스폰 설정")]
     public List<GameObject> items;
-    [SerializeField] private float coin_Y = -1.5f;
+    [SerializeField] private float spawn_Y = -3f;
     [SerializeField] private int spawnCount = 15; // 한번에 소환하는 아이템 수
-    [SerializeField] private float spawnInterval = 6; // 아이템 스폰 간격
+    [SerializeField] private float spawnInterval = 0.3f; // 아이템 스폰 간격
 
-    private float spawnTimer = 0f; // 스폰 간격 측정용
-    private int itemTurn = 1; // 아이템 스폰 주기 저장
+    public float spawnTimer = 0f; // 
+    private int itemTurn = 0; // 아이템 스폰 주기 저장
 
     private void Start()
     {
-        Spawnitem();
     }
 
-    void Update()
+    private void Update()
     {
+        spawnTimer += GameSystem.speed * Time.deltaTime;
 
-
-        spawnTimer += Time.deltaTime;
-
-            if (spawnTimer >= spawnInterval) // 스폰 처리
-            {
-                Spawnitem();
-                spawnTimer = 0f;
-            }
+        if (spawnTimer >= spawnInterval && !GameSystem.hasFinished)
+        {
+            Spawnitem();
+            spawnTimer = 0f; // 누적 거리 초기화
+        }
     }
 
     private void Spawnitem() // 아이템 스폰
     {
-        if (items == null) return;
+        itemTurn++;
 
-        for (int i = 0; i < spawnCount; i++)
+        Vector3 spawnPosition = new Vector3
+        ((target.position.x + spawnOffset), spawn_Y, 0f);
+
+        if (itemTurn % 30 == 0) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
         {
-            Vector3 spawnPosition = new Vector3
-            ((target.position.x + (i * 2)) + spawnOffset, -2.5f, 0f);
-
-            if (i == spawnCount - 1 && itemTurn == 2) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
-            {
-                int random = Random.Range(1, items.Count);
-                Instantiate(items[random], spawnPosition, Quaternion.identity);
-            }
-            else // 그 외 코인 스폰
-            {
-                Instantiate(items[0], spawnPosition, Quaternion.identity);
-            }
+            int random = Random.Range(1, items.Count);
+            Instantiate(items[random], spawnPosition, Quaternion.identity);
         }
-
-        if (itemTurn != 2) // 생성 주기 체크
+        else // 그 외 코인 스폰
         {
-            itemTurn = 2;
-        }
-        else if (itemTurn != 1)
-        {
-            itemTurn = 1;
+            Instantiate(items[0], spawnPosition, Quaternion.identity);
         }
     }
 }

@@ -45,6 +45,7 @@ public class JI_PlayerController : MonoBehaviour
         {
             jumpCount = 0;
         }
+
         HandleSlide();
         IsLanding();
     }
@@ -166,4 +167,5 @@ public class JI_PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
+
 }

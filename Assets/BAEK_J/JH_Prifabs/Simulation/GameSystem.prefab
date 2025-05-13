@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879a11e4b3cffda428e6cddb70c7bfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
-  speed: 3
+  isStage: 1
+  stageScore: 0
+  beforeSpeed: 0
   moveDistance: 0
   destination: 1000
-  isStage: 0
