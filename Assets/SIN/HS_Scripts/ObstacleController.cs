@@ -9,7 +9,7 @@ public abstract class ObstacleController : MonoBehaviour
 
     protected virtual void Update()
     {
-        Move();
+        //Move();
     }
 
     protected virtual void Move()
