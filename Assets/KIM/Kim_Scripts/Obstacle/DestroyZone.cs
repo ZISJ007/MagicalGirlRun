@@ -13,7 +13,7 @@ public class DestroyZone : MonoBehaviour
         {
             poolableObject.returnPool();
         }
-        else
+        else if (other.CompareTag("Item"))
         {
             Destroy(other.gameObject);
         }
