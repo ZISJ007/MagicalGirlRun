@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 5949374629654069895}
   m_Layer: 0
   m_Name: GroundObstacle3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upMoveSpeed: 10
   targetY: -3.5
+  xMoveSpeed: 0
 --- !u!61 &724519747368005259
 BoxCollider2D:
   m_ObjectHideFlags: 0
