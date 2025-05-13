@@ -533,6 +533,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+--- !u!114 &833338707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7516897144586705457, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+  m_PrefabInstance: {fileID: 833338706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &835499795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5576270532201232168, guid: 1c04450e3a2061f41b20f0c40032a7f9, type: 3}
@@ -898,6 +909,10 @@ PrefabInstance:
       propertyPath: scrollBar
       value: 
       objectReference: {fileID: 1286327112}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 2008567720}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1399,6 +1414,10 @@ PrefabInstance:
       propertyPath: demand
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6168602557505624441, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
+      propertyPath: questUI
+      value: 
+      objectReference: {fileID: 833338707}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1912,6 +1931,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
+--- !u!114 &2008567720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 261115521598269062, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
+  m_PrefabInstance: {fileID: 2008567719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ddc32b52cfa0449892adbcb85d027b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &35304871145743309
 Animator:
   serializedVersion: 5
