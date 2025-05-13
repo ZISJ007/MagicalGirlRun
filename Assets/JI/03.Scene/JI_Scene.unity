@@ -906,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1571821697197255461, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: groundLayer.m_Bits
-      value: 64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3070831060415988890, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: maxHp

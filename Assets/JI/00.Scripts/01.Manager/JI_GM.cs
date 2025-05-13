@@ -18,7 +18,7 @@ public class JI_GM : MonoBehaviour
     private IEnumerator LoadSceneDelay(float delaySeconds)
     {
         yield return new WaitForSeconds(delaySeconds);
-        SceneManager.LoadScene("JI_Scene");
+        SceneManager.LoadScene("StageSelectScene");
     }
     private void Update()
     {
