@@ -10,6 +10,7 @@ public class PlayerDeleter : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            Time.timeScale = 0f;
         }
     }
 }

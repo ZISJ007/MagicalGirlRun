@@ -8,6 +8,7 @@ public class ItemInfo : MonoBehaviour
     private QuestManager questManager; // 퀘스트 매니저 참조
     private GameSystem gameSystem; // 게임 시스템 참조
     private JI_ResourceController player; // 리소스 컨트롤러 참조
+    private ScoreManager scoreManager;
 
 
     private void Start()
@@ -15,6 +16,7 @@ public class ItemInfo : MonoBehaviour
         gameSystem = FindObjectOfType<GameSystem>();
         questManager = FindObjectOfType<QuestManager>();
         player = FindObjectOfType<JI_ResourceController>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -28,7 +30,7 @@ public class ItemInfo : MonoBehaviour
         {
             if (gameObject.name.Contains("Coin")) // 코인
             {
-                gameSystem.AddScore(+100);
+                scoreManager.AddScore(+100);
             }
             else if (gameObject.name.Contains("Booster")) // 부스터
             {
