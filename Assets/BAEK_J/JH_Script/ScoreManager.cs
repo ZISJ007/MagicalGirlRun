@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -10,9 +9,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int isStage = 0;
     [SerializeField] private int score; // 게임 점수
 
-    public Text ScoreTxt;
-    public Text nowScoreTxt;
-    public Text bestScoreTxt;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI nowScoreTxt;
+    [SerializeField] private TextMeshProUGUI bestScoreTxt;
 
     void Start()
     {
@@ -21,7 +20,14 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int amount) // 점수 증감
     {
+        if (scoreText == null)
+        {
+            Debug.Log("텍스트 오브젝트를 할당 해주세요");
+            return;
+        }
+
         score += amount;
+        scoreText.text = score.ToString();
     }
 
     public void SetScore()

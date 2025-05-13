@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour
 {
+    public Scrollbar scrollBar;
+
     [Header("현재 스테이지")]
     [SerializeField] private int isStage = 0;
 
@@ -39,6 +40,8 @@ public class GameSystem : MonoBehaviour
             hasFinished = true;
             Finish();
         }
+
+        scrollBar.value = Mathf.Clamp01(moveDistance / destination);
     }
 
     public void ChangeSpeed(float amount, float duration) // 1) 지속 시간동안 속도 증감
