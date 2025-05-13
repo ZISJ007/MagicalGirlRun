@@ -251,27 +251,27 @@ MonoBehaviour:
   - speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uB098\uB2C8\uAC00"
-    bgmClip: {fileID: 8300000, guid: 32aa465f03dc7534780d1bbd0d94c7e7, type: 3}
+    bgmClip: {fileID: 0}
   - speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140"
     badstoryText: "\uC8FC\uC778\uACF5\uC9F1~"
-    bgmClip: {fileID: 8300000, guid: 7602fa386ffa19b4b9aeb14cb0a84187, type: 3}
+    bgmClip: {fileID: 8300000, guid: 6985c9a888ab0504cb6d1c63b5384e46, type: 3}
   - speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uD558\uC774~"
-    bgmClip: {fileID: 8300000, guid: 32aa465f03dc7534780d1bbd0d94c7e7, type: 3}
+    bgmClip: {fileID: 8300000, guid: fd56cb9788a873c4bb3aa2d660c649d8, type: 3}
   - speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140"
     badstoryText: "\uB098\uB2C8\uAC00\uC2A4\uD0A4~"
-    bgmClip: {fileID: 8300000, guid: bc73ac01dde4a5845be64181fde35199, type: 3}
+    bgmClip: {fileID: 8300000, guid: 8ff0cf32d082f5c4198225eea8c55cf3, type: 3}
   - speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uB9E4\uB2C8\uC800 \uC694\uB9AC\uBAA8 \uC544 \uB098 \uD0C0~"
-    bgmClip: {fileID: 8300000, guid: 8fdc453e8aacae045a1767608caf56e0, type: 3}
+    bgmClip: {fileID: 8300000, guid: e65b03314e440104f84b06fa60cbc775, type: 3}
   - speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uD06C\uC544\uC544\uC544\uC545"
-    bgmClip: {fileID: 8300000, guid: 44cd8e7d8918de64795b0f132f1d3624, type: 3}
+    bgmClip: {fileID: 8300000, guid: d439ebfe094b64c4ba5970b9180b3427, type: 3}
 --- !u!114 &359420665
 MonoBehaviour:
   m_ObjectHideFlags: 0
