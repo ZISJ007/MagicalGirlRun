@@ -1438,6 +1438,14 @@ PrefabInstance:
       propertyPath: spawn_Y
       value: -1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1230149426524939813, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
+      propertyPath: questItems
+      value: 
+      objectReference: {fileID: 5916977743540308992, guid: e3a95f46494e0e74fb157934c261578c, type: 3}
+    - target: {fileID: 1230149426524939813, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
+      propertyPath: spawnInterval
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2559860411100981903, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: m_Name
       value: QuestManager

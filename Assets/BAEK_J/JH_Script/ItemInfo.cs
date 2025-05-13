@@ -46,7 +46,7 @@ public class ItemInfo : MonoBehaviour
             {
                 player.Heal(1);
             }
-            else if (gameObject.name.Contains("QuestItem")) // 퀘스트 아이템
+            else if (gameObject.CompareTag("Quest")) // 퀘스트 아이템
             {
                 questManager.GetQuestItem();
             }
