@@ -64,8 +64,9 @@ public class StageSelectUI : MonoBehaviour
                 stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
                 infoPanel.SetActive(true);
 
-                ShowBestScore(index);
+                ShowBestScore(i + 1);
             }));
+
         }
 
         startButton.onClick.AddListener(() => {
@@ -164,9 +165,9 @@ public class StageSelectUI : MonoBehaviour
         StartSelectedStage();
     }
 
-    void ShowBestScore(int stageIndex)
+    private void ShowBestScore(int stage)
     {
-        string key = $"bestScore_{stageIndex + 1}";
+        string key = $"bestScore_{stage}";
         int best = PlayerPrefs.GetInt(key, 0);
         bestScoreText.text = $"최고 점수: {best}";
     }
