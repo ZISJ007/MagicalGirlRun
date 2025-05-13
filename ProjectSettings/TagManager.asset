@@ -7,17 +7,15 @@ TagManager:
   - YMoveTrigger
   - Obstacle
   - Item
-
   - ItemObstacle
-
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
