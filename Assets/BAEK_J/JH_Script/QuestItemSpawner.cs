@@ -17,7 +17,7 @@ public class QuestItemSpawner : MonoBehaviour
 
     void Update()
     {
-        if (target == null) return;
+        if (!QuestManager.onQuest) return;
 
         spawnTimer += Time.deltaTime;
 

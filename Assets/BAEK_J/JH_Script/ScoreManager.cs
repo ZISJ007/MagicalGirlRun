@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
 
@@ -27,13 +26,11 @@ public class ScoreManager : MonoBehaviour
         }
 
         score += amount;
-        scoreText.text = score.ToString();
+        scoreText.text = $"현재 점수:{score}";
     }
 
     public void SetScore()
     {
-        Debug.Log($"SetScore 호출됨 | 현재 점수: {score}");
-
         if (nowScoreTxt != null)
             nowScoreTxt.text = score.ToString();
 
