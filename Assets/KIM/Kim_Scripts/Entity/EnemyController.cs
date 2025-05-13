@@ -54,10 +54,12 @@ public class EnemyController : MonoBehaviour
         {
             groundAttackObject = Instantiate(groundAttackGameObjectPrefab, transform);
             groundAttackObject.SetActive(false);
+            StartCoroutine(GroundAttackRoutine());
         }
-
-        StartCoroutine(GroundAttackRoutine());
-        StartCoroutine(AerialAttackRoutine());
+        else
+        {
+            StartCoroutine(AerialAttackRoutine());
+        }
     }
 
     private IEnumerator GroundAttackRoutine()
