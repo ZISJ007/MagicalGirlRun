@@ -65,7 +65,24 @@ public class JI_PlayerController : MonoBehaviour
             anim.SetBool("IsJump", false); // 점프 애니메이션 트리거 해제
         }
     }
-
+    public void AddMaxJumpCount(int amount)
+    {
+        maxJumpCount += amount; // 점프 횟수 증가
+    }
+    public void AddJumpFoce(int amount)
+    {
+        jumpForce += amount; // 점프 횟수 증가
+    }
+    public void SubtractJumpFoce(int amount)
+    {
+        if(amount > jumpForce) return; // 점프 힘이 0보다 작아지지 않도록 방지
+        jumpForce -= amount; // 점프 횟수 증가
+    }
+    public void SubtractJumpCount(int amount)
+    {
+        if (amount > maxJumpCount) return; // 점프 횟수가 0보다 작아지지 않도록 방지
+        maxJumpCount -= amount; // 점프 횟수 증가
+    }
     private bool IsGrounded()
     {
         Collider2D hit = Physics2D.OverlapCircle(
