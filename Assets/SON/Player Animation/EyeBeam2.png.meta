@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615ed9e42b76de8419a56505f299b51d
+guid: 9af02fe644f86b9428a7807b960e2666
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Car(Run)_0
+      name: EyeBeam2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 49
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,41 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc542107f507fb4f8dd844f9131e81e
-      internalID: -759292067
+      spriteID: 733afbcd88330d743ab3cb60eff5714a
+      internalID: -1384706550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Car(Run)_1
+      name: EyeBeam2_1
       rect:
         serializedVersion: 2
-        x: 52
-        y: 0
-        width: 49
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 608bf43f91fef5c42b99e79ffbded02b
-      internalID: 154863290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Car(Run)_2
-      rect:
-        serializedVersion: 2
-        x: 104
+        x: 42
         y: 1
-        width: 48
-        height: 31
+        width: 42
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52a467438010eed47ac1271e07c9d84b
-      internalID: -964311878
+      spriteID: f7e550f723e0d78409519ba74993b207
+      internalID: -1591238355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Car(Run)_3
+      name: EyeBeam2_2
       rect:
         serializedVersion: 2
-        x: 161
-        y: 0
-        width: 49
-        height: 32
+        x: 84
+        y: 1
+        width: 43
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acffbdd3cfa815c4bbb2651f52ddce73
-      internalID: -1831533860
+      spriteID: 3d8ff624ec6e61e4da4d8ba98b613972
+      internalID: -1384251568
       vertices: []
       indices: 
       edges: []
@@ -217,10 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Car(Run)_0: -759292067
-      Car(Run)_1: 154863290
-      Car(Run)_2: -964311878
-      Car(Run)_3: -1831533860
+      EyeBeam2_0: -1384706550
+      EyeBeam2_1: -1591238355
+      EyeBeam2_2: -1384251568
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
