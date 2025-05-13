@@ -10,11 +10,9 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     [Header("현재 스테이지")]
-    public int isStage = 0; // 현재 스테이지(1~4)
-
     // 스테이지 퀘스트 상태
-    public static bool[] isQuestClear = new bool[3];
-    public static bool[] onQuest = new bool[3];
+    public static bool isQuestClear;
+    public static bool onQuest;
 
     [Header("요구량, 보유량")]
     [SerializeField] private int demand = 5;
@@ -22,19 +20,9 @@ public class QuestManager : MonoBehaviour
 
     void Start()
     {
-        GetQuest();
-    }
-
-    private void GetQuest() // 스테이지에 따른 퀘스트 아이템 요구량 설정
-    {
-        for (int i = 0; i < onQuest.Length; i++)
-        {
-            if (!GameSystem.key[i] && isStage == i + 1)
-            {
-                onQuest[i] = true;
-                Debug.Log($"{i + 1}스테이지 퀘스트 활성화");
-            }
-        }
+        Debug.Log($"퀘스트 활성화");
+        onQuest = true;
+        isQuestClear = false;
     }
 
     public void GetQuestItem() // 퀘스트 아이템 습득
@@ -43,20 +31,17 @@ public class QuestManager : MonoBehaviour
 
         Debug.Log($"퀘스트 아이템 획득 총 {reserves}개");
 
-        for (int i = 0; i < onQuest.Length; i++)
+        if (onQuest && demand <= reserves)
         {
-            if (onQuest[i] && demand <= reserves)
-            {
-                QuestComplete(i);
-            }
+            QuestComplete();
         }
     }
 
-    private void QuestComplete(int num) // 퀘스트 완료
+    private void QuestComplete() // 퀘스트 완료
     {
         Debug.Log($"퀘스트 완료");
-        isQuestClear[num] = true;
-        onQuest[num] = false;
+        isQuestClear = true;
+        onQuest = false;
         reserves = 0;
     }
 }

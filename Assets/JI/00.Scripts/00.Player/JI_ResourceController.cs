@@ -31,6 +31,14 @@ public class JI_ResourceController : MonoBehaviour
         {
             TakeDamage(1f);
         }
+
+        if (GameSystem.hasFinished)
+        {
+            transform.position += Vector3.right * GameSystem.speed * Time.deltaTime;
+        }
+
+        if (isInvincible) return;
+        isInvincible = true;
     }
 
     public void Heal(float amount)
