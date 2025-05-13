@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -11,31 +12,47 @@ public class StageInfo
     public string stageName;
     public string stageDescription;
 }
+
 public class StageSelectUI : MonoBehaviour
 {
+    [Header("스테이지 버튼")] 
+    [SerializeField] private List<Button> stageButtons;
 
-    [Header("스테이지 버튼")] [SerializeField] private List<Button> stageButtons;
-    [Header("스테이지 정보(버튼 순서와동일하게)")]
-    [SerializeField]private List<StageInfo> stageInfos;
+    [Header("스테이지 정보(버튼 순서와동일하게)")] [SerializeField]
+    private List<StageInfo> stageInfos;
 
     [Header("UI")]
     [SerializeField] private GameObject infoPanel;
     [SerializeField] private TextMeshProUGUI bestScoreText;
-    [SerializeField]private TextMeshProUGUI stageInfoText;
-    [SerializeField]private Button startButton;
+    [SerializeField] private TextMeshProUGUI stageInfoText;
+    [SerializeField] private Button startButton;
 
-    [Header("사운드")]
-    [SerializeField] private AudioSource audioSource;     // 효과음용
-    [SerializeField] private AudioSource bgmSource;        // BGM용
+    [Header("사운드")] 
+    [SerializeField] private AudioSource audioSource; // 효과음용
+    [SerializeField] private AudioSource bgmSource; // BGM용
 
-    [SerializeField] private AudioClip stageSelectSound;   // 스테이지 선택 효과음
-    [SerializeField] private AudioClip startButtonSound;   // 시작 버튼 효과음
+    [SerializeField] private AudioClip stageSelectSound; // 스테이지 선택 효과음
+    [SerializeField] private AudioClip startButtonSound; // 시작 버튼 효과음
+
+    [Header("버튼 애니메이션")] 
+    [SerializeField] private Transform buttonParent;
+    [SerializeField] private float focusScale;
+    [SerializeField] private float offsetZ;
+    [SerializeField] private float animDuration;
+
+    private bool isAnimating = false;
 
     private string selectedStage = "";
     private int keysCollected = 0;
 
+    private Vector3[] originalPosition;
+    private Vector3[] originalScale;
+    private int[] originalSiblingIndexs;
+    private Button currentFocusButton = null;
+
     void Start()
     {
+        Time.timeScale = 1;
         infoPanel.SetActive(false);
         if (bgmSource != null && !bgmSource.isPlaying)
         {
@@ -49,25 +66,27 @@ public class StageSelectUI : MonoBehaviour
             return;
         }
 
+        originalPosition = new Vector3[stageButtons.Count];
+        originalScale = new Vector3[stageButtons.Count];
+
+
+        originalSiblingIndexs = new int[stageButtons.Count];
         for (int i = 0; i < stageButtons.Count; i++)
         {
+            originalSiblingIndexs[i]=stageButtons[i].transform.GetSiblingIndex();
+            originalPosition[i] = stageButtons[i].transform.localPosition;
+            originalScale[i] = stageButtons[i].transform.localScale;
+
             int index = i;
             stageButtons[i].onClick.AddListener((() =>
             {
-                AnimateButtonPress(stageButtons[index].transform);
-                if (stageSelectSound != null && audioSource != null)
-                {
-                    audioSource.PlayOneShot(stageSelectSound);
-                }
-                selectedStage = stageInfos[index].stageName;
-                stageInfoText.text = $"[{stageInfos[index].stageName} 정보]\n{stageInfos[index].stageDescription}";
-                infoPanel.SetActive(true);
-
-                ShowBestScore(index + 1);
+                HandleStageButtonClick(stageButtons[index], index);
             }));
         }
 
-        startButton.onClick.AddListener(() => {
+//---------------------------------------------------------------------------
+        startButton.onClick.AddListener(() =>
+        {
             AnimateButtonPress(startButton.transform);
             if (startButtonSound != null && audioSource != null)
             {
@@ -81,18 +100,52 @@ public class StageSelectUI : MonoBehaviour
         });
     }
 
-    private void Update()
+    void HandleStageButtonClick(Button _clickedButton, int _index)
     {
-        if (Input.GetKeyDown(KeyCode.R)) // R 키로 BestScore 초기화
+        if (isAnimating) return;
+
+        if (currentFocusButton == _clickedButton)
         {
-            PlayerPrefs.DeleteAll();
+            ResetButton();
+            currentFocusButton = null;
+            return;
         }
+        else
+        {
+            AnimStageSelect(_clickedButton);
+            currentFocusButton = _clickedButton;
+            
+            _clickedButton.transform.SetAsLastSibling();
+            _clickedButton.GetComponent<RectTransform>().anchoredPosition=Vector2.zero;
+        }
+
+        foreach (var button in stageButtons)
+        {
+            var image=  button.GetComponent<Image>();
+            if(image!=null)
+            {
+                image.raycastTarget=(button==_clickedButton);
+            }
+            button.interactable=(button==_clickedButton);
+        }
+
+        AnimateButtonPress(_clickedButton.transform);
+        if (startButtonSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(startButtonSound);
+        }
+        
+        selectedStage = stageInfos[_index].stageName;
+        stageInfoText.text = $"[{stageInfos[_index].stageName} 정보]\n{stageInfos[_index].stageDescription}";
+        infoPanel.SetActive(true);
+
+        ShowBestScore(_index + 1);
     }
 
     void StartSelectedStage()
     {
         if (selectedStage == "BossStage" && keysCollected < 3)
-        {           
+        {
             return;
         }
 
@@ -109,6 +162,90 @@ public class StageSelectUI : MonoBehaviour
         SceneManager.LoadScene(selectedStage);
     }
 
+    
+    void AnimStageSelect(Button _selectedButton)
+    {
+        StartCoroutine(StageSelectAnimRoutine(_selectedButton));
+    }
+    
+    
+    IEnumerator StageSelectAnimRoutine(Button _selectedButton)
+    {
+        isAnimating = true;
+        int animCount = 0;
+
+        for(int i = 0; i < stageButtons.Count; i++)
+        {
+           
+            Button button = stageButtons[i];
+            bool isSelected = (button == _selectedButton);
+            
+            Vector3 targetPos= isSelected?buttonParent.localPosition:originalPosition[i]+new Vector3(0,0,offsetZ);
+            Vector3 targetScale = isSelected ? Vector3.one * focusScale : Vector3.one * 0.08f;
+
+            animCount++;
+            StartCoroutine(AnimateButton(button.transform, targetPos, targetScale,() => { animCount--; }));
+        }
+        while(animCount > 0)
+            yield return null;
+        
+        isAnimating = false;
+    }
+
+    void ResetButton()
+    {
+
+        StartCoroutine(ResetAnimButton());
+    }
+    
+    private IEnumerator ResetAnimButton()
+    {
+        isAnimating = true;
+        infoPanel.SetActive(false);
+        int animIndex = 0;
+        for (int i = 0; i < stageButtons.Count; i++)
+        {
+            animIndex++;
+            stageButtons[i].transform.SetSiblingIndex(originalSiblingIndexs[i]);
+            StartCoroutine(AnimateButton(stageButtons[i].transform,originalPosition[i],originalScale[i],() => { animIndex--; }));
+        }
+        while(animIndex > 0)
+            yield return null;      
+        for (int i = 0; i < stageButtons.Count; i++)
+        {
+            
+            var image = stageButtons[i].GetComponent<Image>();
+            if (image != null)
+            {
+                image.raycastTarget = true;
+            }
+
+            stageButtons[i].interactable = true;
+        }
+        
+        isAnimating = false;
+    }
+    IEnumerator AnimateButton(Transform _buttonTransform, Vector3 _targetPos, Vector3 _targetScale, System.Action onComplete=null)
+    {
+        Vector3 targetPos = _buttonTransform.localPosition;
+        Vector3 targetScale = _buttonTransform.localScale;
+
+        float elapsed = 0f;
+        while (elapsed < animDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / animDuration;
+            _buttonTransform.localPosition = Vector3.Lerp(targetPos, _targetPos, t);
+            _buttonTransform.localScale = Vector3.Lerp(targetScale, _targetScale, t);
+            yield return null;
+        }
+
+        _buttonTransform.localPosition = _targetPos;
+        _buttonTransform.localScale = _targetScale;
+
+        onComplete?.Invoke();
+    }
+
     public void StageCleared(string stageName)
     {
         // 외부에서 스테이지 클리어시 호출 
@@ -116,9 +253,9 @@ public class StageSelectUI : MonoBehaviour
 
         if (keysCollected >= 3)
         {
-            
         }
     }
+
     public static class StageData
     {
         public static string selectedStage;
@@ -137,7 +274,7 @@ public class StageSelectUI : MonoBehaviour
         float duration = 0.1f;
         float elapsed = 0f;
 
-        
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -148,7 +285,7 @@ public class StageSelectUI : MonoBehaviour
 
         elapsed = 0f;
 
-        
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -157,23 +294,23 @@ public class StageSelectUI : MonoBehaviour
             yield return null;
         }
 
-       
+
         buttonTransform.localPosition = originalPos;
     }
+
     private IEnumerator PlayStartSoundAndLoadScene()
     {
         audioSource.PlayOneShot(startButtonSound);
 
-        
+
         yield return new WaitForSeconds(startButtonSound.length);
 
-        
+
         StartSelectedStage();
     }
 
-    private void ShowBestScore(int stage) // 최고 점수 불러오는 메서드
+    private void ShowBestScore(int stage)
     {
-        Debug.Log($"현재 스테이지 {stage} 최고점수");
         string key = $"bestScore_{stage}";
         int best = PlayerPrefs.GetInt(key, 0);
         bestScoreText.text = $"최고 점수: {best}";
