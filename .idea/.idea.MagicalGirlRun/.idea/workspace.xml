@@ -7,43 +7,29 @@
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Image/Bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Image/Bar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Image/HP(Full).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Image/HP(Full).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Prefabs/PauseMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Prefabs/PauseMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Prefabs/StageCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Prefabs/StageCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/PauseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/PauseUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/StageSelectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/StageSelectUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/TutorialManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/TitleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/TitleUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/Attack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/Attack.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/GroundEnemy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/GroundEnemy.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialAttackObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialAttackObject.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/AerialEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/GroundAttackObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/GroundAttackObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle3.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle4.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/Stage1/GroundObstacle4.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttackObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttackObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/ObstacleSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JI/00.Scripts/00.Player/JI_PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JI/00.Scripts/00.Player/JI_PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JI/01.Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JI/01.Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/AerialOstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/AerialOstacle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Obstacle/2Stage/GroundObstacle4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Prefabs/Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST2/ST2_Obstacle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST2/ST2_Obstacle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST2/ST2_Obstacle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST2/ST2_Obstacle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST3/BOSS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST3/BOSS/Manager1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST3/BOSS/Manager1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST3/BOSS/Tutor1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/TestSprite/ST3/BOSS/Tutor1.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/2Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2Stage.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/3Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/3Stage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BadEndingScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BadEndingScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossStage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +49,8 @@
     <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -72,19 +60,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev/KGC/Enemy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev/KGC/Enemy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="독립실행형 플레이어.Unity 시작">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe" />

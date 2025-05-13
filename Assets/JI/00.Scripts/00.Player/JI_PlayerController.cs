@@ -23,8 +23,8 @@ public class JI_PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer; // 스프라이트 렌더러 컴포넌트
     private Coroutine damageFlashCoroutine; //무적 애니메이션 코루틴
-    private bool isJump = false;
-    private bool isStopped = false;
+    public bool isJump = false;
+    public bool isStopped = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
