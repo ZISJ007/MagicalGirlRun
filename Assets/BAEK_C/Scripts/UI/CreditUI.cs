@@ -95,34 +95,7 @@ public class CreditUI : MonoBehaviour
             color.a = Mathf.Lerp(color.a, alpha, Time.deltaTime * imageFadeLerpSpeed);
             data.image.color = color;
         }
-    }
-    private IEnumerator FadeInOutImage(Image img)
-    {
-        float elapsed = 0f;
-        Color color = img.color;
-
-        // 페이드 인
-        while (elapsed < imageFadeDuration)
-        {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(0f, 1f, elapsed / imageFadeDuration);
-            img.color = color;
-            yield return null;
-        }
-
-        // 유지 시간
-        yield return new WaitForSeconds(imageDisplayDuration);
-
-       
-        elapsed = 0f;
-        while (elapsed < imageFadeDuration)
-        {
-            elapsed += Time.deltaTime;
-            color.a = Mathf.Lerp(1f, 0f, elapsed / imageFadeDuration);
-            img.color = color;
-            yield return null;
-        }
-    }
+    }   
     private IEnumerator FirstTextStartCredits()
     {
         isScrolling = false;
