@@ -15,6 +15,7 @@ public class JI_ResourceController : MonoBehaviour
     [Header("플레이어 무적 상태")]
     private bool isInvincible = false;
     private Coroutine invincibilityCoroutine;
+    
 
     private void Awake()
     {
@@ -27,12 +28,11 @@ public class JI_ResourceController : MonoBehaviour
     }
     private void Update()
     {
-
         if (GameSystem.hasFinished)
         {
+            isInvincible = true;
             transform.position += Vector3.right * GameSystem.speed * Time.deltaTime;
         }
-
     }
 
     public void Heal(int amount)
