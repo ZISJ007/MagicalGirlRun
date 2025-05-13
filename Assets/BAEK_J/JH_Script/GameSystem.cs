@@ -6,13 +6,14 @@ using static UnityEngine.GraphicsBuffer;
 
 public class GameSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject portal;
+    [Header("현재 스테이지")]
+    public int isStage = 0;
 
     [SerializeField] private int stageScore; // 게임 점수
     [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
-    [Header("속도와 목적지 설정")]
+    [Header("기본 속도와 목적지 설정")]
     public static float speed = 5;
     [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 500;
@@ -22,13 +23,13 @@ public class GameSystem : MonoBehaviour
     // 보유 중인 열쇠
     public static bool[] key = new bool[3];
 
-    void Start()
+    private void Start()
     {
         moveDistance = 0;
         stageScore = 0;
     }
 
-    void Update()
+    private void Update()
     {
         if (hasFinished) return;
 
@@ -62,16 +63,10 @@ public class GameSystem : MonoBehaviour
 
     private void Finish() // 퀘스트를 클리어 했다면 키 제공
     {
-        for (int i = 0; i < key.Length; i++)
-        {
-            if (QuestManager.isQuestClear[i] == true)
+            if (QuestManager.isQuestClear == true)
             {
-                GameSystem.key[i] = true;
-                Debug.Log($"{i + 1}번째 키 획득");
+                GameSystem.key[isStage - 1] = true;
+                Debug.Log($"{isStage}번째 키 획득");
             }
-        }
-
-        Vector3 spawnPosition = new Vector3 (40f, -1f, 0f);
-        Instantiate(portal, spawnPosition, Quaternion.identity);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4373038227300089301}
   - component: {fileID: 4935196368157463347}
   - component: {fileID: 5289383614544176371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JH_Flatfom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

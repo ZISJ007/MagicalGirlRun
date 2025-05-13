@@ -9,7 +9,7 @@ public class QuestItemSpawner : MonoBehaviour
     [SerializeField] private float spawnOffset = 15f; // 타겟(플레이어)와 스폰 위치의 거리
 
     [Header("퀘스트 아이템 리스트와 스폰 설정")]
-    public List<GameObject> questItems;
+    public GameObject questItems;
     [SerializeField] private float spawn_Y = -1f;
     [SerializeField] private float spawnInterval = 10f; // 아이템 스폰 간격
 
@@ -21,7 +21,7 @@ public class QuestItemSpawner : MonoBehaviour
 
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer >= spawnInterval) // 스폰 처리
+        if (spawnTimer >= spawnInterval && !GameSystem.hasFinished) // 스폰 처리
         {
             SpawnQuestItem();
             spawnTimer = 0f;
@@ -32,14 +32,11 @@ public class QuestItemSpawner : MonoBehaviour
     {
         if (questItems == null) return;
 
-        for (int i = 0;  i < QuestManager.onQuest.Length; i++)
+        if (QuestManager.onQuest)
         {
-            if (QuestManager.onQuest[i])
-            {
-                Vector3 spawnPosition = new Vector3
-                ((target.position.x) + spawnOffset, spawn_Y, 0f);
-                Instantiate(questItems[i], spawnPosition, Quaternion.identity);
-            }
+            Vector3 spawnPosition = new Vector3
+            ((target.position.x) + spawnOffset, spawn_Y, 0f);
+            Instantiate(questItems, spawnPosition, Quaternion.identity);
         }
     }
 }

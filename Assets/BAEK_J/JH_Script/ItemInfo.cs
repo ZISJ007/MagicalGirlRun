@@ -9,17 +9,22 @@ public class ItemInfo : MonoBehaviour
     private GameSystem gameSystem; // 게임 시스템 참조
     private JI_ResourceController player; // 리소스 컨트롤러 참조
 
-    void Update()
+
+    private void Start()
     {
-        transform.position += Vector3.left * GameSystem.speed * Time.deltaTime; // 실제 이동
         gameSystem = FindObjectOfType<GameSystem>();
         questManager = FindObjectOfType<QuestManager>();
         player = FindObjectOfType<JI_ResourceController>();
     }
 
+    void Update()
+    {
+        transform.position += Vector3.left * GameSystem.speed * Time.deltaTime; // 실제 이동
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) // 플레이어와 접촉시
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !GameSystem.hasFinished)
         {
             if (gameObject.name.Contains("Coin")) // 코인
             {
@@ -41,11 +46,6 @@ public class ItemInfo : MonoBehaviour
             {
                 player.Heal(1);
             }
-            else if (gameObject.name.Contains("portal")) // 하트
-            {
-                Destroy(collision.gameObject);
-            }
-
             else if (gameObject.name.Contains("QuestItem")) // 퀘스트 아이템
             {
                 questManager.GetQuestItem();
