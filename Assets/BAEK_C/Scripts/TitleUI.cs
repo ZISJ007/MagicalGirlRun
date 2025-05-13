@@ -8,10 +8,6 @@ using UnityEngine.SceneManagement;
 public class TitleUI : BaseUI
 {
     public AudioSource audioSource;
-
-    
-
-
     public Button startButton;
     public Button exitButton;
     public Button fakeExitButton;
@@ -42,8 +38,7 @@ public class TitleUI : BaseUI
         }
         else
         {
-            SceneManager.LoadScene("BadEndingScene");
-            StageSelectUI.StageData.selectedStage = "Tutorial";
+            SceneManager.LoadScene("Tutorial");
         }
     }
 

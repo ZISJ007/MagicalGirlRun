@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2912011543119846858}
   - component: {fileID: 4523121230178096093}
-  - component: {fileID: -5558679796437841820}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2476617335203133048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3342712, y: 0.08735092, z: -0.03683116}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,16 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   speed: 3
+  moveDistance: 0
   destination: 1000
---- !u!114 &-5558679796437841820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2476617335203133048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0efc3844eb88b04dbf8bf22422de4df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isStage: 0
