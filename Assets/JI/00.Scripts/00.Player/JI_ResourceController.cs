@@ -27,18 +27,12 @@ public class JI_ResourceController : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.H))  // H키를 눌렀을 때 체력 회복
-        {
-            TakeDamage(1);
-        }
 
         if (GameSystem.hasFinished)
         {
             transform.position += Vector3.right * GameSystem.speed * Time.deltaTime;
         }
 
-        if (isInvincible) return;
-        isInvincible = true;
     }
 
     public void Heal(int amount)
