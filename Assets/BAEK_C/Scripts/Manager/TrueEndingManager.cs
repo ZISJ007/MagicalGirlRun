@@ -63,8 +63,8 @@ public class TrueEndingManager : MonoBehaviour
             yield return StartCoroutine(FadeImage(step.illustration, 1f, 0f, imageFadeDuration));
         }
 
-     
-        
+
+        yield return StartCoroutine(FadeImage(blackPanel, 0f, 1f, 2f));
 
         //Å©·¹µ÷ ¾ÀÀ¸·Î
         SceneManager.LoadScene("EndingCredit");
