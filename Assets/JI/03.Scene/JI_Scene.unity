@@ -904,6 +904,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1571821697197255461, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3070831060415988890, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: maxHp
       value: 6
@@ -922,7 +926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5576270532201232168, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.82
+      value: -8.4
       objectReference: {fileID: 0}
     - target: {fileID: 5576270532201232168, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -967,6 +971,14 @@ PrefabInstance:
     - target: {fileID: 5610943440230564501, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695815127724600102, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695815127724600102, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8234242405619952067, guid: 535109e137da6d342a54233b4f8d128f, type: 3}
       propertyPath: m_SortingOrder

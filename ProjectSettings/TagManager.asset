@@ -7,9 +7,9 @@ TagManager:
   - YMoveTrigger
   - Obstacle
   - Item
-
   - ItemObstacle
-
+  - Heart
+  - BackGround
   layers:
   - Default
   - TransparentFX
