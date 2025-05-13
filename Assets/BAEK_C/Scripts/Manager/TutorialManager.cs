@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using System.Collections;
@@ -12,15 +13,19 @@ public class TutorialManager : MonoBehaviour
     {
         public string message;
         public List<KeyCode> requiredKeys;
+        public bool isRunning;
     }
+    [SerializeField]private GameObject player;
     
-    [FormerlySerializedAs("tutorialCharacter")] public GameObject tutorialPanel;
-    public TextMeshProUGUI tutorialText;
+    [SerializeField]private GameObject tutorialPanel;
+    [SerializeField]private TextMeshProUGUI tutorialText;
 
+    [Header("대사 & 조건 키 추가")]
     [SerializeField] private List<TutorialStep> steps = new List<TutorialStep>();
     
     private int currentStepIndex = 0;
     private bool tutorialActive = true;
+
 
     void Start()
     {
@@ -35,15 +40,23 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if(!tutorialActive||currentStepIndex >= steps.Count) return;
+        if(currentStepIndex >= steps.Count) return;
 
-        foreach (KeyCode key in steps[currentStepIndex].requiredKeys)
+        if (tutorialActive)
         {
-            if (Input.GetKeyDown(key))
+            foreach (KeyCode key in steps[currentStepIndex].requiredKeys)
             {
-                NextStep();
-                break;
+                if (Input.GetKeyDown(key))
+                {
+                    NextStep();
+                    return;
+                }
             }
+        }
+
+        if (steps[currentStepIndex].isRunning)
+        {
+            player.transform.position += Vector3.right * 6f * Time.deltaTime;
         }
     }
 
@@ -68,6 +81,12 @@ public class TutorialManager : MonoBehaviour
    
     IEnumerator EndTutorial()
     {
+        if (steps.Count > 0)
+        {
+            currentStepIndex = steps.Count - 1;
+            steps[currentStepIndex].isRunning = true;
+        }
+
         yield return new WaitForSeconds(1f);
         tutorialPanel.SetActive(false);
 
