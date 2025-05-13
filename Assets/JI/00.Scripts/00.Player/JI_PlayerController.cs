@@ -4,7 +4,7 @@ using UnityEngine;
 public class JI_PlayerController : MonoBehaviour
 {
     [Header("점프 설정")]
-    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float jumpForce = 10;
 
     [Header("점프 횟수 설정")]
     [SerializeField] private int maxJumpCount = 2;    // 최대 점프 횟수
@@ -34,7 +34,7 @@ public class JI_PlayerController : MonoBehaviour
         IsResume(); // 스크립트 활성화
     }
     void Update()
-    {
+    { 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
         {
             isJump = true;
@@ -59,7 +59,9 @@ public class JI_PlayerController : MonoBehaviour
     {
         if (isJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            float gameJumpForce = jumpForce + GameSystem.speed;
+
+            rb.velocity = new Vector2(rb.velocity.x, gameJumpForce);
             jumpCount++;
             isJump = false;
             anim.SetBool("IsJump", false); // 점프 애니메이션 트리거 해제
@@ -73,6 +75,7 @@ public class JI_PlayerController : MonoBehaviour
     {
         jumpForce += amount; // 점프 횟수 증가
     }
+
     public void SubtractJumpFoce(int amount)
     {
         if(amount > jumpForce) return; // 점프 힘이 0보다 작아지지 않도록 방지
