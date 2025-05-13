@@ -12,7 +12,7 @@ public class ItemSpawner : MonoBehaviour
 
     [Header("아이템 리스트와 스폰 설정")]
     public List<GameObject> items;
-    [SerializeField] private float coin_Y = -1.5f;
+    [SerializeField] private float spawn_Y = -3f;
     [SerializeField] private int spawnCount = 15; // 한번에 소환하는 아이템 수
     [SerializeField] private float spawnInterval = 0.3f; // 아이템 스폰 간격
 
@@ -39,7 +39,7 @@ public class ItemSpawner : MonoBehaviour
         itemTurn++;
 
         Vector3 spawnPosition = new Vector3
-        ((target.position.x + spawnOffset), -2.5f, 0f);
+        ((target.position.x + spawnOffset), spawn_Y, 0f);
 
         if (itemTurn % 30 == 0) // 매 2번째 생성 주기 마지막엔 특수 아이템 스폰
         {
