@@ -922,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[1].obstaclePrefabs.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[2].obstaclePrefabs.Array.size
@@ -948,6 +948,10 @@ PrefabInstance:
       propertyPath: poolConfigs.Array.data[1].obstaclePrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 8965110112489355953, guid: 805f1c9c3d3dc3c40a081c12bf61664c, type: 3}
+    - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+      propertyPath: poolConfigs.Array.data[1].obstaclePrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8965110112489355953, guid: ccc0d9b1103886e42968d43ac0e96c48, type: 3}
     - target: {fileID: 8989882689435500031, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       propertyPath: poolConfigs.Array.data[2].obstaclePrefabs.Array.data[0]
       value: 
@@ -1165,8 +1169,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1038205744}
     m_Modifications:
     - target: {fileID: 633209007867880914, guid: 55e2688a5cfdb9541a419e51a875116e, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 835499795}
+    - target: {fileID: 633209007867880914, guid: 55e2688a5cfdb9541a419e51a875116e, type: 3}
       propertyPath: groundAttackInterval
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1131614164444452321, guid: 55e2688a5cfdb9541a419e51a875116e, type: 3}
       propertyPath: m_Name
@@ -1499,14 +1507,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1959541971329071061, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959541971329071061, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3251835041089070078, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
       propertyPath: m_Name
       value: AerialEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 5777272076280767996, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
+      propertyPath: maxYOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777272076280767996, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
+      propertyPath: minYOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777272076280767996, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 835499795}
+    - target: {fileID: 5777272076280767996, guid: 83c5d9c32736703498324ecc414611c3, type: 3}
+      propertyPath: aerialAttackInterval
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1595,7 +1623,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 110
-  m_Sprite: {fileID: -601313706, guid: 4607c1aaa43aecd40a23a13e981edae6, type: 3}
+  m_Sprite: {fileID: 2008806488, guid: bbd85a1659be79a44999b050c0f9965a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
