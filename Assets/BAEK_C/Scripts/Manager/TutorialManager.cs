@@ -40,7 +40,6 @@ public class TutorialManager : MonoBehaviour
     {
         tutorialText.text = message;
     }
-
    
     IEnumerator EndTutorial()
     {
