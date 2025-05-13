@@ -1191,7 +1191,7 @@ MonoBehaviour:
     stageDescription: "\uB09C\uC774\uB3C4: \uC911\uAC04"
   - stageName: 3Stage
     stageDescription: "\uB09C\uC774\uB3C4: \uC5B4\uB824\uC6C0"
-  - stageName: BadEnding
+  - stageName: TrueEndingScene
     stageDescription: "\uB09C\uC774\uB3C4: ???"
   infoPanel: {fileID: 423887655}
   bestScoreText: {fileID: 69933257}
