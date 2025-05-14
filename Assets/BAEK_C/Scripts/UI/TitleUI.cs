@@ -50,7 +50,7 @@ public class TitleUI : BaseUI
 
     public void OnFakeExit(AudioClip clip)
     {
-        Debug.Log("ÇÏ³²ÀÚÃ³·³ µµ¸ÁÀÌ¾ß? ³Í ¸¶¹ý¼Ò³à´Ù");
+        Debug.Log("³Í ¸¶¹ý¼Ò³à´Ù ¾îµô µµ¸Á°¡");
         StartCoroutine(PlaySoundThen(() => LoadStartScene(), clip));
     }
 
