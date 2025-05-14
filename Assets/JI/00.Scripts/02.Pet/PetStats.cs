@@ -42,7 +42,7 @@ public class PetStats : MonoBehaviour
     private void PlusHp()
     {
         playerStats.SetMaxHp(plusHp); // 최대 체력 증가
-        var heartsUI = FindObjectOfType<JI_HeartsUI>();
+        var heartsUI = FindObjectOfType<HeartsUI>();
         if (heartsUI != null)
         {
             heartsUI.CreateHearts();

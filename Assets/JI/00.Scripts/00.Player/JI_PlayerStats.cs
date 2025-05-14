@@ -5,7 +5,7 @@ public class JI_PlayerStats : MonoBehaviour
     [Header("플레이어 체력")]
     [SerializeField] private int maxHp = 3; // 최대 체력 (내부 전용)
     [SerializeField] private int currentHp; // 현재 체력 (내부 전용)
-    JI_HeartsUI heartsUI; // 하트 UI를 참조하기 위한 변수
+    HeartsUI heartsUI; // 하트 UI를 참조하기 위한 변수
     public int MaxHp // 최대 체력 외부에서  접근 가능
     {
         get => maxHp;
@@ -34,7 +34,7 @@ public class JI_PlayerStats : MonoBehaviour
     private void Awake()
     {
         currentHp = maxHp;
-        heartsUI = FindObjectOfType<JI_HeartsUI>();
+        heartsUI = FindObjectOfType<HeartsUI>();
       
        
     }
