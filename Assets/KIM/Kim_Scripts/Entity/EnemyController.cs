@@ -34,7 +34,6 @@ public class EnemyController : MonoBehaviour
     //애니메이션
     private static readonly int isGroundAttack = Animator.StringToHash("GroundIsAttack");
     private static readonly int isGroundAttackReady = Animator.StringToHash("GroundIsAttackReady");
-    private static readonly int isAerialAttack = Animator.StringToHash("AerialIsAttack");
     private Animator animator;
 
     private void Awake()
@@ -82,7 +81,6 @@ public class EnemyController : MonoBehaviour
     {
         while (true)
         {
-            AerialAttackAnimation();
             yield return new WaitForSeconds(0.5f);
             AerialAttack();
             yield return new WaitForSeconds(aerialAttackInterval);
@@ -152,9 +150,4 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger(isGroundAttack);
     }
 
-    public void AerialAttackAnimation()
-    {
-        if (animator==null)return;
-        animator.SetTrigger(isAerialAttack);
-    }
 }

@@ -27,6 +27,7 @@ public class PlayerUIManager : MonoBehaviour
 
     private void Start()
     {
+        if(canvasGroup==null)return;
         canvasGroup.alpha = 0;
     }
 
