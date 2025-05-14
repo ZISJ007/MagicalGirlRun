@@ -5,7 +5,9 @@
     <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/PauseUI.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/StageSelectUI.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/TitleUI.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/UI/PauseUI.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/BAEK_C/Scripts/UI/StageSelectUI.cs" charset="EUC-KR" />
+    <file url="file://$PROJECT_DIR$/Assets/BAEK_J/JH_Script/BossButton.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/BAEK_J/JH_Script/GameSystem.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/JHScript/StageManager.cs" charset="EUC-KR" />
     <file url="file://$PROJECT_DIR$/Assets/JI/00.Scripts/00.Player/JI_CharacterCustomizer.cs" charset="EUC-KR" />
