@@ -1295,11 +1295,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 187
+      value: 190.2787
       objectReference: {fileID: 0}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16.2124
       objectReference: {fileID: 0}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_LocalScale.x
@@ -1307,11 +1307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: -6.8999634
       objectReference: {fileID: 0}
     - target: {fileID: 681122282511404481, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00009918213
+      value: 2.3232002
       objectReference: {fileID: 0}
     - target: {fileID: 1575206818076559821, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_Pivot.x
@@ -1403,10 +1403,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3854808974041661588, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71.0118
       objectReference: {fileID: 0}
     - target: {fileID: 3854808974041661588, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854808974041661588, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35.506012
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854808974041661588, guid: 08a4b3719fea25f4b966cec793059134, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1459,7 +1467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2c7bd7c8ad9f68741881b013d025d252, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b64615aa1f18f147b6f2f01f3424bb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

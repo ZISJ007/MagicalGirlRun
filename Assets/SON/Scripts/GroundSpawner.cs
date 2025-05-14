@@ -1,34 +1,67 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GroundSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject backPrefab;     // Ω∫∆˘«“ πË∞Ê «¡∏Æ∆’
-    [SerializeField] private float spawnInterval = 3f;  // Ω∫∆˘ ¡÷±‚
-    [SerializeField] private Vector3 spawnPosition = new Vector3(30f, 0f, 0f); // Ω∫∆˘ ¿ßƒ°
-    [SerializeField] private float scrollSpeed = 2f;    // Ω∫≈©∑— º”µµ (Ω∫∆˘µ» ∞¥√ºø°∞‘ ¿¸¥ﬁ)
+    [Header("ÌÅ¨ÎùºÏö¥Îìú Ïä§Ìè∞ ÏÑ§Ï†ï")] [SerializeField]
+    private GameObject groundPrefab;
 
-    private float timer = 0f;
+    [SerializeField] private float scrollSpeed = 2f;
+    [SerializeField] private int groundCount = 3;
+    [SerializeField] private float spawnY;
 
-    void Update()
+    private List<Ground> groundList = new List<Ground>();
+    private float groundWidth;
+
+    private void Start()
     {
-        timer += Time.deltaTime;
+        groundWidth = groundPrefab.GetComponent<SpriteRenderer>().bounds.size.x;
 
-        if (timer >= spawnInterval)
+        Vector3 spawnPos = new Vector3(transform.position.x - 3, spawnY, 0);
+        for (int i = 0; i < groundCount; i++)
         {
-            SpawnGround();
-            timer = 0f;
+            var ground = SpawnGround(spawnPos);
+            spawnPos.x += groundWidth;
         }
     }
 
-    void SpawnGround()
+    private void Update()
     {
-        GameObject newBack = Instantiate(backPrefab, spawnPosition, Quaternion.identity);
-
-        // Ω∫≈©∑— º”µµ ¿¸¥ﬁ
-        var remover = newBack.GetComponent<GroundRemover>();
-        if (remover != null)
+        while (groundList.Count < groundCount)
         {
-            remover.ScrollSpeed = scrollSpeed;
+            Vector3 spawnPos = GetRightMostGroundPos() + Vector3.right * groundWidth;
+            SpawnGround(spawnPos);
         }
+    }
+
+    private Ground SpawnGround(Vector3 _pos)
+    {
+        GameObject newGround = Instantiate(groundPrefab, _pos, Quaternion.identity);
+        Ground ground = newGround.GetComponent<Ground>();
+        ground.Init(scrollSpeed, this);
+        groundList.Add(ground);
+        return ground;
+    }
+
+    private Vector3 GetRightMostGroundPos()
+    {
+        Vector3 rightMost = groundList[0].transform.position;
+        foreach (var ground in groundList)
+        {
+            if (ground.transform.position.x > rightMost.x)
+            {
+                rightMost = ground.transform.position;
+            }
+        }
+
+        return rightMost;
+    }
+
+    public void UnregisterGround(Ground ground)
+    {
+        if (groundList.Contains(ground))
+            groundList.Remove(ground);
     }
 }

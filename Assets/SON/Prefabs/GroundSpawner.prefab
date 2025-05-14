@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c424dd244e9c4f346a3af2bcfcd2e490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backPrefab: {fileID: 6625167284349335250, guid: c597b2c37d3d4b042af6bd51557610d6, type: 3}
-  spawnInterval: 2
-  spawnPosition: {x: 18, y: -4.2, z: 0}
-  scrollSpeed: 4
+  groundPrefab: {fileID: 768352703122875628, guid: 920b328ec98d8704a9ab173ca4ac00aa, type: 3}
+  scrollSpeed: 2
+  groundCount: 3
+  spawnY: -3.8
