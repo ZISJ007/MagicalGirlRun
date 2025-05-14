@@ -143,6 +143,7 @@ public class EnemyController : MonoBehaviour
     public void GroundAttackAnimation()
     {
         if(animator==null)return;
+        GroundAttackFire();
         animator.SetTrigger(isGroundAttack);
     }
 
