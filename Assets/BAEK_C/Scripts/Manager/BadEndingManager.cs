@@ -19,6 +19,7 @@ public class BadEndingManager : MonoBehaviour
     
     void Start()
     {          
+        Time.timeScale = 1;
      Button.onClick.AddListener(NextLine); 
     }
     public void ShowLine()
@@ -33,22 +34,22 @@ public class BadEndingManager : MonoBehaviour
 
             
 
-        // ÀÌ¸§ ÅØ½ºÆ® ¼³Á¤
+        // ï¿½Ì¸ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
         if (line.speaker == "Left")
         {
-            leftNameText.text = line.speakerName;   // ¿ÞÂÊ Ä³¸¯ÅÍ ÀÌ¸§
-            rightNameText.text = "";                // ¿À¸¥ÂÊ Ä³¸¯ÅÍ ÀÌ¸§Àº ºñ¿öµÒ
+            leftNameText.text = line.speakerName;   // ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+            rightNameText.text = "";                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
         }
         else if (line.speaker == "Right")
         {
-            leftNameText.text = "";                // ¿ÞÂÊ Ä³¸¯ÅÍ ÀÌ¸§Àº ºñ¿öµÒ
-            rightNameText.text = line.speakerName;  // ¿À¸¥ÂÊ Ä³¸¯ÅÍ ÀÌ¸§
+            leftNameText.text = "";                // ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+            rightNameText.text = line.speakerName;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
         }
 
-        badstoryText.text = line.badstoryText;      // ´ë»ç ÅØ½ºÆ®
+        badstoryText.text = line.badstoryText;      // ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
         
 
-        Panel.SetActive(true);  // ´ëÈ­ ÆÐ³Î È°¼ºÈ­
+        Panel.SetActive(true);  // ï¿½ï¿½È­ ï¿½Ð³ï¿½ È°ï¿½ï¿½È­
         if (bgmSource != null)
         {
             bgmSource.Stop();
@@ -56,13 +57,13 @@ public class BadEndingManager : MonoBehaviour
             if (line.bgmClip != null)
             {
                 bgmSource.clip = line.bgmClip;
-                bgmSource.loop = false; // ÇÊ¿äÇÏ¸é true·Î
+                bgmSource.loop = false; // ï¿½Ê¿ï¿½ï¿½Ï¸ï¿½ trueï¿½ï¿½
                 bgmSource.Play();
             }
         }
     }
 
-    // ´ë»ç ÁøÇà
+    // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     void NextLine()
     {
         
@@ -70,14 +71,14 @@ public class BadEndingManager : MonoBehaviour
         ShowLine();
     }
 
-    // ´ëÈ­ Á¾·á
+    // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
     void EndDialogue()
     {
         if (isButtonEnd) return;
         isButtonEnd = true;    
 
         if (Button != null)
-            Button.interactable = false;  //Áßº¹¹æÁö ±×³É ¹öÆ° ¾Æ¿¹ ²¨¹ö¸²
+            Button.interactable = false;  //ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×³ï¿½ ï¿½ï¿½Æ° ï¿½Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Panel.SetActive(false);
 
         if (fadeInScene != null)
@@ -89,8 +90,8 @@ public class BadEndingManager : MonoBehaviour
 [System.Serializable]
 public class BadStoryLine
 {
-    public string speaker;             // ¾î¶² Ä³¸¯ÅÍ°¡ ¸»À» ÇÏ´ÂÁö (Left,Right)
-    public string speakerName;         // ¸»ÇÏ´Â »ç¶÷ÀÇ ÀÌ¸§
-    public string badstoryText;        // ´ë»ç ³»¿ë
+    public string speaker;             // ï¿½î¶² Ä³ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ï¿½ï¿½ (Left,Right)
+    public string speakerName;         // ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+    public string badstoryText;        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public AudioClip bgmClip;
 }

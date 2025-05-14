@@ -12,19 +12,21 @@ public class GameSystem : MonoBehaviour
     [SerializeField] private GameObject claerPanel;
     [SerializeField] private GameObject failPanel;
 
-    [Header("현재 스테이지")]
+    [Header("???? ????????")]
     public int isStage = 0;
-    [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
-    private Coroutine speedChange; // 지속시간 코루틴
+    [SerializeField] private float beforeSpeed; // ???? ?? ??? ????
+    private Coroutine speedChange; // ????ð? ????
 
-    [Header("기본 속도와 목적지 설정")]
+    [Header("?? ????? ?????? ????")]
     public static float speed = 5;
     [SerializeField] private float moveDistance;
     [SerializeField] private float destination = 100;
+    
+    [SerializeField]private bool isBoss = false;
 
-    public static bool hasFinished = false; // Finish 메서드 반복 실행 방지
+    public static bool hasFinished = false; // Finish ????? ??? ???? ????
 
-    // 보유 중인 열쇠
+    // ???? ???? ????
     public static bool[] key = new bool[3];
 
 
@@ -51,26 +53,31 @@ public class GameSystem : MonoBehaviour
         scrollBar.value = Mathf.Clamp01(moveDistance / destination);
     }
 
-    public void ChangeSpeed(float amount, float duration) // 1) 지속 시간동안 속도 증감
+    public void ChangeSpeed(float amount, float duration) // 1) ???? ?ð????? ??? ????
     {
         beforeSpeed = speed;
         speed += amount;
-        Debug.Log($"속도 변동 {speed} (지속 시간: {duration}초)");
+        Debug.Log($"??? ???? {speed} (???? ?ð?: {duration}??)");
         speedChange = StartCoroutine(RevertSpeed(duration));
     }
-    private IEnumerator RevertSpeed(float duration) // 2) 지속시간 종료시 복구
+    private IEnumerator RevertSpeed(float duration) // 2) ????ð? ????? ????
     {
         yield return new WaitForSeconds(duration);
         speed = beforeSpeed;
-        Debug.Log($"속도 복원 {speed}");
+        Debug.Log($"??? ???? {speed}");
     }
 
-    private void Finish() // 퀘스트를 클리어 했다면 키 제공
+    private void Finish() // ??????? ????? ???? ? ????
     {
         if (QuestManager.isQuestClear == true)
         {
             GameSystem.key[isStage - 1] = true;
-            Debug.Log($"{isStage}번째 키 획득");
+            Debug.Log($"{isStage}??° ? ???");
+        }
+
+        if (isBoss)
+        {
+            SceneManager.LoadScene("Scenes/TrueEndingScene");
         }
     }
 
