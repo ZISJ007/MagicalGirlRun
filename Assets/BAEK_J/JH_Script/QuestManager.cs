@@ -5,9 +5,10 @@ using TMPro;
 public class QuestManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI questUI;
+    [SerializeField] private TextMeshProUGUI questText;
+    [SerializeField] private GameSystem gameSystem;
 
     [Header("현재 스테이지")]
-    // 스테이지 퀘스트 상태
     public static bool isQuestClear;
     public static bool onQuest;
 
@@ -18,8 +19,8 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         Debug.Log($"퀘스트 활성화");
-        onQuest = true;
         isQuestClear = false;
+        GetQuest();
         OnQuestUI();
     }
 
@@ -38,6 +39,7 @@ public class QuestManager : MonoBehaviour
     private void QuestComplete() // 퀘스트 완료
     {
         questUI.text = $"퀘스트 아이템 수집\n-수집 완료-";
+        questText.text = $"잼 수집율\n{reserves}/{demand}\n열쇠 획득 성공";
         isQuestClear = true;
         onQuest = false;
         reserves = 0;
@@ -45,8 +47,21 @@ public class QuestManager : MonoBehaviour
 
     private void OnQuestUI() // 퀘스트 현황 표시
     {
-        if (onQuest == false) { return; }
+        if (!onQuest) return;
 
-        questUI.text = $"퀘스트 아이템 수집\n{reserves}/{demand}";
+        questUI.text = $"잼 수집\n{reserves}/{demand}";
+        questText.text = $"잼 수집율\n{reserves}/{demand}\n열쇠 획득 실패";
+    }
+
+    private void GetQuest() // 키를 가지고 있지 않을 때 퀘스트 활성화
+    {
+        int stageIndex = gameSystem.isStage - 1;
+
+        if (stageIndex >= 0 && stageIndex < GameSystem.key.Length && GameSystem.key[stageIndex])
+        {
+            return; 
+        }
+
+        onQuest = true;
     }
 }

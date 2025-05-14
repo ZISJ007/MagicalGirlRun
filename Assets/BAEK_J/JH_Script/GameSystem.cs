@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour
 {
-    public Scrollbar scrollBar;
-    public ScoreManager scoreManager;
+    [SerializeField] private Scrollbar scrollBar;
+    [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private GameObject endPanel;
 
     [Header("현재 스테이지")]
-    [SerializeField] private int isStage = 0;
+    public int isStage = 0;
     [SerializeField] private float beforeSpeed; // 증감 전 속도 저장
     private Coroutine speedChange; // 지속시간 코루틴
 
@@ -65,6 +67,15 @@ public class GameSystem : MonoBehaviour
         {
             GameSystem.key[isStage - 1] = true;
             Debug.Log($"{isStage}번째 키 획득");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Time.timeScale = 0f;
+            endPanel.SetActive(true);
         }
     }
 }
