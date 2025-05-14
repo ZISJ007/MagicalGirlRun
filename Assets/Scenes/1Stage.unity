@@ -416,15 +416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162703832032474049, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.629398
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162703832032474049, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9549656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162703832032474049, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.09166815
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162703832032474049, guid: c44bcfaa338c9b142bc28fd03a450135, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1725,9 +1725,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5082280102435269263, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50cf27719f2e15c4397a2c02588db7f6, type: 3}
     - target: {fileID: 5301559469830982693, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
       propertyPath: m_Name
       value: StageCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180967125869363199, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180967125869363199, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1782,18 +1794,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1366008546}
     m_Modifications:
+    - target: {fileID: 238110647720777014, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a37b5ff170d8204a96d6bd8308b5eef, type: 3}
+    - target: {fileID: 1553580384478859416, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4220882456594769764, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 4220882456594769764, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5574719473411318649, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
-      propertyPath: pauseButton
-      value: 
-      objectReference: {fileID: 187807386}
     - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1824,18 +1836,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966623511053649920, guid: 00a83842451331e42a5e2f002b1100aa, type: 3}

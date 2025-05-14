@@ -44,8 +44,6 @@ public class GroundObstacle : BaseObstacle
         if (other.CompareTag("YMoveTrigger"))
         {
             isYMoving = true;
-
-            Debug.Log("ºÎµóÈû");
         }
     }
 }

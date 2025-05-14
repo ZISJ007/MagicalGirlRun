@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 5260708834367096379, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1526098083, guid: fac5fb7e79aa64b4e9dc062f2f21f7b7, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a37b5ff170d8204a96d6bd8308b5eef, type: 3}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -284,11 +284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -320,11 +320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5352959131115858887, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -359,7 +359,8 @@ PrefabInstance:
       value: StartButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6156281499319439840, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4359bbcc7ef2a2a45bb07ee1a883f9ae, type: 3}
@@ -380,6 +381,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3316156706624133545, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316156706624133545, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67094e1751d8d09468bb447c55ae1881, type: 3}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -406,11 +415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -442,11 +451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -228
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7802024981682080793, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -461,7 +470,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1177255490209476883, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eed49a016aec0949b07a3fc70bc696c, type: 3}

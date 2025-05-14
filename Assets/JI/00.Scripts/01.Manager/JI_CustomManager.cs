@@ -38,4 +38,14 @@ public class JI_CustomManager : MonoBehaviour
             customizer.EquipHat(hatPrefab);
         }
     }
+    public void OnDeleteHat()
+    {         // 선택 정보 초기화
+        ResetCustomization();
+        // 커스터마이저가 존재하면 즉시 장착 해제
+        var customizer = FindObjectOfType<JI_CharacterCustomizer>();
+        if (customizer != null)
+        {
+            customizer.EquipHat(null);
+        }
+    }
 }

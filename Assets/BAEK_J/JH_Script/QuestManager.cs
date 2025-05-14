@@ -38,8 +38,8 @@ public class QuestManager : MonoBehaviour
 
     private void QuestComplete() // 퀘스트 완료
     {
-        questUI.text = $"퀘스트 아이템 수집\n-수집 완료-";
-        questText.text = $"잼 수집율\n{reserves}/{demand}\n열쇠 획득 성공";
+        questUI.text = $"스테이지 잼 수집\n-수집 완료-";
+        questText.text = $"스테이지 잼 수집율\n{reserves}/{demand}\n열쇠 획득 성공";
         isQuestClear = true;
         onQuest = false;
         reserves = 0;
@@ -49,8 +49,8 @@ public class QuestManager : MonoBehaviour
     {
         if (!onQuest) return;
 
-        questUI.text = $"잼 수집\n{reserves}/{demand}";
-        questText.text = $"잼 수집율\n{reserves}/{demand}\n열쇠 획득 실패";
+        questUI.text = $"스테이지 잼 수집\n{reserves}/{demand}";
+        questText.text = $"스테이지 잼 수집율\n{reserves}/{demand}\n열쇠 획득 실패";
     }
 
     private void GetQuest() // 키를 가지고 있지 않을 때 퀘스트 활성화
