@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class CreditUI : MonoBehaviour
 {
     [Header("크레딧 초기 텍스트")]
-    [SerializeField] private TextMeshProUGUI firstText;
+    [SerializeField] private TextMeshProUGUI FinalText;
     [SerializeField] private float firstDuration = 2f;
     [SerializeField] private float fadeDuration = 1f;
 
@@ -68,7 +68,7 @@ public class CreditUI : MonoBehaviour
             if (scrollContent.anchoredPosition.y >= creditEndY)
             {
                 isScrolling = false;
-                StartCoroutine(FinalText());
+                StartCoroutine(FinalyText());
             }
         }
     }
@@ -96,21 +96,21 @@ public class CreditUI : MonoBehaviour
             data.image.color = color;
         }
     }   
-    private IEnumerator FirstTextStartCredits()
+    private IEnumerator FinalTextCredits()
     {
         isScrolling = false;
 
         
-        Color color = firstText.color;
+        Color color = FinalText.color;
         color.a = 0f;
-        firstText.color = color;
+        FinalText.color = color;
         float elapsed = 0f;
 
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
             color.a = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
-            firstText.color = color;
+            FinalText.color = color;
             yield return null;
         }
 
@@ -122,18 +122,18 @@ public class CreditUI : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             color.a = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
-            firstText.color = color;
+            FinalText.color = color;
             yield return null;
         }
 
-        isScrolling = true;
+        
     }
-    private IEnumerator FinalText()
+    private IEnumerator FinalyText()
     {
         
-        yield return StartCoroutine(FirstTextStartCredits());
+        yield return StartCoroutine(FinalTextCredits());
+        yield return new WaitForSeconds(2f);
 
-        
         SceneManager.LoadScene("TitleScene");
     }
     private void SkipCredit()

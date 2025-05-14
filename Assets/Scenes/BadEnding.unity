@@ -257,7 +257,7 @@ MonoBehaviour:
     badstoryText: "\uBB50\uC57C \uC5EC\uAE34 \uC5B4\uB514\uC57C "
     bgmClip: {fileID: 0}
   - speaker: Left
-    speakerName: "\uB9C8\uBC95\uC18C\uB140"
+    speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uC900\uBE44\uB294 \uB418\uC5C8\uB098?"
     bgmClip: {fileID: 0}
   - speaker: Right
@@ -269,7 +269,7 @@ MonoBehaviour:
     badstoryText: "\uBB50\uC57C \uB0B4 \uBAB8\uC774 \uBA4B\uB300\uB85C..."
     bgmClip: {fileID: 0}
   - speaker: Left
-    speakerName: "\uB9C8\uBC95\uC18C\uB140"
+    speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uC8FC\uC778\uACF5\uC9F1~"
     bgmClip: {fileID: 8300000, guid: 6985c9a888ab0504cb6d1c63b5384e46, type: 3}
   - speaker: Right
@@ -277,7 +277,7 @@ MonoBehaviour:
     badstoryText: "\uD558\uC774~"
     bgmClip: {fileID: 8300000, guid: fd56cb9788a873c4bb3aa2d660c649d8, type: 3}
   - speaker: Left
-    speakerName: "\uB9C8\uBC95\uC18C\uB140"
+    speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uB098\uB2C8\uAC00\uC2A4\uD0A4~"
     bgmClip: {fileID: 8300000, guid: 8ff0cf32d082f5c4198225eea8c55cf3, type: 3}
   - speaker: Right
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 434446188}
   - component: {fileID: 434446187}
   m_Layer: 5
-  m_Name: Image2
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -30}
+  m_AnchoredPosition: {x: -78, y: -30}
   m_SizeDelta: {x: 216.0047, y: 274.7493}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &434446187
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0175b41dc57d3314e9869e0f6ac29625, type: 3}
+  m_Sprite: {fileID: 366800688, guid: a76c550b4a7cc5a4ba60315c57823fa4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -546,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -0.000005722, y: -130}
-  m_SizeDelta: {x: 158.2, y: 41.371}
+  m_AnchoredPosition: {x: 145, y: 18}
+  m_SizeDelta: {x: 228.0726, y: 62.7104}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &768875331
 CanvasRenderer:
@@ -586,8 +586,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -604,8 +604,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -13.868295, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1099,7 +1099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -21.244, y: -160.6}
+  m_AnchoredPosition: {x: -21.244, y: -168}
   m_SizeDelta: {x: 173.517, y: 45.377}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &943466905
@@ -1149,8 +1149,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 1606237386}
   - component: {fileID: 1606237385}
   m_Layer: 5
-  m_Name: Image1
+  m_Name: MagicGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,8 +1381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 77, y: -42}
-  m_SizeDelta: {x: 158.9388, y: 202.1638}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 536.383, y: 588.702}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1606237385
 MonoBehaviour:
@@ -1404,7 +1404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ab4a6caee153ab408cb89b244ce09b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b9db0d5ae5aeca47ad531f0461929c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1860,7 +1860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 95}
+  m_AnchoredPosition: {x: 42, y: 103}
   m_SizeDelta: {x: 1299.346, y: 322.998}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2085038794
