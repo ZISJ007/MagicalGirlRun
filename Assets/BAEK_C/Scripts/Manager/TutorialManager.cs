@@ -36,6 +36,10 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        if (BGMManager.Instance != null)
+        {
+            BGMManager.Instance.PlayBgm("Tutorial");
+        }
         if (steps.Count == 0)
         {
             tutorialActive = false;

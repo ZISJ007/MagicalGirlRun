@@ -55,6 +55,10 @@ public class PauseUI : MonoBehaviour
     // 게임 종료
     void ExitGame()
     {  
+        if (BGMManager.Instance != null)
+        {
+            BGMManager.Instance.PlayBgm("StageSelectScene");
+        }
         SceneManager.LoadScene("Scenes/StageSelectScene");
     }
 }
