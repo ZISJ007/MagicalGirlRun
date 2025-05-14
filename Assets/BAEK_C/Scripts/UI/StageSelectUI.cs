@@ -130,11 +130,11 @@ public class StageSelectUI : MonoBehaviour
         }
 
         AnimateButtonPress(_clickedButton.transform);
-        if (startButtonSound != null && audioSource != null)
+        if (stageSelectSound != null && audioSource != null)
         {
-            audioSource.PlayOneShot(startButtonSound);
+            audioSource.PlayOneShot(stageSelectSound);
         }
-        
+
         selectedStage = stageInfos[_index].stageName;
         stageInfoText.text = $"[{stageInfos[_index].stageName} Á¤º¸]\n{stageInfos[_index].stageDescription}";
         infoPanel.SetActive(true);
