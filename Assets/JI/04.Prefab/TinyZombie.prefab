@@ -121,5 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plusJumpForce: 0
   plusJumpCount: 3
-  minusJumpForce: 2
+  minusJumpForce: 3
   minusJumpCount: 0
+  plusHp: 0
