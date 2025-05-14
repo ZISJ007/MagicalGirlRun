@@ -9,6 +9,8 @@ TagManager:
   - Item
   - ItemObstacle
   - Quest
+  - Heart
+  - Ground
   layers:
   - Default
   - TransparentFX

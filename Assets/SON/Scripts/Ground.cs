@@ -1,24 +1,27 @@
+using System;
 using UnityEngine;
 
-public class GroundRemover : MonoBehaviour
+public class Ground : MonoBehaviour
 {
-    [SerializeField] private float scrollSpeed = 2f;
-    [SerializeField] private float destroyThresholdX = -30f;
+    private Rigidbody2D rb;
+    private float scrollSpeed;
+    private GroundSpawner spawner;
 
-    public float ScrollSpeed
+    public void Init(float _scrollSpeed, GroundSpawner _groundSpawner)
     {
-        get => scrollSpeed;
-        set => scrollSpeed = Mathf.Max(0, value);
+        scrollSpeed = _scrollSpeed;
+        spawner = _groundSpawner;
+        rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        rb.velocity = Vector2.left * scrollSpeed;
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // 왼쪽으로 이동
-        transform.position += Vector3.left * scrollSpeed * Time.deltaTime;
-
-        // x 좌표가 -30 이하가 되면 파괴
-        if (transform.position.x <= destroyThresholdX)
+        if (other.gameObject.name.Equals("ObjectDestoryZone"))
         {
+            spawner.UnregisterGround(this);
+            Debug.Log("Destory ground");
             Destroy(gameObject);
         }
     }

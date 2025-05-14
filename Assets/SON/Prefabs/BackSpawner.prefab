@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c18bf0b7f63a547bfd01a078aa3dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backPrefab: {fileID: 6326506970817284208, guid: 948d195fd0b756d4cbc05d9049f53a3f, type: 3}
-  spawnInterval: 60
-  spawnPosition: {x: 26, y: 0.9, z: 0}
+  backPrefab: {fileID: 8596186152656139386, guid: 101515387b3830847afef47948170e60, type: 3}
   scrollSpeed: 0.2
+  spawnY: 1.7
+  spawnX: -3.6
+  backCount: 3
