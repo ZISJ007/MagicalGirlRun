@@ -24,6 +24,7 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
+        hasFinished = false;
         Time.timeScale = 1f;
         moveDistance = 0;
     }
