@@ -49,7 +49,7 @@ public class JI_HeartsUI : MonoBehaviour
             // 하트 프리팹을 생성하고 RectTransform을 spawnPoint의 자식으로 설정
             Image img = Instantiate(heartPrefab, spawnPoint).GetComponent<Image>(); 
             // 부모 위치 기준으로 X축 오프셋 적용
-            img.rectTransform.anchoredPosition = new Vector2(i * 100, 0);
+            img.rectTransform.anchoredPosition = new Vector2(i * 66, 0);
 
             hearts.Add(img); // 하트 UI 이미지 리스트에 추가
         }
