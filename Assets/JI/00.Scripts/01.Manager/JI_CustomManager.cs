@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class JI_CustomManager : MonoBehaviour
 {
     public static JI_CustomManager Instance { get; private set; }

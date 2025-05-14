@@ -14,6 +14,7 @@ public class JI_PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;   // 바닥 체크용 EmptyObject
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask groundLayer;   // "Ground" 레이어 지정
+    private bool wasGrounded; // 바닥에 닿아 있었는지 여부
     [Header("공중 감지 설정")]
     private bool isLanding = false; // 착지 여부
     [Header("슬라이드 설정")]
@@ -41,10 +42,13 @@ public class JI_PlayerController : MonoBehaviour
             anim.SetBool("IsJump", true); // 점프 애니메이션 트리거 설정
         }
 
-        if (IsGrounded())
+        bool nowGrounded = IsGrounded(); // 바닥에 닿아 있는지 확인
+        if (!wasGrounded && nowGrounded) //바닥에 닿았을 때
         {
-            jumpCount = 0;
+            
+            jumpCount = 0;//점프 카운트 리셋
         }
+        wasGrounded = nowGrounded; // 바닥에 닿아 있는지 여부 업데이트
 
         HandleSlide();
         IsLanding();
