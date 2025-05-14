@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour
 {
     [SerializeField] private Scrollbar scrollBar;
     [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private GameObject endPanel;
+    [SerializeField] private GameObject claerPanel;
+    [SerializeField] private GameObject failPanel;
 
     [Header("현재 스테이지")]
     public int isStage = 0;
@@ -23,6 +26,7 @@ public class GameSystem : MonoBehaviour
 
     // 보유 중인 열쇠
     public static bool[] key = new bool[3];
+
 
     private void Start()
     {
@@ -70,12 +74,18 @@ public class GameSystem : MonoBehaviour
         }
     }
 
+    public void Fail()
+    {
+        failPanel.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Time.timeScale = 0f;
-            endPanel.SetActive(true);
+            claerPanel.SetActive(true);
         }
     }
 }
