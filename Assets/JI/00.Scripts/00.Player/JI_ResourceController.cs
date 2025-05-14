@@ -7,6 +7,7 @@ public class JI_ResourceController : MonoBehaviour
 {
     private JI_PlayerController playerController;
     private JI_PlayerStats playerStats;
+    private PlayerUIManager playerUIManager;
 
     [Header("장애물 데미지")]
     public int obstacleDamage = 0;
@@ -19,12 +20,9 @@ public class JI_ResourceController : MonoBehaviour
 
     private void Awake()
     {
+        playerUIManager= FindObjectOfType<PlayerUIManager>();
         playerController = GetComponent<JI_PlayerController>();
         playerStats = GetComponent<JI_PlayerStats>();
-    }
-    private void Start()
-    {
-
     }
     private void Update()
     {
@@ -46,6 +44,9 @@ public class JI_ResourceController : MonoBehaviour
         playerController.HandleDamage(invincibilityDuration);  // 플레이어 피해 애니메이션 매서드 호출
         playerStats.TakeDamage(amount);  // 플레이어 체력 감소
         StartInvincibility(invincibilityDuration); //데미지 받을 때 무적 상태 시작
+        
+        playerUIManager.TryShowRadomText();
+        
         if (playerStats.CurrentHp <= 0)  // 체력이 0 이하일 때 사망
         {
             Death();

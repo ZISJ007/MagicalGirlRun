@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 4475606835806790727}
   m_Layer: 0
   m_Name: AerialObstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3035890a408e02e46b708e0ec6feb28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMoveSpeed: 5
   downMoveSpeed: 5
   targetY: 2
 --- !u!61 &-4894703845430863260

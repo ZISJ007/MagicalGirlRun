@@ -1322,7 +1322,7 @@ PrefabInstance:
     - target: {fileID: 633209007867880914, guid: 55e2688a5cfdb9541a419e51a875116e, type: 3}
       propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 986227838}
     - target: {fileID: 633209007867880914, guid: 55e2688a5cfdb9541a419e51a875116e, type: 3}
       propertyPath: groundAttackInterval
       value: 6
