@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStage: 1
   score: 0
-  ScoreTxt: {fileID: 0}
+  scoreText: {fileID: 0}
   nowScoreTxt: {fileID: 0}
   bestScoreTxt: {fileID: 0}
