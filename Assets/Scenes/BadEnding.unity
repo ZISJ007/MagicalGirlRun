@@ -246,45 +246,56 @@ MonoBehaviour:
   rightNameText: {fileID: 943466905}
   badstoryText: {fileID: 862985439}
   Panel: {fileID: 2085038792}
+  character: {fileID: 434446185}
   Button: {fileID: 613550701}
   badstoryline:
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uB098\uB2C8\uAC00"
     bgmClip: {fileID: 0}
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uBB50\uC57C \uC5EC\uAE34 \uC5B4\uB514\uC57C "
     bgmClip: {fileID: 0}
-  - speaker: Left
+  - isCharacterChange: 0
+    speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uC900\uBE44\uB294 \uB418\uC5C8\uB098?"
     bgmClip: {fileID: 0}
-  - speaker: Right
+  - isCharacterChange: 1
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uBB54 \uC18C\uB9AC\uC57C \uC2EB\uC5B4 \uC2EB\uB2E4\uACE0"
     bgmClip: {fileID: 0}
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uBB50\uC57C \uB0B4 \uBAB8\uC774 \uBA4B\uB300\uB85C..."
     bgmClip: {fileID: 0}
-  - speaker: Left
+  - isCharacterChange: 0
+    speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uC8FC\uC778\uACF5\uC9F1~"
     bgmClip: {fileID: 8300000, guid: 6985c9a888ab0504cb6d1c63b5384e46, type: 3}
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uD558\uC774~"
     bgmClip: {fileID: 8300000, guid: fd56cb9788a873c4bb3aa2d660c649d8, type: 3}
-  - speaker: Left
+  - isCharacterChange: 0
+    speaker: Left
     speakerName: "\uB9C8\uBC95\uC18C\uB140\uB4E4"
     badstoryText: "\uB098\uB2C8\uAC00\uC2A4\uD0A4~"
     bgmClip: {fileID: 8300000, guid: 8ff0cf32d082f5c4198225eea8c55cf3, type: 3}
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uB9E4\uB2C8\uC800 \uC694\uB9AC\uBAA8 \uC544 \uB098 \uD0C0~"
     bgmClip: {fileID: 8300000, guid: e65b03314e440104f84b06fa60cbc775, type: 3}
-  - speaker: Right
+  - isCharacterChange: 0
+    speaker: Right
     speakerName: "\uC8FC\uC778\uACF5"
     badstoryText: "\uD06C\uC544\uC544\uC544\uC545"
     bgmClip: {fileID: 8300000, guid: d439ebfe094b64c4ba5970b9180b3427, type: 3}
@@ -327,6 +338,7 @@ GameObject:
   - component: {fileID: 434446186}
   - component: {fileID: 434446188}
   - component: {fileID: 434446187}
+  - component: {fileID: 434446189}
   m_Layer: 5
   m_Name: player
   m_TagString: Untagged
@@ -351,8 +363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: -30}
-  m_SizeDelta: {x: 216.0047, y: 274.7493}
+  m_AnchoredPosition: {x: -85, y: 76}
+  m_SizeDelta: {x: 300, y: 450}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &434446187
 MonoBehaviour:
@@ -392,6 +404,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434446185}
   m_CullTransparentMesh: 1
+--- !u!95 &434446189
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434446185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9a00f9d4479afb4aa948cdbe5b8d81d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &613550700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -21.244, y: -168}
+  m_AnchoredPosition: {x: -69, y: -249}
   m_SizeDelta: {x: 173.517, y: 45.377}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &943466905

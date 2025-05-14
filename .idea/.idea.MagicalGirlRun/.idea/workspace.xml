@@ -7,30 +7,9 @@
     <list default="true" id="24ff7ccd-aacd-4f2c-bdba-9e786d6a0a59" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicalGirlRun/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BAEK_J/JH_Script/PlayerDeleter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_J/JH_Script/PlayerDeleter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JI/00.Scripts/00.Player/JI_ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JI/00.Scripts/00.Player/JI_ResourceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JI/04.Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JI/04.Prefab/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/AerialEnemy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/AerialEnemy.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/Attack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Aerial/Attack.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/Attack.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/Attack.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/AttackReady.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/AttackReady.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/GroundEnemy.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/GroundEnemy.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Animation/Enemy/Ground/1Stage/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Tire/ObstacleSprite.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_ObstacleAnimation/Tire/ObstacleSprite.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/CustomButtonImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/CustomButtonImage.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SON/Player Animation/Run.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SON/Player Animation/Run.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1Stage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2Stage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/3Stage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/3Stage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossStage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossStage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/BadEndingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BAEK_C/Scripts/Manager/BadEndingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BadEnding.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BadEnding.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +20,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/17/03f5e88e/SpriteRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/Attack/GroundAttackObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyAnimationHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Entity/PlayerUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KIM/Kim_Scripts/Obstacle/AirBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/thtld/Desktop/Sparta_Unity/MagicalGirlRun/Assets/Scenes/2Stage.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMPro_UGUI_Private.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -134,7 +120,8 @@
       <workItem from="1747095043204" duration="3181000" />
       <workItem from="1747125155142" duration="13716000" />
       <workItem from="1747152315469" duration="1681000" />
-      <workItem from="1747182606481" duration="3000" />
+      <workItem from="1747182607040" duration="34235000" />
+      <workItem from="1747244693352" duration="974000" />
     </task>
     <servers />
   </component>
