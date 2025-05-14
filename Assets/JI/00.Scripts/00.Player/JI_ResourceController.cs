@@ -7,24 +7,24 @@ public class JI_ResourceController : MonoBehaviour
 {
     private JI_PlayerController playerController;
     private JI_PlayerStats playerStats;
+    private PlayerUIManager playerUIManager;
+    private GameSystem gameSystem;
 
     [Header("장애물 데미지")]
     public int obstacleDamage = 0;
     [Header("무적 지속시간(초)")]
     public float invincibilityDuration = 1.0f;
     [Header("플레이어 무적 상태")]
-    private bool isInvincible = false;
+    public bool isInvincible = false;
     private Coroutine invincibilityCoroutine;
     
 
     private void Awake()
     {
+        gameSystem=FindObjectOfType<GameSystem>();
+        playerUIManager= FindObjectOfType<PlayerUIManager>();
         playerController = GetComponent<JI_PlayerController>();
         playerStats = GetComponent<JI_PlayerStats>();
-    }
-    private void Start()
-    {
-
     }
     private void Update()
     {
@@ -46,6 +46,9 @@ public class JI_ResourceController : MonoBehaviour
         playerController.HandleDamage(invincibilityDuration);  // 플레이어 피해 애니메이션 매서드 호출
         playerStats.TakeDamage(amount);  // 플레이어 체력 감소
         StartInvincibility(invincibilityDuration); //데미지 받을 때 무적 상태 시작
+        
+        playerUIManager.TryShowRadomText();
+        
         if (playerStats.CurrentHp <= 0)  // 체력이 0 이하일 때 사망
         {
             Death();
@@ -73,10 +76,14 @@ public class JI_ResourceController : MonoBehaviour
         isInvincible = false; // 무적 해제
         invincibilityCoroutine = null; // 코루틴 종료
     }
-    private void Death()  // 플레이어 사망 
+    private bool Death()  // 플레이어 사망 
     {
         playerController.HandleDeath();  // 플레이어 사망 처리
+        isInvincible = true;
         enabled = false;  // JI_ResourceController 비활성화
+        gameSystem.Fail();
+        
+        return true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

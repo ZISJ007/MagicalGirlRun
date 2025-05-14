@@ -17,6 +17,9 @@ public class TutorialManager : MonoBehaviour
     }
     [SerializeField]private GameObject player;
     
+    private Animator animator;
+    private static readonly int isTalk = Animator.StringToHash("IsTalk");
+    
     [SerializeField]private GameObject tutorialPanel;
     [SerializeField]private TextMeshProUGUI tutorialText;
 
@@ -26,6 +29,10 @@ public class TutorialManager : MonoBehaviour
     private int currentStepIndex = 0;
     private bool tutorialActive = true;
 
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     void Start()
     {
@@ -76,6 +83,7 @@ public class TutorialManager : MonoBehaviour
 
     void ShowCurrentStep()
     {
+        animator.SetTrigger(isTalk);
         tutorialText.text = steps[currentStepIndex].message;
     }
    

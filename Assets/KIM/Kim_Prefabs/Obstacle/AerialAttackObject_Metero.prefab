@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8881435388789135154}
   m_Layer: 0
   m_Name: AerialAttackObject_Metero
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
