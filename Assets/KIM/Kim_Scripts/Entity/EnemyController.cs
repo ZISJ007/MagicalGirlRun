@@ -91,7 +91,6 @@ public class EnemyController : MonoBehaviour
             groundAttackObject.transform.rotation = attackPivot.rotation;
             groundAttackObject.SetActive(true);
 
-            GroundAttackAnimation();
             GroundAttackObject script = groundAttackObject.GetComponent<GroundAttackObject>();
             script.StartMove();
         }
