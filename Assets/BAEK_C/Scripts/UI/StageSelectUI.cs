@@ -34,7 +34,6 @@ public class StageSelectUI : MonoBehaviour
 
     [Header("사운드")] 
     [SerializeField] private AudioSource audioSource; // 효과음용
-    [SerializeField] private AudioSource bgmSource; // BGM용
 
     [SerializeField] private AudioClip stageSelectSound; // 스테이지 선택 효과음
     [SerializeField] private AudioClip startButtonSound; // 시작 버튼 효과음
@@ -57,6 +56,11 @@ public class StageSelectUI : MonoBehaviour
 
     void Start()
     {
+        if (BGMManager.Instance != null)
+        {
+            BGMManager.Instance.PlayBgm("selectedStage");
+        }
+        
         int trueCount = GameSystem.key.Count(k => k);
         {
             Debug.Log(trueCount);
@@ -67,10 +71,6 @@ public class StageSelectUI : MonoBehaviour
 
         Time.timeScale = 1;
         infoPanel.SetActive(false);
-        if (bgmSource != null && !bgmSource.isPlaying)
-        {
-            bgmSource.Play();
-        }
         //  메쉬프로라 폰트잇어야 한글가능
 
         if (stageButtons.Count != stageInfos.Count)
@@ -175,6 +175,11 @@ public class StageSelectUI : MonoBehaviour
 
         // 선택한 스테이지 이름 저장
         StageData.selectedStage = selectedStage;
+
+        if (BGMManager.Instance != null)
+        {
+            BGMManager.Instance.PlayBgm(selectedStage);
+        }
 
         // 공통 씬으로 이동
         SceneManager.LoadScene(selectedStage);

@@ -780,7 +780,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 62f50e19a96260e4eb4a54e1e38326c9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.118
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6175,7 +6175,6 @@ MonoBehaviour:
   startButton: {fileID: 526133934}
   bossButton: {fileID: 1262328613}
   audioSource: {fileID: 403601522}
-  bgmSource: {fileID: 403601522}
   stageSelectSound: {fileID: 8300000, guid: 1fd16ee2bf9b4954787456ead2cbabb7, type: 3}
   startButtonSound: {fileID: 8300000, guid: d62b78e16ed60f947a28f2e905c7c389, type: 3}
   buttonParent: {fileID: 1705478346}
