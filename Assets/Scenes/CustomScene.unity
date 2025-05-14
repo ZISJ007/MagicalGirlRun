@@ -573,9 +573,9 @@ MonoBehaviour:
   hatPrefabs:
   - {fileID: 2240405300423211367, guid: e0cd5a0b51347b14c83e5d259b7e61de, type: 3}
   - {fileID: 2240405300423211367, guid: ef36a15c7b4cf8440b19a0eed14d6ef6, type: 3}
-  - {fileID: 8697153839881065835, guid: f5cedf96b22a9274d985cd9771187d92, type: 3}
   - {fileID: 8697153839881065835, guid: 9621dfca4ff2f144388a8415bd77cc19, type: 3}
-  deleteButton: {fileID: 0}
+  - {fileID: 8697153839881065835, guid: f5cedf96b22a9274d985cd9771187d92, type: 3}
+  deleteButton: {fileID: 869122731}
 --- !u!1 &329827247
 GameObject:
   m_ObjectHideFlags: 0
