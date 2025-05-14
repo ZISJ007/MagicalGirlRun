@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9140d9199a754b343948ab6fe96e99ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  demand: 5
+  questUI: {fileID: 0}
+  questText: {fileID: 0}
+  gameSystem: {fileID: 0}
+  demand: 3
   reserves: 0
 --- !u!1 &5273954725033528883
 GameObject:
@@ -94,5 +97,5 @@ MonoBehaviour:
   target: {fileID: 0}
   spawnOffset: 20
   questItems: {fileID: 1429046596827920747, guid: 642189b3d2b692b458b3147358e57199, type: 3}
-  spawn_Y: -1
-  spawnInterval: 20
+  spawn_Y: -1.5
+  spawnInterval: 10
