@@ -134,7 +134,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: KGC_2
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 59
+        width: 1002
+        height: 1242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c3e92a12e5fb548845da2e71e1c3a2
+      internalID: -1331362683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KGC_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 972
+        height: 1200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3b0b092b0f8d240be1b6ba2b39e959
+      internalID: 5073257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +187,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KGC_0: -1314310246
+      KGC_1: 2090709818
+      KGC_2: -1331362683
+      KGC_3: 5073257
+      KGC_4: -19527820
+      KGC_5: 1442577984
+      KGC_6: 1381387015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
