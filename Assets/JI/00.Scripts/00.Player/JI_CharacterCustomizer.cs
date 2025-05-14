@@ -22,7 +22,17 @@ public class JI_CharacterCustomizer : MonoBehaviour
     }
     public void EquipHat(GameObject hatPrefab)
     {
-        if (currentHat != null)
+        if (hatPrefab == null)  // 선택된 모자가 없다면
+        {
+            if (currentHat != null) // 현재 장착된 모자가 있다면 제거
+            {
+                Destroy(currentHat);
+                currentHat = null;
+            }
+            return;
+        }
+
+        if (currentHat != null) // 현재 장착된 모자가 있다면 제거
             Destroy(currentHat);
 
         currentHat = Instantiate(hatPrefab, headSocket);

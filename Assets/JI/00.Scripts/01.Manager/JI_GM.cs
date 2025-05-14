@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class JI_GM : MonoBehaviour
@@ -8,6 +10,8 @@ public class JI_GM : MonoBehaviour
     public GameObject playerObject;
     private bool isMoving = false;
     public float moveSpeed = 5f;
+
+
     public void OnClickToStart()
     {
         isMoving = true; // 클릭 시 이동 시작
@@ -28,4 +32,5 @@ public class JI_GM : MonoBehaviour
             playerObject.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
     }
+  
 }

@@ -53,4 +53,9 @@ public class JI_PlayerStats : MonoBehaviour
         CurrentHp -= amount;
     }
 
+    public void SetMaxHp(int amount) // 최대 체력 설정
+    {
+        MaxHp += amount;
+        CurrentHp = maxHp; // 최대 체력 증가 시 현재 체력도 최대 체력으로 설정
+    }
 }
