@@ -10,6 +10,7 @@ public class KeyCount : MonoBehaviour
     void Start()
     {
         int trueCount = GameSystem.key.Count(k => k);
+        Debug.Log(trueCount);
 
         keyCount.text = $"X {trueCount}";
     }
