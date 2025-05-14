@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using System.Linq;
+using System;
 
 [System.Serializable]
 public class StageInfo
 {
     public string stageName;
     public string stageDescription;
+    public bool stageLock;
 }
 
 public class StageSelectUI : MonoBehaviour
@@ -26,6 +28,9 @@ public class StageSelectUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bestScoreText;
     [SerializeField] private TextMeshProUGUI stageInfoText;
     [SerializeField] private Button startButton;
+
+    [Header("Boss 버튼")]
+    [SerializeField] private BossButton bossButton;
 
     [Header("사운드")] 
     [SerializeField] private AudioSource audioSource; // 효과음용
@@ -52,6 +57,14 @@ public class StageSelectUI : MonoBehaviour
 
     void Start()
     {
+        int trueCount = GameSystem.key.Count(k => k);
+        {
+            Debug.Log(trueCount);
+        }
+
+        if (trueCount == 3)
+            stageInfos[5].stageLock = true;
+
         Time.timeScale = 1;
         infoPanel.SetActive(false);
         if (bgmSource != null && !bgmSource.isPlaying)
@@ -102,7 +115,12 @@ public class StageSelectUI : MonoBehaviour
 
     void HandleStageButtonClick(Button _clickedButton, int _index)
     {
-        if (isAnimating) return;
+        if (stageInfos[_index].stageLock || isAnimating) return;
+
+        if (_index == 5)
+        {
+            bossButton.UnlockButton();
+        }
 
         if (currentFocusButton == _clickedButton)
         {
@@ -114,9 +132,9 @@ public class StageSelectUI : MonoBehaviour
         {
             AnimStageSelect(_clickedButton);
             currentFocusButton = _clickedButton;
-            
+
             _clickedButton.transform.SetAsLastSibling();
-            _clickedButton.GetComponent<RectTransform>().anchoredPosition=Vector2.zero;
+            _clickedButton.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         }
 
         foreach (var button in stageButtons)

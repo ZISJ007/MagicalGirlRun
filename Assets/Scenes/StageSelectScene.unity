@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 0}
+  m_AnchoredPosition: {x: 90, y: 0}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117438606
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: x 0
+  m_text: X 0/3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: -5
+  m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6153,20 +6153,27 @@ MonoBehaviour:
   stageInfos:
   - stageName: 1Stage
     stageDescription: "\uB09C\uC774\uB3C4: \uC26C\uC6C0"
+    stageLock: 0
   - stageName: 2Stage
     stageDescription: "\uB09C\uC774\uB3C4: \uC911\uAC04"
+    stageLock: 0
   - stageName: 3Stage
     stageDescription: "\uB09C\uC774\uB3C4: \uC5B4\uB824\uC6C0"
+    stageLock: 0
   - stageName: Tutorial
     stageDescription: "\uD29C\uD1A0\uB9AC\uC5BC"
+    stageLock: 0
   - stageName: CustomScene
     stageDescription: "\uD328\uD53C \uB418\uB7EC\uAC00\uAE30"
+    stageLock: 0
   - stageName: BossStage
-    stageDescription: "\uC5F4\uC1E0 3\uAC1C\uAC00 \uD544\uC694\uD569\uB2C8\uB2E4."
+    stageDescription: ???
+    stageLock: 1
   infoPanel: {fileID: 423887655}
   bestScoreText: {fileID: 69933257}
   stageInfoText: {fileID: 297632078}
   startButton: {fileID: 526133934}
+  bossButton: {fileID: 1262328613}
   audioSource: {fileID: 403601522}
   bgmSource: {fileID: 403601522}
   stageSelectSound: {fileID: 8300000, guid: 1fd16ee2bf9b4954787456ead2cbabb7, type: 3}
@@ -6723,6 +6730,7 @@ GameObject:
   - component: {fileID: 1262328612}
   - component: {fileID: 1262328611}
   - component: {fileID: 1262328610}
+  - component: {fileID: 1262328613}
   m_Layer: 5
   m_Name: BossButton
   m_TagString: Untagged
@@ -6832,6 +6840,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262328608}
   m_CullTransparentMesh: 1
+--- !u!114 &1262328613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262328608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ded914760a7554ea44e1dd67cae46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1262328611}
+  unlockSprite: {fileID: 21300000, guid: e5bf97a7ce194df40a02908ea5fcfb4a, type: 3}
+  keyCount: {fileID: 117438606}
+  key: {fileID: 1667922031}
 --- !u!1 &1266292359
 GameObject:
   m_ObjectHideFlags: 0
@@ -7176,7 +7200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667922033
