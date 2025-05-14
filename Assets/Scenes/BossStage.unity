@@ -259,6 +259,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5061783199122371038, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
     - {fileID: 1462552931236358807, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
+    - {fileID: 9145297412975142600, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8310228120847034148, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
       insertIndex: -1
@@ -803,9 +804,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1235610034}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: failPanel
+      value: 
+      objectReference: {fileID: 1153661727}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scrollBar
       value: 
       objectReference: {fileID: 1153661725}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: claerPanel
+      value: 
+      objectReference: {fileID: 1235610034}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scoreManager
       value: 
@@ -1189,6 +1198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1153661727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3384345358764116003, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+  m_PrefabInstance: {fileID: 1153661723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1235610034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 342433172511741274, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}

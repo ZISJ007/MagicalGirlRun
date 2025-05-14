@@ -473,11 +473,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 342433172511741274, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
   m_PrefabInstance: {fileID: 2961078305401530992}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1497511755 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6312103415125268839, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-  m_PrefabInstance: {fileID: 2961078305401530992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1543971845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,9 +675,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1366199746}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: failPanel
+      value: 
+      objectReference: {fileID: 2961078305401530993}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scrollBar
       value: 
       objectReference: {fileID: 247521661}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: claerPanel
+      value: 
+      objectReference: {fileID: 1366199746}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scoreManager
       value: 
@@ -874,32 +877,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1346832406}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9145297412975142600, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb96653f95435845a6ef6b7a12c3622, type: 3}
---- !u!1 &2130795688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3583194488237591527, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-  m_PrefabInstance: {fileID: 2961078305401530992}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2130795690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130795688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c6928c807654d4fb4b35071ab987ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 5775580391974415977, guid: 07cd476232496c045a0a2244cf197238, type: 3}
-  spawnPoint: {fileID: 1497511755}
-  fullHeart: {fileID: 21300000, guid: 8ad16fe930562744981b71d095fe5e30, type: 3}
-  halfHeart: {fileID: 21300000, guid: 642690e9a2c65134d8c1295384193b9a, type: 3}
-  emptyHeart: {fileID: 21300000, guid: c8309537a18a0c94ca27989be27050c0, type: 3}
 --- !u!212 &365874726664548739
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1061,18 +1043,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 342433172511741274, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499612301139953795, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 499612301139953795, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190335
-      objectReference: {fileID: 0}
     - target: {fileID: 3245478619671035680, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1153,55 +1123,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3354869677231669432, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1497511755}
-    - target: {fileID: 3354869677231669432, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: heartPrefab
-      value: 
-      objectReference: {fileID: 5775580391974415977, guid: 07cd476232496c045a0a2244cf197238, type: 3}
-    - target: {fileID: 3555641174004906051, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -137.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3555641174004906051, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 6.4809875
-      objectReference: {fileID: 0}
-    - target: {fileID: 3753291371522938553, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5127418972074936640, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: m_text
-      value: "\uC2A4\uD14C\uC774\uC9C0 \uD074\uB9AC\uC5B4"
-      objectReference: {fileID: 0}
     - target: {fileID: 5301559469830982693, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
       propertyPath: m_Name
       value: StageCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5981733258402817181, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: hearts.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981733258402817181, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: hearts.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981733258402817181, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5981733258402817181, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3583194488237591527, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2130795690}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+--- !u!1 &2961078305401530993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3384345358764116003, guid: 6ff84f746f3e42b45b9f55c6534449dd, type: 3}
+  m_PrefabInstance: {fileID: 2961078305401530992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3251835041952784338
 GameObject:
   m_ObjectHideFlags: 0
