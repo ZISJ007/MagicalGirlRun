@@ -2206,7 +2206,7 @@ MonoBehaviour:
   isGroundEnemy: 0
   groundAttackInterval: 2
   groundAttackGameObjectPrefab: {fileID: 0}
-  aerialAttackInterval: 5
+  aerialAttackInterval: 10
   bulletObjectPoolKey: AerialBullet_Rain
   angleRange: 0
   minYOffset: -2
