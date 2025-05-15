@@ -67,7 +67,7 @@ public class StageSelectUI : MonoBehaviour
         }
 
         if (trueCount == 3)
-            stageInfos[5].stageLock = true;
+            stageInfos[5].stageLock = false;
 
         Time.timeScale = 1;
         infoPanel.SetActive(false);
