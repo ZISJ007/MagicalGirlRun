@@ -1,4 +1,4 @@
-# MagicRunner
+# MagicalGirlRun
 
 Unity 기반 2D Endless Runner 게임 프로젝트  
 플레이어는 마법소녀가 되기 싫어서 끊임없이 달리고, 장애물을 피하며 마법소녀들에게 도망칩니다.
@@ -61,7 +61,7 @@ Unity 기반 2D Endless Runner 게임 프로젝트
 ---
 
 ## 📂 프로젝트 구조
-MagicRunner-main/
+MagicalGirlRun-main/
 
 ├── Assets/
 
