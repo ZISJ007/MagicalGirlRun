@@ -162,10 +162,6 @@ public class StageSelectUI : MonoBehaviour
 
     void StartSelectedStage()
     {
-        if (selectedStage == "BossStage" && keysCollected < 3)
-        {
-            return;
-        }
 
         if (string.IsNullOrEmpty(selectedStage))
         {
