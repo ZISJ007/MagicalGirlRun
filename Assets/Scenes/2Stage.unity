@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 510659199}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: destination
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scoreManager
@@ -845,7 +845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6168602557505624441, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: demand
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6168602557505624441, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: questUI
