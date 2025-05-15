@@ -644,6 +644,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 928870734}
     - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
+      propertyPath: destination
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4523121230178096093, guid: 6801a4c77733c504b8efc68c9c933719, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 2008567720}
@@ -1197,7 +1201,7 @@ PrefabInstance:
       objectReference: {fileID: 5916977743540308992, guid: e3a95f46494e0e74fb157934c261578c, type: 3}
     - target: {fileID: 1230149426524939813, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: spawnInterval
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2559860411100981903, guid: f9c5ace20d04dcb4091894d46b61191f, type: 3}
       propertyPath: m_Name
