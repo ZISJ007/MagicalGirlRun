@@ -617,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6521724899633607637, guid: 3fc0f8e875720774988712467c690dd5, type: 3}
       propertyPath: spawnY
-      value: 2
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 6521724899633607637, guid: 3fc0f8e875720774988712467c690dd5, type: 3}
       propertyPath: backPrefab
