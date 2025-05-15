@@ -2812,7 +2812,7 @@ MonoBehaviour:
   heartPrefab: {fileID: 5775580391974415977, guid: 07cd476232496c045a0a2244cf197238, type: 3}
   spawnPoint: {fileID: 6312103415125268839}
   fullHeart: {fileID: 21300000, guid: 8ad16fe930562744981b71d095fe5e30, type: 3}
-  halfHeart: {fileID: 21300000, guid: 642690e9a2c65134d8c1295384193b9a, type: 3}
+  halfHeart: {fileID: 21300000, guid: d8308f945791d914293fdc051ba25918, type: 3}
   emptyHeart: {fileID: 21300000, guid: c8309537a18a0c94ca27989be27050c0, type: 3}
 --- !u!1001 &9210534496642606383
 PrefabInstance:
