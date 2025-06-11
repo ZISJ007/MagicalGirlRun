@@ -68,8 +68,13 @@ MagicalGirlRun-main/
 │ ├── Scripts/ # 게임 스크립트
 
 │ ├── Prefabs/ # 프리팹 리소스
+
 │ ├── Scenes/ # 메인 씬 포함
+
 │ └── Art/ # 스프라이트 및 애니메이션
+
 ├── Packages/
+
 ├── ProjectSettings/
+
 └── README.md
